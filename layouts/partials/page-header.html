@@ -1,10 +1,10 @@
-<section>
+<section  class="page-header">
   <div class="container">
     <div class="row">
       <div class="col-8 mx-auto text-center">
         <div class="section-sm">
           <h2 class="mb-3 text-dark font-weight-bold">{{.Title | markdownify}}</h2>
-          <ul class="list-inline">
+          <ul class="list-inline breadcrumb-menu">
           {{ $url := replace .Permalink ( printf "%s" site.BaseURL) "" }}
           {{ $.Scratch.Add "path" site.BaseURL }}
           <li class="list-inline-item"><a href="{{site.BaseURL | relLangURL}}">Home</a></li>
@@ -17,9 +17,6 @@
           {{ end }}
           </ul>
         </div>
-      </div>
-      <div class="col-12">
-        <div class="border-bottom"></div>
       </div>
     </div>
   </div>

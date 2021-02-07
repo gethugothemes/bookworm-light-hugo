@@ -29,10 +29,10 @@
               <!-- If there's more than one page. -->
               {{ if gt $paginator.TotalPages 1 }}
               <nav class="mb-md-50">
-                <ul class="pagination">
+                <ul class="pagination justify-content-center">
                   <!-- Previous page. -->
                   {{ if $paginator.HasPrev }}
-                  <li class="page-item mr-auto"><a class="page-link rounded arrow" href="{{ $paginator.Prev.URL }}" aria-label="Pagination Arrow">
+                  <li class="page-item"><a class="page-link rounded" href="{{ $paginator.Prev.URL }}" aria-label="Pagination Arrow">
                     <i class="las la-angle-left"></i>
                   </a></li>
                   {{ end }}
@@ -76,7 +76,7 @@
                   {{ end }}
                   <!-- Next page. -->
                   {{ if $paginator.HasNext }}
-                  <li class="page-item ml-auto"><a class="page-link rounded arrow" href="{{ $paginator.Next.URL }}" aria-label="Pagination Arrow">
+                  <li class="page-item"><a class="page-link rounded" href="{{ $paginator.Next.URL }}" aria-label="Pagination Arrow">
                     <i class="las la-angle-right"></i>
                   </a></li>
                   {{ end }}

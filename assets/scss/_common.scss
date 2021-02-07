@@ -96,7 +96,7 @@ mark {
 .card.post-card {
   border-radius: 0px;
   border: 0;
-  height: 100%;
+  // height: 100%;
 
   .card-body {
     padding: 0;
@@ -261,6 +261,13 @@ a.post-title:hover,
       background-color: $color-primary;
     }
   }
+}
+
+// breadcrumb
+.breadcrumb-menu {
+  display: inline-block;
+  padding-bottom: 25px;
+  border-bottom: 3px solid $color-primary;
 }
 
 
