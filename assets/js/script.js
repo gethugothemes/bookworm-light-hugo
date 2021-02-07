@@ -1,7 +1,12 @@
+// Preloader js
+function preloader() {
+	$('.preloader').delay(100).fadeOut(300);
+}
+$(preloader);
+$(document).on("turbolinks:load", preloader);
+
 (function ($) {
   'use strict';
-
-  $(document).on("turbolinks:load");
 
   // header sticky
   $(window).scroll(function () {

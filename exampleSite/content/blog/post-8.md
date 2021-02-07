@@ -1,11 +1,11 @@
 ---
-title: "Why should we ask ourselves"
+title: "How to make toys from old olarpaper"
 description: "meta description"
-image: "images/post/05.jpg"
-date: 2021-01-25T16:56:47+06:00
+image: "images/post/01.jpg"
+date: 2021-02-05T16:56:47+06:00
 draft: false
 author: "Henara Colii"
-tags: ["Food", "Gold"]
+tags: ["Diy", "Toy"]
 ---
 
 Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.

@@ -1,6 +1,7 @@
 ---
 title: "Why should we ask ourselves"
-image: "images/post-horizontal/01.jpg"
+description: "meta description"
+image: "images/post/04.jpg"
 date: 2021-02-02T16:56:47+06:00
 draft: false
 author: "Henara Colii"

@@ -1,0 +1,3 @@
+{{ if site.Params.preloader.enable }}
+<div class="preloader">{{ with site.Params.preloader.preloader }}<img src="{{ . | absURL }}" alt="preloader">{{ end }}</div>
+{{ end }}

@@ -1,8 +1,8 @@
 ---
-title: "Why should we ask ourselves"
+title: "What you need to know about Photography"
 description: "meta description"
-image: "images/post/05.jpg"
-date: 2021-01-25T16:56:47+06:00
+image: "images/post/02.jpg"
+date: 2021-02-04T16:56:47+06:00
 draft: false
 author: "Henara Colii"
 tags: ["Food", "Gold"]

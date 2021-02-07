@@ -3,7 +3,7 @@ baseURL = "https://examplesite.com"
 title = "Bookworm - Personal Blog Template"
 theme = "bookworm"
 # post pagination
-paginate = "3"
+paginate = "5"
 # post excerpt
 summaryLength = "10"
 # google analytics
@@ -78,7 +78,7 @@ author_url = "https://gethugothemes.com/"
 
 # Preloader
 [params.preloader]
-enable = true
+enable = false
 preloader = "" # use jpg, png, svg or gif format.
 
 
@@ -98,24 +98,11 @@ enable = true
 instagram_user = "bookworm"
 access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
 
-# google map
-[params.gmap]
-enable = true
-gmap_api = "AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"
-map_latitude = "51.5223477"
-map_longitude = "-0.1622023"
-map_marker = "images/marker.png"
-
 # cookies
 [params.cookies]
 enable = false
 expire_days = 2
 
-
-######################## sidebar widgets #########################
-[params.widgets]
-# sidebar = ["search", "categories", "tags", "recent-post"]
-# available widget : search,categories,tags,recent-post
 
 ############################# Main Menu ########################
 
@@ -151,12 +138,6 @@ hasChildren = true
   weight = 2
   url = "tags"
   name = "Tags"
-  
-  [[menu.main]]
-  parent = "Pages"
-  weight = 3
-  url = "#"
-  name = "Pages 03"
 
 # Header Social Icons
 [[params.social]]

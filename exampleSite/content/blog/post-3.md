@@ -1,6 +1,7 @@
 ---
 title: "What else do we need to make this a success?"
-image: "images/post-horizontal/01.jpg"
+description: "meta description"
+image: "images/post/06.jpg"
 date: 2021-01-25T11:35:57+06:00
 author: "Henara Colii"
 tags: ["City", "Gold"]

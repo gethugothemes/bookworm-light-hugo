@@ -2,8 +2,9 @@
 <html lang="{{ site.LanguageCode | default `en-US` }}">
   {{- partial "head.html" . -}}
 <body>
+  {{- partial "preloader.html" . -}}
   {{- partial "header.html" . -}}
-  {{if and (not .IsHome) (ne .Permalink (`search/` | absURL)) }}
+  {{if and (not .IsHome) (ne .Section "blog") (ne .Section "404") (ne .Permalink (`search/` | absURL)) }}
   {{- partial "page-header.html" . -}}
   {{end}}
   {{- block "main" . }}{{- end }}
