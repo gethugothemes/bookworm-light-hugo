@@ -1,5 +1,5 @@
 {{ range site.Params.plugins.css }}
-<link rel="stylesheet" href="{{ .src | absURL }}">
+<link rel="stylesheet" href="{{ .src | absURL }}" {{.attributes | safeHTMLAttr}}>
 {{ end }}
 
 <!-- Main Stylesheet -->

@@ -48,7 +48,7 @@ $(document).on("turbolinks:load", preloader);
       var accessToken = $('#instafeed').attr('data-accessToken');
       var userFeed = new Instafeed({
         get: 'user',
-        limit: 8,
+        limit: 6,
         resolution: 'low_resolution',
         accessToken: accessToken,
         template: '<div class="col-xl col-lg-2 col-md-3 col-sm-3 col-4"><a class="instagram-post" href="{{link}}" aria-label="instagram-post-link"><img loading="lazy" class="img-fluid" src="{{image}}" alt="instagram-image"></a></div>'

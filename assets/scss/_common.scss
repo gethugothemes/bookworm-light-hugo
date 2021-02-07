@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Lora&display=swap');
-
 body {
   color: $gray;
   background-color: $white;
-  font-family: $font-secondary;
+  font-family: $font-primary;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.65;
@@ -114,7 +112,7 @@ mark {
 }
 
 .post-title {
-  font-weight: 600;
+  font-weight: 800;
   color: $dark;
 }
 
@@ -124,11 +122,10 @@ a.post-title:hover,
 }
 
 .card-meta {
-  font-weight: 500;
-  letter-spacing: -1px;
+  font-weight: 700;
 
   .list-inline-item:not(:last-child) {
-    margin-right: 1.2rem;
+    margin-right: 0.8rem;
   }
 
   .card-meta-author {
@@ -158,7 +155,7 @@ a.post-title:hover,
       }
 
       &::before {
-        content: "//"
+        content: "#";
       }
 
       &:hover {
@@ -171,7 +168,6 @@ a.post-title:hover,
 
 // content
 .content {
-  font-family: $font-primary;
   font-size: 17px;
 
   p {
@@ -180,15 +176,15 @@ a.post-title:hover,
 
   img {
     margin-bottom: 30px;
+    @extend .rounded;
   }
 
   h2,
   h3,
   h4 {
-    font-family: $font-secondary;
     color: $dark;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   h3 {
@@ -213,9 +209,8 @@ a.post-title:hover,
   blockquote {
     padding: 20px 30px;
     border-left: 6px solid $color-primary;
-    font-family: $font-secondary;
     color: $dark;
-    font-weight: 600;
+    font-weight: 900;
     font-size: 18px;
     margin: 30px 0;
     border-radius: 5px;
@@ -233,12 +228,12 @@ a.post-title:hover,
     margin-left: 0;
     color: $dark;
     border: 0;
+    margin: 0 4px;
     height: 48px;
     width: 48px;
     line-height: 48px;
     text-align: center;
-    font-weight: 600;
-    border-radius: 0 !important;
+    font-weight: 700;
 
     &.active,
     &:focus,
@@ -359,16 +354,25 @@ button.input-group-text {
   font-family: $font-primary
 }
 
-.font-secondary {
-  font-family: $font-secondary
+.rounded {
+  border-radius: 10px !important;
+  overflow: hidden;
 }
 
 .font-weight-500 {
   font-weight: 500
 }
 
-.font-weight-600 {
-  font-weight: 600
+.font-weight-700 {
+  font-weight: 700
+}
+
+.font-weight-800 {
+  font-weight: 800
+}
+
+.font-weight-900 {
+  font-weight: 900
 }
 
 .text-primary {

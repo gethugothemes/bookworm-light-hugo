@@ -63,8 +63,9 @@
       background-color: #f7f8fa;
       color: $dark;
       padding: 6px 13px;
-      font-weight: 500;
+      font-weight: 700;
       font-size: 15px;
+      @extend .rounded;
       &:hover {
          background-color: transparent;
          color: $color-primary;

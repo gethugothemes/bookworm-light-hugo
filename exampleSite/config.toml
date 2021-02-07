@@ -28,6 +28,12 @@ unsafe= true
 src = "plugins/bootstrap/bootstrap.min.css"
 [[params.plugins.css]]
 src = "plugins/line-awesome/css/line-awesome.min.css"
+[[params.plugins.css]]
+src = "https://fonts.gstatic.com"
+attributes = "rel='preconnect'"
+
+[[params.plugins.css]]
+src = "https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&display=swap"
 
 # JS Plugins
 [[params.plugins.js]]

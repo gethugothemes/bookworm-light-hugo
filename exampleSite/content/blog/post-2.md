@@ -1,7 +1,7 @@
 ---
 title: "What else do we need to make this a success?"
 description: "meta description"
-image: "images/post/07.jpg"
+image: "images/post/03.jpg"
 date: 2021-01-25T11:33:57+06:00
 author: "Lubana Era"
 tags: ["City", "Gold"]

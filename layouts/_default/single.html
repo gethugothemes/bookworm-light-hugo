@@ -59,8 +59,6 @@
     <div class="single-post-similer">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <h2 class="font-weight-600 text-dark">You May Also Like</h2>
-
           <div class="row mt-4">
             {{ $related := .Site.RegularPages.Related . | last 2 }}
             {{ with $related }}
@@ -85,7 +83,7 @@
                 src="{{.Params.image | absURL}}" alt="{{ .Title }}"></a>
             <div class="media-body">
               <p class="font-primary">Written By</p>
-              <h4><a href="{{.Permalink}}" class="text-dark font-weight-600">{{.Title}}</a></h4>
+              <h4><a href="{{.Permalink}}" class="text-dark font-weight-700">{{.Title}}</a></h4>
               <p class="font-primary">{{ .Summary | truncate 250 }}</p>
               <ul class="social-links list-unstyled list-inline ml-0 ml-sm-n2">
                 {{ range .Params.social }}

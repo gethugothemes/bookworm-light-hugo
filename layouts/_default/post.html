@@ -1,7 +1,7 @@
 <article class="card post-card">
   {{if .Params.image}}
   <a href="{{.Permalink}}">
-    <img loading="lazy" class="w-100" src="{{ .Params.image | absURL}}" alt="{{.Title}}">
+    <img loading="lazy" class="w-100 rounded" src="{{ .Params.image | absURL}}" alt="{{.Title}}">
   </a>
   {{end}}
   <div class="card-body">

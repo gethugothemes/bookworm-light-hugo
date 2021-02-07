@@ -6,7 +6,7 @@
       {{range .RegularPages}}
       <div class="col-lg-3 col-md-4 col-6 mb-4">
         <a class="d-inline-block" href="{{.Permalink}}">
-          <img loading="lazy" class="img-fluid rounded-lg" src="{{.Params.image | absURL}}" alt="{{.Title}}">
+          <img loading="lazy" class="img-fluid rounded" src="{{.Params.image | absURL}}" alt="{{.Title}}">
           <h4 class="mt-3">{{.Title}}</h4>
         </a>
       </div>

@@ -32,7 +32,7 @@
                 <ul class="pagination">
                   <!-- Previous page. -->
                   {{ if $paginator.HasPrev }}
-                  <li class="page-item mr-auto"><a class="page-link arrow" href="{{ $paginator.Prev.URL }}" aria-label="Pagination Arrow">
+                  <li class="page-item mr-auto"><a class="page-link rounded arrow" href="{{ $paginator.Prev.URL }}" aria-label="Pagination Arrow">
                     <i class="las la-angle-left"></i>
                   </a></li>
                   {{ end }}
@@ -68,7 +68,7 @@
                   <!-- Output page numbers. -->
                   {{ if eq ($.Scratch.Get "page_number_flag") true }}
                   <li class="page-item{{ if eq . $paginator }} active {{ end }}">
-                    <a href="{{ .URL }}" class="page-link">
+                    <a href="{{ .URL }}" class="page-link rounded">
                       {{ .PageNumber }}
                     </a>
                   </li>
@@ -76,7 +76,7 @@
                   {{ end }}
                   <!-- Next page. -->
                   {{ if $paginator.HasNext }}
-                  <li class="page-item ml-auto"><a class="page-link arrow" href="{{ $paginator.Next.URL }}" aria-label="Pagination Arrow">
+                  <li class="page-item ml-auto"><a class="page-link rounded arrow" href="{{ $paginator.Next.URL }}" aria-label="Pagination Arrow">
                     <i class="las la-angle-right"></i>
                   </a></li>
                   {{ end }}
@@ -92,7 +92,7 @@
         <div class="section pb-0">
           <div class="row">
             <div class="col-12">
-              <div class="newsletter-block font-primary">
+              <div class="newsletter-block rounded font-primary">
                 <div class="row align-items-center">
                   <div class="col-lg-6">
                     <h3 class="mb-0">{{ .title }}</h3>
@@ -126,17 +126,17 @@
 {{ with site.Params.instafeed }}
 {{ if .enable }}
 <section>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="text-center">
           <p class="font-primary">Our Instagram</p>
-          <h2 class="text-dark font-weight-600"><a href="https://www.instagram.com/{{.instagram_user}}/">@{{.instagram_user}}</a></h2>
+          <h2 class="text-dark font-weight-700"><a href="https://www.instagram.com/{{.instagram_user}}/">@{{.instagram_user}}</a></h2>
         </div>
       </div>
       {{ with .access_token }}
       <div class="mt-5">
-        <div id="instafeed" class="instagram_feed row no-gutters justify-content-center" data-accessToken="{{.}}"></div>
+        <div id="instafeed" class="instagram_feed rounded row no-gutters justify-content-center" data-accessToken="{{.}}"></div>
       </div>
       {{ end }}
     </div>

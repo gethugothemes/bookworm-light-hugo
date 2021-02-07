@@ -1,7 +1,7 @@
 
   {{ "<!-- All JS Files -->" | safeHTML }}
   {{ range site.Params.plugins.js }}
-  <script src="{{ .src | absURL }}"></script>
+  <script src="{{ .src | absURL }}" {{.attributes | safeHTMLAttr}}></script>
   {{ end }}
 
   {{ "<!-- Main Script -->" | safeHTML }}
