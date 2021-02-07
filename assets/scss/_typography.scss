@@ -1,0 +1,47 @@
+h1, .h1 {
+   font-size: $h1;
+   @include desktop-xl {
+      font-size: $h1-lg;
+   }
+   @include desktop {
+      font-size: $h1-md;
+   }
+}
+h2, .h2 {
+   font-size: $h2;
+   @include desktop {
+      font-size: $h2-md;
+   }
+}
+h3, .h3 {
+   font-size: $h3;
+   @include desktop {
+      font-size: $h3-md;
+   }
+}
+h4, .h4 {
+   font-size: $h4;
+}
+h5, .h5 {
+   font-size: $h5;
+}
+h6, .h6 {
+   font-size: $h6;
+}
+a:focus,
+button:focus {
+	outline: 0;
+}
+a {
+   color: $gray;
+   transition: all .3s;
+   &:hover {
+      text-decoration: none;
+      color: $black-200;
+   }
+}
+ul, li {
+	padding: 0;
+   margin: 0;
+   list-style-position: inside;
+}

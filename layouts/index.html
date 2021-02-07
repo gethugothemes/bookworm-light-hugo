@@ -1,0 +1,148 @@
+{{define "main"}}
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row no-gutters justify-content-center">
+      <div class="col-lg-10">
+        <div class="row">
+          {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+          {{range $index, $items := $paginator.Pages}}
+          <div class="{{ if (eq $index 0) }}col-lg-12{{ else }}col-lg-6{{ end }}">
+            {{.Render "post"}}
+          </div>
+          {{end}}
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <nav class="mt-4">
+              {{"<!-- pagination -->" | safeHTML }}
+              {{ $paginator := .Paginator }}
+              <!-- Number of links either side of the current page. -->
+              {{ $adjacent_links := 2 }}
+              <!-- $max_links = ($adjacent_links * 2) + 1 -->
+              {{ $max_links := (add (mul $adjacent_links 2) 1) }}
+              <!-- $lower_limit = $adjacent_links + 1 -->
+              {{ $lower_limit := (add $adjacent_links 1) }}
+              <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+              {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
+              <!-- If there's more than one page. -->
+              {{ if gt $paginator.TotalPages 1 }}
+              <nav class="mb-md-50">
+                <ul class="pagination">
+                  <!-- Previous page. -->
+                  {{ if $paginator.HasPrev }}
+                  <li class="page-item mr-auto"><a class="page-link arrow" href="{{ $paginator.Prev.URL }}" aria-label="Pagination Arrow">
+                    <i class="las la-angle-left"></i>
+                  </a></li>
+                  {{ end }}
+                  <!-- Page numbers. -->
+                  {{ range $paginator.Pagers }}
+                  {{ $.Scratch.Set "page_number_flag" false }}
+                  <!-- Advanced page numbers. -->
+                  {{ if gt $paginator.TotalPages $max_links }}
+                  <!-- Lower limit pages. -->
+                  <!-- If the user is on a page which is in the lower limit.  -->
+                  {{ if le $paginator.PageNumber $lower_limit }}
+                  <!-- If the current loop page is less than max_links. -->
+                  {{ if le .PageNumber $max_links }}
+                  {{ $.Scratch.Set "page_number_flag" true }}
+                  {{ end }}
+                  <!-- Upper limit pages. -->
+                  <!-- If the user is on a page which is in the upper limit. -->
+                  {{ else if ge $paginator.PageNumber $upper_limit }}
+                  <!-- If the current loop page is greater than total pages minus $max_links -->
+                  {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}
+                  {{ $.Scratch.Set "page_number_flag" true }}
+                  {{ end }}
+                  <!-- Middle pages. -->
+                  {{ else }}
+                  {{ if and ( ge .PageNumber (sub $paginator.PageNumber $adjacent_links) ) ( le .PageNumber (add $paginator.PageNumber $adjacent_links) ) }}
+                  {{ $.Scratch.Set "page_number_flag" true }}
+                  {{ end }}
+                  {{ end }}
+                  <!-- Simple page numbers. -->
+                  {{ else }}
+                  {{ $.Scratch.Set "page_number_flag" true }}
+                  {{ end }}
+                  <!-- Output page numbers. -->
+                  {{ if eq ($.Scratch.Get "page_number_flag") true }}
+                  <li class="page-item{{ if eq . $paginator }} active {{ end }}">
+                    <a href="{{ .URL }}" class="page-link">
+                      {{ .PageNumber }}
+                    </a>
+                  </li>
+                  {{ end }}
+                  {{ end }}
+                  <!-- Next page. -->
+                  {{ if $paginator.HasNext }}
+                  <li class="page-item ml-auto"><a class="page-link arrow" href="{{ $paginator.Next.URL }}" aria-label="Pagination Arrow">
+                    <i class="las la-angle-right"></i>
+                  </a></li>
+                  {{ end }}
+                </ul>
+              </nav>
+              {{ end }}
+            </nav>
+          </div>
+        </div>
+
+        {{ with site.Params.subscription }}
+        {{ if .enable }}
+        <div class="section pb-0">
+          <div class="row">
+            <div class="col-12">
+              <div class="newsletter-block font-primary">
+                <div class="row align-items-center">
+                  <div class="col-lg-6">
+                    <h3 class="mb-0">{{ .title }}</h3>
+                  </div>
+                  <div class="col-lg-6 mt-4 mt-lg-0">
+                    <form action="{{ .mailchimp_form_action }}" method="post" name="mailchimp_form_name" target="_blank">
+                      <div class="input-group">
+                        <input form="subscription" type="text" class="form-control px-0" placeholder="{{ .input_placeholder }}" aria-label="Subscription" required>
+                        <div class="input-group-append">
+                          <button type="submit" name="subscription" class="input-group-text" aria-label="Subscription Button"><i class="icon lar la-envelope-open"></i></button>
+                        </div>
+                      </div>
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="{{ .mailchimp_form_name }}" tabindex="-1">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ with site.Params.instafeed }}
+{{ if .enable }}
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+          <p class="font-primary">Our Instagram</p>
+          <h2 class="text-dark font-weight-600"><a href="https://www.instagram.com/{{.instagram_user}}/">@{{.instagram_user}}</a></h2>
+        </div>
+      </div>
+      {{ with .access_token }}
+      <div class="mt-5">
+        <div id="instafeed" class="instagram_feed row no-gutters justify-content-center" data-accessToken="{{.}}"></div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{end}}

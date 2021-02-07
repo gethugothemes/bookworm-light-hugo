@@ -1,0 +1,181 @@
+######################## default configuration ####################
+baseURL = "https://examplesite.com"
+title = "Bookworm - Personal Blog Template"
+theme = "bookworm"
+# post pagination
+paginate = "3"
+# post excerpt
+summaryLength = "10"
+# google analytics
+googleAnalytics = "" # example : UA-123-45
+# disqus short name
+disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
+# disable language
+disableLanguages = [] # desable language from here
+
+
+############################# Outputs ##############################
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[markup.goldmark.renderer]
+unsafe= true
+
+
+######################## Plugins ####################
+# CSS Plugins
+[[params.plugins.css]]
+src = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+src = "plugins/line-awesome/css/line-awesome.min.css"
+
+# JS Plugins
+[[params.plugins.js]]
+src = "plugins/jquery/jquery.min.js"
+[[params.plugins.js]]
+src = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+src = "plugins/instagram-feed/instagram-feed.js"
+
+[[params.plugins.js]]
+src = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+src = "plugins/search/mark.js"
+[[params.plugins.js]]
+src = "plugins/search/search.js"
+[[params.plugins.js]]
+src = "plugins/turbolinks/turbolinks.js"
+
+#################### default parameters ################################
+[params]
+logo = "images/logo.svg"
+logo_height = "38"
+favicon = "images/favicon.png"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# contact info
+address = "9567 Turner Trace Apt. BC C3G8A4"
+mobile = "+211234565523"
+email = "info@email.com"
+# contact form action
+contact_form_action = "#" # contact form works with https://formspree.io
+# search
+search = true
+# custom script on header
+custom_script= ""
+
+disableAssetsBusting = false
+
+# main section
+mainSections = ["blog"]
+
+# copyright text
+[params.copyright]
+info = "All rights reserved 2021"
+author = "Gethugothemes"
+author_url = "https://gethugothemes.com/"
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use jpg, png, svg or gif format.
+
+
+# Subscription
+[params.subscription]
+enable = true
+# mailchimp subsciption
+mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
+mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
+title = "Subscribe to the best creative articles feed."
+input_placeholder = "Enter your email"
+
+
+# Instagram feed
+[params.instafeed]
+enable = true
+instagram_user = "bookworm"
+access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
+
+# google map
+[params.gmap]
+enable = true
+gmap_api = "AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"
+map_latitude = "51.5223477"
+map_longitude = "-0.1622023"
+map_marker = "images/marker.png"
+
+# cookies
+[params.cookies]
+enable = false
+expire_days = 2
+
+
+######################## sidebar widgets #########################
+[params.widgets]
+# sidebar = ["search", "categories", "tags", "recent-post"]
+# available widget : search,categories,tags,recent-post
+
+############################# Main Menu ########################
+
+[[menu.main]]
+weight = 1
+url = "/"
+name = "Home"
+  
+[[menu.main]]
+weight = 3
+url = "about"
+name = "About"
+  
+[[menu.main]]
+weight = 4
+url = "contact"
+name = "Contact"
+
+[[menu.main]]
+weight = 5
+url = "#"
+name = "Pages"
+hasChildren = true
+
+  [[menu.main]]
+  parent = "Pages"
+  weight = 1
+  url = "author"
+  name = "Author"
+  
+  [[menu.main]]
+  parent = "Pages"
+  weight = 2
+  url = "tags"
+  name = "Tags"
+  
+  [[menu.main]]
+  parent = "Pages"
+  weight = 3
+  url = "#"
+  name = "Pages 03"
+
+# Header Social Icons
+[[params.social]]
+name = "Facebook"
+url = "https://www.facebook.com/"
+icon = "lab la-facebook-f"
+
+[[params.social]]
+name = "Twitter"
+url = "https://www.twitter.com/"
+icon = "lab la-twitter"
+
+[[params.social]]
+name = "Instagram"
+url = "https://www.instagram.com/"
+icon = "lab la-instagram"
+
+[[params.social]]
+name = "Dribbble"
+url = "https://www.dribbble.com/"
+icon = "lab la-dribbble"
+

@@ -1,0 +1,34 @@
+<article class="card post-card">
+  {{if .Params.image}}
+  <a href="{{.Permalink}}">
+    <img loading="lazy" class="w-100" src="{{ .Params.image | absURL}}" alt="{{.Title}}">
+  </a>
+  {{end}}
+  <div class="card-body">
+    <h3 class="h2 mb-4">
+      <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
+    </h3>
+  </div>
+  <div class="card-footer">
+    <ul class="card-meta list-inline">
+      <li class="list-inline-item">
+        {{ with site.GetPage (.Params.Author | urlize | lower) }}
+        <a href="{{.Permalink}}" class="card-meta-author">
+          <img loading="lazy" src="{{.Params.image | absURL}}" alt="{{ .Title }}">
+          <span>{{ .Title }}</span>
+        </a>
+        {{ end }}
+      </li>
+      <li class="list-inline-item">
+        <ul class="card-meta-tag list-inline">
+          {{range .Params.tags}}
+          <li class="list-inline-item"><a href="{{site.BaseURL}}tags/{{.| urlize}}">{{.}}</a></li>
+          {{end}}
+        </ul>
+      </li>
+      <li class="list-inline-item">
+        <span>{{.PublishDate.Format "02 Jan, 2006"}}</span>
+      </li>
+    </ul>
+  </div>
+</article>

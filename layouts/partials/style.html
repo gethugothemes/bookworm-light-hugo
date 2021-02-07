@@ -1,0 +1,19 @@
+{{ range site.Params.plugins.css }}
+<link rel="stylesheet" href="{{ .src | absURL }}">
+{{ end }}
+
+{{ $cssBundle := slice }}
+{{ range .Site.Params.plugins.css }}
+{{ if findRE "^http" .src }}
+<link rel="stylesheet" href="{{ .src | absURL }}">
+{{ else }}
+{{ $cssFile := resources.Get .src }}
+{{ $cssBundle = $cssBundle | append $cssFile }}
+{{ end }}
+{{ end }}
+{{ $cssBundle := $cssBundle | resources.Concat "css/bundle.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $cssBundle.Permalink | absURL }}">
+
+<!-- Main Stylesheet -->
+{{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">

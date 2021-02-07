@@ -1,0 +1,61 @@
+// button style
+.btn {
+	font-size: 16px;
+	padding: 12px 28px;
+	color: $white;
+	border: 0;
+	border-radius: 50px;
+	transition: .2s ease-out;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+   @include desktop-lg {
+      font-size: 15px;
+	}
+	
+	&:active,
+	&:focus {
+		border: 0;
+		box-shadow: none !important;
+	}
+
+	&:hover {
+		box-shadow: 0px 10px 25px rgba($black, 0.1);
+	}
+
+	&.btn-sm {
+		padding: 10px 18px;
+	}
+
+	&.btn-lg {
+		padding: 14px 34px;
+		@include desktop-lg {
+			padding: 12px 28px;
+		}
+	}
+
+	&.btn-primary {
+		background-color: $color-primary !important;
+		border: 2px solid $color-primary;
+		&:hover,
+		&:active,
+		&:focus {
+			color: $white;
+		}
+	}
+
+	&.btn-outline-primary {
+		color: $color-primary;
+		border: 1px solid $color-primary;
+		background-color: transparent !important;
+		&::after {
+			background-color: $color-primary !important;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			color: $white;
+			background-color: $color-primary !important;
+		}
+	}
+}

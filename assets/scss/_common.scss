@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Lora&display=swap');
+
+body {
+  color: $gray;
+  background-color: $white;
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+::selection {
+  color: $white;
+  background-color: darken($color-primary, 5);
+  text-shadow: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+.mark,
+mark {
+  padding: 0 5px 4px;
+  background-color: rgba($color-primary, .1);
+}
+
+/*------------------------------------------------------------------
+ # default styles
+-------------------------------------------------------------------*/
+.section {
+  padding: 120px 0;
+
+  &-sm {
+    padding: 90px 0;
+  }
+}
+
+.section-title {
+  h1 {
+    font-size: $h1-lg;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    position: relative;
+    padding-top: 25px;
+
+    @include desktop-xl {
+      font-size: 42px;
+    }
+
+    @include tablet {
+      font-size: 34px;
+    }
+  }
+}
+
+
+// social-links
+.social-links {
+  a {
+    font-size: 18px;
+    padding: 7px;
+    color: rgba($black, .8);
+    display: inline-block;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &.has-bg-color {
+    a {
+      padding: 7px 9px;
+      color: $white;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+
+// card style
+.card.post-card {
+  border-radius: 0px;
+  border: 0;
+  height: 100%;
+
+  .card-body {
+    padding: 0;
+    padding-top: 30px;
+  }
+
+  .card-footer {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    padding-bottom: 70px;
+  }
+}
+
+.post-title {
+  font-weight: 600;
+  color: $dark;
+}
+
+a.post-title:hover,
+.post-title:hover a {
+  color: $color-primary;
+}
+
+.card-meta {
+  font-weight: 500;
+  letter-spacing: -1px;
+
+  .list-inline-item:not(:last-child) {
+    margin-right: 1.2rem;
+  }
+
+  .card-meta-author {
+    display: inline-block;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    img {
+      border-radius: 50%;
+      height: 26px;
+      margin-right: 6px;
+    }
+  }
+
+  .card-meta-tag {
+    .list-inline-item:not(:last-child) {
+      margin-right: .5rem;
+    }
+
+    a {
+      color: $dark;
+
+      &:hover {
+        color: $dark
+      }
+
+      &::before {
+        content: "//"
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+
+// content
+.content {
+  font-family: $font-primary;
+  font-size: 17px;
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-family: $font-secondary;
+    color: $dark;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  h3 {
+    margin-top: 40px;
+  }
+
+  ol,
+  ul {
+    margin-bottom: 25px;
+    padding-left: 5px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  img {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+
+  blockquote {
+    padding: 20px 30px;
+    border-left: 6px solid $color-primary;
+    font-family: $font-secondary;
+    color: $dark;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 30px 0;
+    border-radius: 5px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// pagination
+.pagination {
+  .page-link {
+    padding: 0;
+    margin-left: 0;
+    color: $dark;
+    border: 0;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 0 !important;
+
+    &.active,
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      color: $white;
+      background-color: $color-primary;
+    }
+
+    &.arrow {
+      font-size: 26px;
+      width: auto;
+
+      &:hover {
+        color: $color-primary;
+        background-color: $white;
+      }
+    }
+  }
+
+  .page-item.active {
+    .page-link {
+      box-shadow: none;
+      color: $white;
+      background-color: $color-primary;
+    }
+  }
+}
+
+
+// form-control
+.form-control {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 0 !important;
+  height: 56px;
+  padding: 12px 18px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: .3s ease;
+
+  &:focus {
+    box-shadow: none;
+    color: $dark;
+    border-bottom-color: $dark;
+
+    ~.input-group-append {
+      .input-group-text {
+        border-bottom-color: $dark;
+      }
+    }
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #999;
+  border-radius: 0 !important;
+  transition: .3s ease;
+  padding-right: 0;
+
+  .icon {
+    font-size: 22px;
+  }
+}
+
+button.input-group-text {
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.custom-control-label {
+  user-select: none;
+  cursor: text;
+  line-height: 1.45;
+
+  &::before {
+    cursor: pointer;
+    border-radius: 0;
+    box-shadow: none !important;
+  }
+}
+
+.custom-checkbox {
+  margin-top: 15px;
+
+  .custom-control-label::before {
+    border-radius: 0;
+  }
+
+  .custom-control-input:checked~.custom-control-label::before,
+  .custom-control-input:not(:disabled):active~.custom-control-label::before {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+    border-color: transparent;
+  }
+
+  .custom-control-input:disabled:checked~.custom-control-label::before {
+    background-color: rgba($color-primary, .5);
+    border-color: rgba($color-primary, .2);
+  }
+}
+
+/*------------------------------------------------------------------
+ # helper classes
+-------------------------------------------------------------------*/
+.font-primary {
+  font-family: $font-primary
+}
+
+.font-secondary {
+  font-family: $font-secondary
+}
+
+.font-weight-500 {
+  font-weight: 500
+}
+
+.font-weight-600 {
+  font-weight: 600
+}
+
+.text-primary {
+  color: $color-primary !important
+}
+
+a.text-primary:hover {
+  color: darken($color-primary, 10) !important
+}
+
+.bg-primary {
+  background-color: $color-primary !important
+}
+
+.text-dark {
+  color: $dark
+}
+
+a.text-dark:hover {
+  color: $color-primary !important
+}
+
+.bg-light {
+  background-color: $light !important
+}
+
+.bg-dark {
+  background-color: $dark !important
+}
+
+
+.text-black-100 {
+  color: $black-100
+}
+
+.text-black-200 {
+  color: $black-200
+}
+
+.text-black-300 {
+  color: $black-300
+}
+
+.text-black-400 {
+  color: $black-400
+}
+
+.text-black-500 {
+  color: $black-500
+}
+
+.text-black-600 {
+  color: $black-600
+}
+
+.text-black-700 {
+  color: $black-700
+}
+
+.text-black-800 {
+  color: $black-800
+}
+
+.text-black-900 {
+  color: $black-900
+}
+
+a.text-black-200:hover,
+a.text-black-300:hover,
+a.text-black-500:hover,
+a.text-black-700:hover {
+  color: $color-primary
+}

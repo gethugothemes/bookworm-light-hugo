@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-5">
+        <div class="title-bordered">
+          <h1 class="h3">Search results for
+            <span class="mark">
+              <script>
+                var keyword = (window.location.search).substr(3);
+                var result = keyword.replace("+", " ");
+                document.write(result);
+              </script>
+            </span>
+          </h1>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="row" id="search-results"></div>
+        <div class="row">
+          <script id="search-result-template" type="text/x-js-template">
+            <div class="col-lg-4 col-md-6 mb-4">
+            <article class="card post-card" id="summary-${key}">
+              ${ isset image }<img loading="lazy" class="w-100" src="{{site.BaseURL}}${image}" alt="${title}">${end}
+              <div class="card-body">
+                <h3 class="h4 mb-4">
+                  <a class="post-title" href="${link}">${title}</a>
+                </h3>
+              </div>
+            </article>
+            </div>
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Search index -->
+<script>var indexURL = {{"index.json" | absURL}}</script>
+
+{{ end }}

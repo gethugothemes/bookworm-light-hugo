@@ -1,0 +1,73 @@
+
+// newsletter-block
+.newsletter-block {
+   background-color: $dark;
+   color: $white;
+   padding: 80px 60px;
+   @include tablet {
+      padding: 80px 30px;
+   }
+   .input-group-text,
+   .form-control {
+      background-color: transparent;
+      color: $white;
+      border-color: #999;
+   }
+   .form-control {
+      &:focus {
+         border-bottom-color: $white;
+         ~ .input-group-append {
+            .input-group-text {
+               border-bottom-color: $white;
+            }
+         }
+      }
+   }
+   ::-webkit-input-placeholder {
+      color: rgba($white, .7);
+   }
+   :-ms-input-placeholder {
+      color: rgba($white, .7);
+   }
+   ::placeholder {
+      color: rgba($white, .7);
+   }
+   button.input-group-text {
+      color: rgba($white, .7);
+      &:hover {
+         color: $white;
+      }
+   }
+}
+
+
+// instagram-feed
+.instagram_feed {
+   .instagram-post:hover {
+      opacity: .8;
+   }
+}
+
+
+// blog post
+.single-post-meta,
+.single-post-similer {
+   margin-top: 70px;
+}
+.single-post-author {
+   margin-top: 50px;
+}
+.post-meta-tags {
+   a {
+      display: inline-block;
+      background-color: #f7f8fa;
+      color: $dark;
+      padding: 6px 13px;
+      font-weight: 500;
+      font-size: 15px;
+      &:hover {
+         background-color: transparent;
+         color: $color-primary;
+      }
+   }
+}
