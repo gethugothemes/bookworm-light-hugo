@@ -8,6 +8,7 @@
     <h3 class="h2 mb-4">
       <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
     </h3>
+    <p>{{ .Plain | truncate 150 }}</p>
   </div>
   <div class="card-footer">
     <ul class="card-meta list-inline">

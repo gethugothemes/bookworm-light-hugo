@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10">
-        <div class="text-center">
+        <div class="text-center mb-5">
           <h3 class="h2 mb-4 post-title">{{.Title}}</h3>
           <ul class="card-meta list-inline">
             <li class="list-inline-item">
@@ -17,22 +17,18 @@
                 {{ end }}
               </a>
             </li>
-            <li class="list-inline-item">
-              <ul class="card-meta-tag list-inline">
-                {{range .Params.tags}}
-                <li class="list-inline-item"><a href="/tags/{{.| urlize}}">{{.}}</a></li>
-                {{end}}
-              </ul>
-            </li>
+            <li class="list-inline-item">|</li>
             <li class="list-inline-item">
               <span>{{.PublishDate.Format "02 January 2006"}}</span>
             </li>
           </ul>
         </div>
 
-        <div class="my-5 text-center">
-          <img loading="lazy" class="img-fluid" src="{{.Params.image | absURL}}" alt="{{.Title}}">
+        {{ with .Params.image }}
+        <div class="mb-5 text-center">
+          <img loading="lazy" class="img-fluid rounded" src="{{ . | absURL}}">
         </div>
+        {{ end }}
 
         <div class="content">
           {{.Content}}
@@ -45,7 +41,7 @@
         <div class="col-lg-5 col-md-6 text-center text-md-left">
           <ul class="post-meta-tags list-unstyled list-inline">
             {{range .Params.tags}}
-            <li class="list-inline-item"><a href="/tags/{{.| urlize}}">{{.}}</a></li>
+            <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}">{{.}}</a></li>
             {{end}}
           </ul>
         </div>
@@ -59,14 +55,15 @@
     <div class="single-post-similer">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="row mt-4">
-            {{ $related := .Site.RegularPages.Related . | last 2 }}
-            {{ with $related }}
-            {{ range . }}
-            <div class="col-md-6">
-              {{.Render "post"}}
+          <div class="row mt-3">
+            <div class="col-12">
+              <h2 class="text-dark font-weight-800 mb-5">You May Also Like</h2>
             </div>
-            {{ end }}
+            {{ $related := (where site.RegularPages "Section" "blog") | intersect (where site.Pages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
+              {{ range first 2 $related }}
+            <div class="col-md-6">
+              {{ .Render "post" }}
+            </div>
             {{ end }}
           </div>
         </div>
@@ -77,10 +74,8 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="media d-block d-sm-flex text-center text-sm-left">
-
             {{ with .Site.GetPage (.Params.Author | urlize | lower) }}
-            <a href="{{.Permalink}}"><img loading="lazy" class="img-fluid rounded-circle mr-0 mr-sm-4 mb-4"
-                src="{{.Params.image | absURL}}" alt="{{ .Title }}"></a>
+            <a href="{{.Permalink}}"><img loading="lazy" class="img-fluid rounded-circle mr-0 mr-sm-4 mb-4" src="{{.Params.image | absURL}}" alt="{{ .Title }}"></a>
             <div class="media-body">
               <p class="font-primary">Written By</p>
               <h4><a href="{{.Permalink}}" class="text-dark font-weight-700">{{.Title}}</a></h4>

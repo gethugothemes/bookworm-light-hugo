@@ -5,7 +5,7 @@ theme = "bookworm"
 # post pagination
 paginate = "5"
 # post excerpt
-summaryLength = "10"
+summaryLength = "20"
 # google analytics
 googleAnalytics = "" # example : UA-123-45
 # disqus short name
