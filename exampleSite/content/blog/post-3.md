@@ -5,6 +5,7 @@ image: "images/post/06.jpg"
 date: 2021-01-25T11:35:57+06:00
 author: "Henara Colii"
 tags: ["City", "Gold"]
+categories: ["Travel"]
 draft: false
 ---
 

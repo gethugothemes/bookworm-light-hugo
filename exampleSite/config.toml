@@ -25,36 +25,46 @@ unsafe= true
 ######################## Plugins ####################
 # CSS Plugins
 [[params.plugins.css]]
-src = "plugins/bootstrap/bootstrap.min.css"
+link = "plugins/bootstrap/bootstrap.min.css"
+attributes = "media='screen'"
 [[params.plugins.css]]
-src = "plugins/line-awesome/css/line-awesome.min.css"
+link = "plugins/line-awesome/css/line-awesome.min.css"
+attributes = ""
 [[params.plugins.css]]
-src = "https://fonts.gstatic.com"
+link = "https://fonts.gstatic.com"
 attributes = "rel='preconnect'"
 
 [[params.plugins.css]]
-src = "https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&display=swap"
+link = "https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&display=swap"
+attributes = ""
 
 # JS Plugins
 [[params.plugins.js]]
-src = "plugins/jquery/jquery.min.js"
+link = "plugins/jquery/jquery.min.js"
+attributes = ""
 [[params.plugins.js]]
-src = "plugins/bootstrap/bootstrap.min.js"
+link = "plugins/bootstrap/bootstrap.min.js"
+attributes = ""
 [[params.plugins.js]]
-src = "plugins/instagram-feed/instagram-feed.js"
+link = "plugins/instagram-feed/instagram-feed.js"
+attributes = ""
 
 [[params.plugins.js]]
-src = "plugins/search/fuse.min.js"
+link = "plugins/search/fuse.min.js"
+attributes = ""
 [[params.plugins.js]]
-src = "plugins/search/mark.js"
+link = "plugins/search/mark.js"
+attributes = ""
 [[params.plugins.js]]
-src = "plugins/search/search.js"
+link = "plugins/search/search.js"
+attributes = ""
 [[params.plugins.js]]
-src = "plugins/turbolinks/turbolinks.js"
+link = "plugins/turbolinks/turbolinks.js"
+attributes = ""
 
 #################### default parameters ################################
 [params]
-logo = "images/logo.svg"
+logo = "images/logo.png"
 logo_height = "38"
 favicon = "images/favicon.png"
 # Meta data
@@ -88,21 +98,21 @@ enable = false
 preloader = "" # use jpg, png, svg or gif format.
 
 
-# Subscription
-[params.subscription]
-enable = true
-# mailchimp subsciption
-mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
-mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
-title = "Subscribe to the best creative articles feed."
-input_placeholder = "Enter your email"
-
-
 # Instagram feed
 [params.instafeed]
 enable = true
 instagram_user = "bookworm"
 access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
+
+
+# Subscription
+[params.subscription]
+enable = false
+# mailchimp subsciption
+mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
+mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
+title = "Subscribe to the best creative articles feed."
+input_placeholder = "Enter your email"
 
 # cookies
 [params.cookies]
@@ -136,14 +146,20 @@ hasChildren = true
   [[menu.main]]
   parent = "Pages"
   weight = 1
-  url = "author"
+  url = "author/"
   name = "Author"
   
   [[menu.main]]
   parent = "Pages"
   weight = 2
-  url = "tags"
+  url = "tags/"
   name = "Tags"
+  
+  [[menu.main]]
+  parent = "Pages"
+  weight = 3
+  url = "categories/"
+  name = "Category"
 
 # Header Social Icons
 [[params.social]]
@@ -162,7 +178,7 @@ url = "https://www.instagram.com/"
 icon = "lab la-instagram"
 
 [[params.social]]
-name = "Dribbble"
-url = "https://www.dribbble.com/"
-icon = "lab la-dribbble"
+name = "Linkedin"
+url = "https://www.linkedin.com/"
+icon = "lab la-linkedin-in"
 

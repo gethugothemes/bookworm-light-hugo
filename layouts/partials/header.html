@@ -22,7 +22,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navHeader">
-            <div class="navbar-nav {{ if lt site.Params.social 1 }}ml-auto{{else}}mx-auto{{end}}">
+            <div class="navbar-nav {{ if site.Params.search }}mx-auto{{else}}ml-auto{{end}}">
 
               {{ $current := . }}
               {{ range site.Menus.main }}
@@ -30,7 +30,7 @@
               {{ $active = or $active (eq .Name $current.Title) }}
               {{if .HasChildren}}
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle {{ if $active }}active{{ end }}" href="#" role="button" data-toggle="dropdown" aria-expanded="false">{{.Name}}</a>
+                <a class="nav-link dropdown-toggle d-inline-block {{ if $active }}active{{ end }}" href="#" role="button" data-toggle="dropdown" aria-expanded="false">{{.Name}}</a>
                 <ul class="dropdown-menu">
                   {{range .Children}}
                   <li><a class="dropdown-item {{ if $active }}active{{ end }}" href="{{.URL | absURL}}">{{.Name}}</a></li>
@@ -45,24 +45,17 @@
               {{end}}
             </div>
             
-            <div class="navbar-right">
+            {{if site.Params.search}}
+            <div class="navbar-right d-none d-lg-inline-block">
               <ul class="social-links list-unstyled list-inline">
-                {{ range site.Params.social }}
-                <li class="list-inline-item"><a href="{{.url}}">
-                  <i class="{{.icon}}"></i>
-                </a></li>
-                {{end}}
-
-
-                {{if site.Params.search}}
                 <li class="list-inline-item ml-4 d-none d-lg-inline-block">
                   <button class="search-toggle" data-toggle="search" aria-label="Search Toggle">
                     <i class="las la-search"></i>
                   </button>
                 </li>
-                {{end}}
               </ul>
             </div>
+            {{end}}
           </div>
         </nav>
       </div>

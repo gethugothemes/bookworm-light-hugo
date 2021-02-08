@@ -1,8 +1,8 @@
 // start header style
 .header-height-fix {
-  height: 138px;
+  height: 109px;
   @include tablet {
-    height: 90px;
+    height: 60px;
   }
 }
 header {
@@ -12,11 +12,11 @@ header {
   left: 0;
   z-index: 1000;
   background-color: $white;
-  padding: 70px 0 10px 0;
+  padding: 50px 0 20px;
   transition: .25s ease;
 
   @include tablet {
-    padding: 40px 0 0 0;
+    padding: 40px 0;
   }
 
   &.header-sticky-top {
@@ -47,7 +47,7 @@ header {
 
     &.dropdown .nav-link::before {
       position: absolute;
-      right: -2px;
+      right: 0;
       top: calc(50% - 7px);
       display: inline-block;
       vertical-align: .255em;
@@ -139,6 +139,10 @@ header {
       max-width: 300px;
       text-align: center;
       padding-top: 20px;
+    }
+
+    .dropdown-toggle {
+      margin-right: 12px;
     }
 
     .navbar-right {

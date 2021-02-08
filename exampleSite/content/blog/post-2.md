@@ -5,6 +5,7 @@ image: "images/post/03.jpg"
 date: 2021-01-25T11:33:57+06:00
 author: "Lubana Era"
 tags: ["City", "Gold"]
+categories: ["Travel"]
 draft: false
 ---
 

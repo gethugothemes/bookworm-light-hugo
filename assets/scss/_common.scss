@@ -2,7 +2,7 @@ body {
   color: $gray;
   background-color: $white;
   font-family: $font-primary;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.65;
 }
@@ -101,19 +101,14 @@ mark {
   .card-body {
     padding: 0;
     padding-top: 30px;
-  }
-
-  .card-footer {
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-    padding-bottom: 70px;
+    margin-bottom: 70px;
   }
 }
 
 .post-title {
   font-weight: 800;
   color: $dark;
+  display: inline-block;
 }
 
 a.post-title:hover,
@@ -122,10 +117,10 @@ a.post-title:hover,
 }
 
 .card-meta {
-  font-weight: 700;
+  font-weight: 500;
 
   .list-inline-item:not(:last-child) {
-    margin-right: 0.8rem;
+    margin-right: 1rem;
   }
 
   .card-meta-author {
@@ -139,6 +134,10 @@ a.post-title:hover,
       border-radius: 50%;
       height: 26px;
       margin-right: 6px;
+    }
+
+    span {
+      vertical-align: middle;
     }
   }
 
@@ -165,13 +164,21 @@ a.post-title:hover,
   }
 }
 
+// taxonomies-list
+.taxonomies-list {
+  li a:hover {
+    background-color: $color-primary !important;
+    color: $white;
+  }
+}
+
 
 // content
 .content {
   font-size: 17px;
 
   p {
-    margin-bottom: 25px;
+    margin-bottom: 16px;
   }
 
   img {
@@ -266,8 +273,8 @@ a.post-title:hover,
 // breadcrumb
 .breadcrumb-menu {
   display: inline-block;
-  padding-bottom: 25px;
-  border-bottom: 3px solid $color-primary;
+  padding-top: 18px;
+  border-top: 1px solid $color-primary;
 }
 
 
@@ -275,7 +282,7 @@ a.post-title:hover,
 .form-control {
   padding: 0;
   border: 0;
-  border-bottom: 1px solid #e6e6e6;
+  border: 1px solid #e6e6e6;
   border-radius: 0 !important;
   height: 56px;
   padding: 12px 18px;
@@ -286,11 +293,11 @@ a.post-title:hover,
   &:focus {
     box-shadow: none;
     color: $dark;
-    border-bottom-color: $dark;
+    border-color: $color-primary;
 
     ~.input-group-append {
       .input-group-text {
-        border-bottom-color: $dark;
+        border-color: $color-primary;
       }
     }
   }
@@ -302,11 +309,9 @@ textarea {
 
 .input-group-text {
   background-color: transparent;
-  border: 0;
   border-bottom: 1px solid #999;
   border-radius: 0 !important;
   transition: .3s ease;
-  padding-right: 0;
 
   .icon {
     font-size: 22px;

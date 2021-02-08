@@ -6,6 +6,7 @@ date: 2021-02-05T16:56:47+06:00
 draft: false
 author: "Lubana Era"
 tags: ["Diy", "Toy"]
+categories: ["LifeStyle"]
 ---
 
 Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.

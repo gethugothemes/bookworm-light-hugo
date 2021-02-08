@@ -6,6 +6,7 @@ date: 2021-02-04T16:56:47+06:00
 draft: false
 author: "Lubana Era"
 tags: ["Photography"]
+categories: ["Photography"]
 ---
 
 Photography is an invaluable medium that allows us to capture the incandescent beauty of the outside world, something many of us haven’t seen in... well, a hot minute. Global pandemics will do that.

@@ -5,20 +5,21 @@
   </a>
   {{end}}
   <div class="card-body">
-    <h3 class="h2 mb-4">
-      <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
-    </h3>
-    <p>{{ .Plain | truncate 150 }}</p>
-  </div>
-  <div class="card-footer">
-    <ul class="card-meta list-inline">
+    <ul class="card-meta list-inline mb-3">
       <li class="list-inline-item">
         {{ with site.GetPage (.Params.Author | urlize | lower) }}
         <a href="{{.Permalink}}" class="card-meta-author">
-          <img loading="lazy" src="{{.Params.image | absURL}}" alt="{{ .Title }}">
+          {{if .Params.image}}
+          <img loading="lazy" src="{{.Params.image | absURL}}" alt="{{.Title}}">
+          {{else}}
+          <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=150&pg&d=identicon">
+          {{end}}
           <span>{{ .Title }}</span>
         </a>
         {{ end }}
+      </li>
+      <li class="list-inline-item">
+        <span>{{.PublishDate.Format "02 Jan, 2006"}}</span>
       </li>
       <li class="list-inline-item">
         <ul class="card-meta-tag list-inline">
@@ -27,9 +28,12 @@
           {{end}}
         </ul>
       </li>
-      <li class="list-inline-item">
-        <span>{{.PublishDate.Format "02 Jan, 2006"}}</span>
-      </li>
     </ul>
+    <h3 class="mb-3">
+      <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
+    </h3>
+    <p>{{ .Plain | truncate 150 }}</p>
+
+    <a href="{{.Permalink}}" class="btn btn-sm btn-primary rounded">Read More</a>
   </div>
 </article>
