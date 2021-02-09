@@ -1,12 +1,6 @@
 // newsletter-block
 .newsletter-block {
-  background-color: $dark;
   color: $white;
-  padding: 80px 60px;
-
-  @include tablet {
-    padding: 80px 30px;
-  }
 
   .input-group-text,
   .form-control {
@@ -15,8 +9,15 @@
     border-color: #999;
   }
 
+  .form-control {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+  }
+
   .input-group-text {
     padding: .375rem 1rem;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
   }
 
   .form-control {

@@ -30,9 +30,6 @@ attributes = "media='screen'"
 [[params.plugins.css]]
 link = "plugins/line-awesome/css/line-awesome.min.css"
 attributes = ""
-[[params.plugins.css]]
-link = "https://fonts.gstatic.com"
-attributes = "rel='preconnect'"
 
 [[params.plugins.css]]
 link = "https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&display=swap"
@@ -86,8 +83,8 @@ disableAssetsBusting = false
 # main section
 mainSections = ["blog"]
 
-# copyright text
-[params.copyright]
+# footer
+[params.footer]
 info = "All rights reserved 2021"
 author = "Gethugothemes"
 author_url = "https://gethugothemes.com/"
@@ -107,11 +104,11 @@ access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1Nmpx
 
 # Subscription
 [params.subscription]
-enable = false
+enable = true
 # mailchimp subsciption
 mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
 mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
-title = "Subscribe to the best creative articles feed."
+title = "Subscribe for our monthly newsletter."
 input_placeholder = "Enter your email"
 
 # cookies
@@ -121,7 +118,6 @@ expire_days = 2
 
 
 ############################# Main Menu ########################
-
 [[menu.main]]
 weight = 1
 url = "/"
@@ -160,25 +156,60 @@ hasChildren = true
   weight = 3
   url = "categories/"
   name = "Category"
+  
+  [[menu.main]]
+  parent = "Pages"
+  weight = 4
+  url = "elements/"
+  name = "Elements"
+  
+  [[menu.main]]
+  parent = "Pages"
+  weight = 5
+  url = "privacy/"
+  name = "Privacy"
+  
+  [[menu.main]]
+  parent = "Pages"
+  weight = 6
+  url = "terms-conditions/"
+  name = "Terms & Conditions"
+
+############################# Footer Menu ########################
+[[menu.footer]]
+weight = 1
+url = "about/"
+name = "About"
+
+[[menu.footer]]
+weight = 2
+url = "author/"
+name = "Authors"
+
+[[menu.footer]]
+weight = 3
+url = "privacy/"
+name = "Privacy"
+
+[[menu.footer]]
+weight = 4
+url = "terms-conditions/"
+name = "Terms & Conditions"
 
 # Header Social Icons
 [[params.social]]
-name = "Facebook"
 url = "https://www.facebook.com/"
 icon = "lab la-facebook-f"
 
 [[params.social]]
-name = "Twitter"
 url = "https://www.twitter.com/"
 icon = "lab la-twitter"
 
 [[params.social]]
-name = "Instagram"
 url = "https://www.instagram.com/"
 icon = "lab la-instagram"
 
 [[params.social]]
-name = "Linkedin"
 url = "https://www.linkedin.com/"
 icon = "lab la-linkedin-in"
 

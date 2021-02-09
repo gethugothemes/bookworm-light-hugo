@@ -22,7 +22,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navHeader">
-            <div class="navbar-nav {{ if site.Params.search }}mx-auto{{else}}ml-auto{{end}}">
+            <ul class="navbar-nav {{ if site.Params.search }}mx-auto{{else}}ml-auto{{end}}">
 
               {{ $current := . }}
               {{ range site.Menus.main }}
@@ -43,7 +43,7 @@
               </li>
               {{end}}
               {{end}}
-            </div>
+            </ul>
             
             {{if site.Params.search}}
             <div class="navbar-right d-none d-lg-inline-block">
@@ -69,7 +69,7 @@
     <i class="las la-times text-primary"></i>
   </div>
   <form action="{{ `search`| relURL }}">
-    <input id="search-query" name="s" type="search" placeholder="Type words &amp; hit enter" class="text-center">
+    <input id="search-query" name="s" type="search" placeholder="Type words &amp; hit enter" class="text-center" aria-label="search-query">
   </form>
 </div>
 {{end}}

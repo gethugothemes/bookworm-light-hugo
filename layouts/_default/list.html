@@ -1,5 +1,8 @@
 {{define "main"}}
 
+<!-- checking blog -->
+{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+
 <section class="section-sm">
   <div class="container">
     <div class="row no-gutters justify-content-center">
@@ -15,5 +18,22 @@
     </div>
   </div>
 </section>
+
+{{ else }}
+
+{{ partial "page-header.html" . }}
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="content">
+          {{.Content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
 
 {{end}}

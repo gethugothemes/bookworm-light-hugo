@@ -1,5 +1,8 @@
 {{ define "main"}}
 
+<!-- checking blog -->
+{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+
 <section class="section-sm">
   <div class="container">
     <div class="row justify-content-center">
@@ -26,7 +29,7 @@
 
         {{ with .Params.image }}
         <div class="mb-5 text-center">
-          <img loading="lazy" class="img-fluid rounded" src="{{ . | absURL}}">
+          <img loading="lazy" class="img-fluid rounded" src="{{ . | absURL}}" alt="Image not Found">
         </div>
         {{ end }}
 
@@ -95,5 +98,21 @@
     </div>
   </div>
 </section>
+
+{{ else }}
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="content">
+          {{.Content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
 
 {{ end }}

@@ -78,16 +78,13 @@ mark {
       color: $color-primary;
     }
   }
-
-  &.has-bg-color {
-    a {
-      padding: 7px 9px;
-      color: $white;
-
-      &:hover {
-        opacity: .7;
-      }
-    }
+  &.icon-box li a {
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    border: 1px solid #ddd;
+    padding: 0;
+    @extend .rounded;
   }
 }
 
@@ -201,7 +198,7 @@ a.post-title:hover,
   ol,
   ul {
     margin-bottom: 25px;
-    padding-left: 5px;
+    padding-left: 0;
 
     li {
       margin-bottom: 10px;
@@ -225,6 +222,236 @@ a.post-title:hover,
     p {
       margin-bottom: 0;
     }
+  }
+}
+
+// content style
+.content {
+
+  * {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    color: $dark;
+  }
+
+  strong {
+    font-weight: 800;
+  }
+
+  a {
+    color: $gray;
+    border-bottom: 1px dotted $color-primary;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+  a.collapse-head {
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  ol,
+  ul {
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  ul {
+    margin-bottom: 20px;
+    list-style-type: none;
+
+    li {
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background: $color-primary;
+        left: 3px;
+        top: 8px;
+      }
+    }
+
+  }
+
+  table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+  }
+
+  table td,
+  table th {
+    padding: .75rem;
+    vertical-align: top;
+    margin-bottom: 0;
+    border: 1px solid #e0e0e0;
+  }
+
+  tr:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  th {
+    font-weight: 500;
+  }
+
+  thead {
+    background: #efefef;
+    margin-bottom: 0;
+
+    tr {
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
+
+  tbody {
+    background: lighten($color: #efefef, $amount: 5);
+    margin-bottom: 0;
+  }
+
+  .notices {
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .notices p {
+    padding: 10px;
+    margin-bottom: 0;
+  }
+
+  .notices p::before {
+    position: absolute;
+    top: 2px;
+    color: $white;
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    content: "\f05a";
+    left: 10px;
+  }
+
+  .notices.note p {
+    border-top: 30px solid #6ab0de;
+    background: $light;
+  }
+
+  .notices.note p::after {
+    content: 'Note';
+    position: absolute;
+    top: 2px;
+    color: $white;
+    left: 2rem;
+  }
+
+
+  .notices.tip p {
+    border-top: 30px solid #78C578;
+    background: $light;
+  }
+
+  .notices.tip p::after {
+    content: 'Tip';
+    position: absolute;
+    top: 2px;
+    color: $white;
+    left: 2rem;
+  }
+
+  .notices.info p {
+    border-top: 30px solid #F0B37E;
+    background: #f7f7f7;
+  }
+
+  .notices.info p::after {
+    content: 'Info';
+    position: absolute;
+    top: 2px;
+    color: $white;
+    left: 2rem;
+  }
+
+
+  .notices.warning p {
+    border-top: 30px solid #E06F6C;
+    background: $light;
+  }
+
+  .notices.warning p::after {
+    content: 'Warning';
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    left: 2rem;
+  }
+
+  pre {
+    display: block;
+    padding: 9.5px;
+    margin: 10px 0px 10px;
+    white-space: pre-wrap;
+  }
+
+  code {
+    margin-bottom: 0 !important;
+    font-size: 100%;
+  }
+}
+
+// code-tab
+.code-tabs {
+  border: 1px solid #ddd;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .nav-tabs {
+    margin-bottom: 0;
+
+    .nav-item {
+      padding-left: 0;
+      border-right: 1px solid #ddd;
+
+      .nav-link {
+        text-decoration: none;
+        font-weight: 500;
+        border: 0;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &.active {
+        background: $color-primary;
+
+        .nav-link {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    padding: 20px 15px;
   }
 }
 
@@ -284,8 +511,8 @@ a.post-title:hover,
   border: 0;
   border: 1px solid #e6e6e6;
   border-radius: 0 !important;
-  height: 56px;
-  padding: 12px 18px;
+  height: 50px;
+  padding: 12px 16px;
   font-size: 17px;
   font-weight: 500;
   transition: .3s ease;
@@ -415,6 +642,10 @@ a.text-dark:hover {
   background-color: $dark !important
 }
 
+.text-gray:hover {
+  color: $color-primary;
+}
+
 
 .text-black-100 {
   color: $black-100
@@ -457,4 +688,26 @@ a.text-black-300:hover,
 a.text-black-500:hover,
 a.text-black-700:hover {
   color: $color-primary
+}
+
+// footer
+footer {
+  background-color: $dark;
+  .icon-box a {
+    color: rgba($white, .7);
+    &:hover {
+      color: $white;
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+}
+.footer-menu {
+  li a {
+    color: rgba($white, .7);
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
 }

@@ -87,37 +87,6 @@
           </div>
         </div>
 
-        {{ with site.Params.subscription }}
-        {{ if .enable }}
-        <div class="section pb-0">
-          <div class="row">
-            <div class="col-12">
-              <div class="newsletter-block rounded font-primary">
-                <div class="row align-items-center">
-                  <div class="col-lg-6">
-                    <h3 class="mb-0">{{ .title }}</h3>
-                  </div>
-                  <div class="col-lg-6 mt-4 mt-lg-0">
-                    <form action="{{ .mailchimp_form_action }}" method="post" name="mailchimp_form_name" target="_blank">
-                      <div class="input-group">
-                        <input form="subscription" type="text" class="form-control" placeholder="{{ .input_placeholder }}" aria-label="Subscription" required>
-                        <div class="input-group-append">
-                          <button type="submit" name="subscription" class="input-group-text" aria-label="Subscription Button"><i class="icon las la-paper-plane"></i></button>
-                        </div>
-                      </div>
-                      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="{{ .mailchimp_form_name }}" tabindex="-1">
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {{ end }}
-        {{ end }}
-
       </div>
     </div>
   </div>
@@ -125,7 +94,7 @@
 
 {{ with site.Params.instafeed }}
 {{ if .enable }}
-<section>
+<section class="mb-5 pb-4">
   <div class="container">
     <div class="row">
       <div class="col-12">
