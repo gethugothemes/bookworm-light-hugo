@@ -55,24 +55,6 @@
       </div>
     </div>
 
-    <div class="single-post-similer">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="row mt-3">
-            <div class="col-12">
-              <h2 class="text-dark font-weight-800 mb-5">You May Also Like</h2>
-            </div>
-            {{ $related := (where site.RegularPages "Section" "blog") | intersect (where site.Pages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
-              {{ range first 2 $related }}
-            <div class="col-md-6">
-              {{ .Render "post" }}
-            </div>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="single-post-author">
       <div class="row justify-content-center">
         <div class="col-lg-10">
@@ -80,7 +62,7 @@
             {{ with .Site.GetPage (.Params.Author | urlize | lower) }}
             <a href="{{.Permalink}}"><img loading="lazy" class="img-fluid rounded-circle mr-0 mr-sm-4 mb-4" src="{{.Params.image | absURL}}" alt="{{ .Title }}"></a>
             <div class="media-body">
-              <p class="font-primary">Written By</p>
+              <p class="font-primary mb-1">Written By</p>
               <h4><a href="{{.Permalink}}" class="text-dark font-weight-700">{{.Title}}</a></h4>
               <p class="font-primary">{{ .Summary | truncate 250 }}</p>
               <ul class="social-links list-unstyled list-inline ml-0 ml-sm-n2">
@@ -90,6 +72,24 @@
                   </a></li>
                 {{end}}
               </ul>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-post-similer">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row mt-3">
+            <div class="col-12">
+              <h3 class="text-dark font-weight-800 mb-4 pb-2">You May Also Like</h3>
+            </div>
+            {{ $related := (where site.RegularPages "Section" "blog") | intersect (where site.Pages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
+              {{ range first 2 $related }}
+            <div class="col-md-6">
+              {{ .Render "post" }}
             </div>
             {{ end }}
           </div>

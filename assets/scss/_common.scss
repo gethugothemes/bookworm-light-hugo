@@ -116,6 +116,10 @@ a.post-title:hover,
 .card-meta {
   font-weight: 500;
 
+  > li:not(:first-child) {
+    vertical-align: middle;
+  }
+
   .list-inline-item:not(:last-child) {
     margin-right: 1rem;
   }
@@ -144,11 +148,7 @@ a.post-title:hover,
     }
 
     a {
-      color: $dark;
-
-      &:hover {
-        color: $dark
-      }
+      color: $gray;
 
       &::before {
         content: "#";
