@@ -1,12 +1,8 @@
-// Preloader js
-function preloader() {
-	$('.preloader').delay(100).fadeOut(300);
-}
-$(preloader);
-$(document).on("turbolinks:load", preloader);
-
-(function ($) {
+$(document).on('turbolinks:load', function () {
   'use strict';
+
+  // prelaoder
+  $('.preloader').delay(100).fadeOut(10);
 
   // header sticky
   $(window).scroll(function () {
@@ -58,37 +54,37 @@ $(document).on("turbolinks:load", preloader);
 
   });
 
-	// tab
-	$('.tab-content').find('.tab-pane').each(function (idx, item) {
-		var navTabs = $(this).closest('.code-tabs').find('.nav-tabs'),
-			title = $(this).attr('title');
-		navTabs.append('<li class="nav-item"><a class="nav-link" href="#">' + title + '</a></li>');
-	});
+  // tab
+  $('.tab-content').find('.tab-pane').each(function (idx, item) {
+    var navTabs = $(this).closest('.code-tabs').find('.nav-tabs'),
+      title = $(this).attr('title');
+    navTabs.append('<li class="nav-item"><a class="nav-link" href="#">' + title + '</a></li>');
+  });
 
-	$('.code-tabs ul.nav-tabs').each(function () {
-		$(this).find("li:first").addClass('active');
-	})
+  $('.code-tabs ul.nav-tabs').each(function () {
+    $(this).find("li:first").addClass('active');
+  })
 
-	$('.code-tabs .tab-content').each(function () {
-		$(this).find("div:first").addClass('active');
-	});
+  $('.code-tabs .tab-content').each(function () {
+    $(this).find("div:first").addClass('active');
+  });
 
-	$('.nav-tabs a').click(function (e) {
-		e.preventDefault();
-		var tab = $(this).parent(),
-			tabIndex = tab.index(),
-			tabPanel = $(this).closest('.code-tabs'),
-			tabPane = tabPanel.find('.tab-pane').eq(tabIndex);
-		tabPanel.find('.active').removeClass('active');
-		tab.addClass('active');
-		tabPane.addClass('active');
-	});
+  $('.nav-tabs a').click(function (e) {
+    e.preventDefault();
+    var tab = $(this).parent(),
+      tabIndex = tab.index(),
+      tabPanel = $(this).closest('.code-tabs'),
+      tabPane = tabPanel.find('.tab-pane').eq(tabIndex);
+    tabPanel.find('.active').removeClass('active');
+    tab.addClass('active');
+    tabPane.addClass('active');
+  });
 
-	// Accordions
-	$('.collapse').on('shown.bs.collapse', function () {
-		$(this).parent().find('.la-plus').removeClass('la-plus').addClass('la-minus');
-	}).on('hidden.bs.collapse', function () {
-		$(this).parent().find('.la-minus').removeClass('la-minus').addClass('la-plus');
-	});
+  // Accordions
+  $('.collapse').on('shown.bs.collapse', function () {
+    $(this).parent().find('.la-plus').removeClass('la-plus').addClass('la-minus');
+  }).on('hidden.bs.collapse', function () {
+    $(this).parent().find('.la-minus').removeClass('la-minus').addClass('la-plus');
+  });
 
-})(jQuery);
+});
