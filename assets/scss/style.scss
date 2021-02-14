@@ -1,16 +1,34 @@
 /*!------------------------------------------------------------------
-[MAIN STYLESHEET]
-
-PROJECT:	Project Name
-VERSION:	Versoin Number
+PROJECT: Bookworm Hugo
+VERSION: 1.0.0
+AUTHOR: Themefisher
+AUTHOR WEBSITE: https://themefisher.com
 -------------------------------------------------------------------*/
 
-/*------------------------------------------------------------------
-[TABLE OF CONTENTS]
--------------------------------------------------------------------*/
+// site variables
+{{ with site.Params.variables }}
+$font-primary: '{{.font_primary}}', sans-serif;
+
+$h1: {{.h1}};
+$h1-lg: {{.h1_lg}};
+$h1-md: {{.h1_md}};
+$h2: {{.h2}};
+$h2-md: {{.h2_md}};
+$h3: {{.h3}};
+$h3-md: {{.h3_md}};
+$h4: {{.h4}};
+$h5: {{.h5}};
+$h6: {{.h6}};
+
+$white: {{.white}};
+$black: {{.black}};
+$dark: {{.dark}};
+$gray: {{.gray}};
+$light: {{.light}};
+$color-primary: {{.color_primary}};
+{{ end }}
 
 @import 'mixins';
-@import 'variables';
 @import 'typography';
 @import 'buttons';
 @import 'common';

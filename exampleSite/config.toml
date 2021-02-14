@@ -45,7 +45,6 @@ attributes = ""
 [[params.plugins.js]]
 link = "plugins/instagram-feed/instagram-feed.js"
 attributes = ""
-
 [[params.plugins.js]]
 link = "plugins/search/fuse.min.js"
 attributes = ""
@@ -58,6 +57,26 @@ attributes = ""
 [[params.plugins.js]]
 link = "plugins/turbolinks/turbolinks.js"
 attributes = ""
+
+# site variables
+[params.variables]
+font_primary = "Mulish"
+h1 = "64px"
+h1_lg = "52px"
+h1_md = "42px"
+h2 = "38px"
+h2_md = "30px"
+h3 = "30px"
+h3_md = "24px"
+h4 = "24px"
+h5 = "18px"
+h6 = "16px"
+white = "#ffffff"
+black = "#000000"
+dark = "#152035"
+gray = "#80848d"
+light = "#FAFAFA"
+color_primary = "#01AD9F"
 
 #################### default parameters ################################
 [params]
