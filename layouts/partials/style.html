@@ -1,7 +1,13 @@
+<!-- plugins + stylesheet -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+{{ $styles := slice }}
 {{ range site.Params.plugins.css }}
-<link rel="stylesheet" href="{{ .link | absURL }}" {{.attributes | safeHTMLAttr}}>
+{{ if findRE "^http" .link }}
+<link rel="stylesheet" href="{{ .link | absURL }}">
+{{ else }}
+{{ $styles = $styles | append (resources.Get .link) }}
 {{ end }}
-
-<!-- Main Stylesheet -->
-{{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+{{ end }}
+{{ $styles := $styles | append (resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify) }}
+{{ $styles := $styles | resources.Concat "/css/vendor.css" | minify | fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">

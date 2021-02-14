@@ -1,12 +1,16 @@
 
-{{ "<!-- All JS Files -->" | safeHTML }}
-{{ range site.Params.plugins.js }}
-<script src="{{ .link | absURL }}" {{.attributes | safeHTMLAttr}}></script>
+<!-- JS Plugins + Main script -->
+{{ $scripts := slice }}
+{{ range site.Params.plugins.js}}
+{{ if findRE "^http" .link }}
+<script src="{{ .link | absURL }}"></script>
+{{ else }}
+  {{ $scripts = $scripts | append (resources.Get .link) }}
 {{ end }}
-
-{{ "<!-- Main Script -->" | safeHTML }}
-{{ $script := resources.Get "js/script.js" | minify}}
-<script src="{{ $script.Permalink }}"></script>
+{{ end }}
+{{ $scripts := $scripts | append (resources.Get "js/script.js" | minify) }}
+{{ $scripts := $scripts | resources.Concat "/js/vendor.js" | minify | fingerprint "sha512" }}
+<script data-turbolinks-suppress-warning src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}"></script>
 
 <!-- cookie -->
 {{ if site.Params.cookies.enable }}
