@@ -116,7 +116,8 @@ a.post-title:hover,
 .card-meta {
   font-weight: 500;
 
-  > li:not(:first-child) {
+  > li {
+    line-height: 1;
     vertical-align: middle;
   }
 

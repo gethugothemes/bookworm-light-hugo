@@ -5,8 +5,8 @@
   </a>
   {{end}}
   <div class="card-body">
-    <ul class="card-meta list-inline mb-3">
-      <li class="list-inline-item">
+    <ul class="card-meta list-inline mb-2">
+      <li class="list-inline-item mb-2">
         {{ with site.GetPage (.Params.Author | urlize | lower) }}
         <a href="{{.Permalink}}" class="card-meta-author">
           {{if .Params.image}}
@@ -18,10 +18,10 @@
         </a>
         {{ end }}
       </li>
-      <li class="list-inline-item">
+      <li class="list-inline-item mb-2">
         <span>{{.PublishDate.Format "02 Jan, 2006"}}</span>
       </li>
-      <li class="list-inline-item">
+      <li class="list-inline-item mb-2">
         <ul class="card-meta-tag list-inline">
           {{range .Params.tags}}
           <li class="list-inline-item"><a href="{{site.BaseURL}}tags/{{.| urlize}}">{{.}}</a></li>
@@ -34,6 +34,6 @@
     </h3>
     <p>{{ .Plain | truncate 150 }}</p>
 
-    <a href="{{.Permalink}}" class="btn btn-sm btn-outline-primary rounded" aria-label="Read Post Details">Read More</a>
+    <!-- <a href="{{.Permalink}}" aria-label="More on {{.Title}}">Read More <i class="las la-angle-right"></i></a> -->
   </div>
 </article>
