@@ -116,7 +116,7 @@ preloader = "" # use jpg, png, svg or gif format.
 
 # Instagram feed
 [params.instafeed]
-enable = false
+enable = true
 instagram_user = "bookworm"
 access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
 
