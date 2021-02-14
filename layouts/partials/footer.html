@@ -5,7 +5,7 @@
         {{ with site.Params.subscription }}
         {{ if .enable }}
         <div class="newsletter-block font-primary">
-          <h4 class="mb-4 font-weight-700 text-center">{{ .title | markdownify }}</h4>
+          <h3 class="h4 mb-4 font-weight-700 text-center">{{ .title | markdownify }}</h3>
           <form class="px-0 px-sm-3 px-md-5" action="{{ .mailchimp_form_action }}" method="post" name="mailchimp_form_name" target="_blank">
             <div class="input-group">
               <input form="subscription" type="text" class="form-control" placeholder="{{ .input_placeholder }}" aria-label="Subscription" required autocomplete="new-email">
@@ -35,7 +35,7 @@
           {{end}}
         </ul>
         {{ with site.Params.footer }}
-        <p class="mb-0 font-weight-500">{{.info}} <a href="{{.author_url}}" class="text-gray">{{.author}}</a></p>
+        <p class="mb-0 font-weight-500 copyright-text">{{.info}} <a href="{{.author_url}}" class="text-gray">{{.author}}</a></p>
         {{ end }}
       </div>
     </div>
