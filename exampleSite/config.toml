@@ -26,37 +26,26 @@ unsafe= true
 # CSS Plugins
 [[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
-attributes = "media='screen'"
 [[params.plugins.css]]
 link = "plugins/line-awesome/css/line-awesome.min.css"
-attributes = ""
-
 [[params.plugins.css]]
 link = "https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&display=swap"
-attributes = ""
 
 # JS Plugins
 [[params.plugins.js]]
 link = "plugins/jquery/jquery.min.js"
-attributes = ""
 [[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
-attributes = ""
 [[params.plugins.js]]
 link = "plugins/instagram-feed/instagram-feed.js"
-attributes = ""
 [[params.plugins.js]]
 link = "plugins/search/fuse.min.js"
-attributes = ""
 [[params.plugins.js]]
 link = "plugins/search/mark.js"
-attributes = ""
 [[params.plugins.js]]
 link = "plugins/search/search.js"
-attributes = ""
 [[params.plugins.js]]
 link = "plugins/turbolinks/turbolinks.js"
-attributes = ""
 
 # site variables
 [params.variables]
@@ -86,33 +75,19 @@ favicon = "images/favicon.png"
 # Meta data
 description = "This is meta description"
 author = "Themefisher"
-# contact info
-# address = "9567 Turner Trace Apt. BC C3G8A4"
-# mobile = "+211234565523"
-# email = "info@email.com"
 # contact form action
 contact_form_action = "#" # contact form works with https://formspree.io
 # search
 search = true
-# custom script on header
-custom_script= ""
-
-disableAssetsBusting = false
-
 # main section
 mainSections = ["blog"]
-
-# footer
-[params.footer]
-info = "All rights reserved 2021"
-author = "Gethugothemes"
-author_url = "https://gethugothemes.com/"
+# copyright
+copyright = "Designed & Developed By [Gethugothemes](https://gethugothemes.com/)"
 
 # Preloader
 [params.preloader]
 enable = false
 preloader = "" # use jpg, png, svg or gif format.
-
 
 # Instagram feed
 [params.instafeed]
@@ -231,4 +206,3 @@ icon = "lab la-instagram"
 [[params.social]]
 url = "https://www.linkedin.com/"
 icon = "lab la-linkedin-in"
-

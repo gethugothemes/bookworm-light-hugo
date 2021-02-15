@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ site.LanguageCode | default `en-US` }}">
-  {{- partial "head.html" . -}}
+{{ partial "head.html" . }}
+
 <body>
-  {{- partial "preloader.html" . -}}
-  {{- partial "header.html" . -}}
+  {{ partialCached "preloader.html" . }}
+  {{ partial "header.html" . }}
   {{if and (not .IsHome) (ne .Section "blog") (ne .Permalink (`about/` | absURL)) (ne .Permalink (`search/` | absURL)) }}
-  {{- partial "page-header.html" . -}}
+  {{ partial "page-header.html" . }}
   {{end}}
-  {{- block "main" . }}{{- end }}
-  {{- partial "footer.html" . -}}
+  {{ block "main" . }}{{ end }}
+  {{ partialCached "footer.html" . }}
+  {{ partialCached "script.html" . }}
 </body>
+
 </html>

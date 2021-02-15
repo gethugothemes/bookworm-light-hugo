@@ -34,15 +34,10 @@
           </a></li>
           {{end}}
         </ul>
-        {{ with site.Params.footer }}
-        <p class="mb-0 font-weight-500 copyright-text">{{.info}} <a href="{{.author_url}}" class="text-gray">{{.author}}</a></p>
+        {{ with site.Params.copyright }}
+        <p class="mb-0 font-weight-500 copyright-text content">{{.| markdownify}}</p>
         {{ end }}
       </div>
     </div>
   </div>
 </footer>
-
-{{ partialCached "script.html" . }}
-
-</body>
-</html>
