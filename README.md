@@ -58,13 +58,13 @@ Read Wiki For More Details => **[Bookworm - CMS Integration](https://github.com/
 
 ## Add/Remove Author
 
-Release ChangeLog has info about stuff added: **[Author Control](https://github.com/gethugothemes/bookworm/author)**
+Release ChangeLog has info about stuff added: **[Author Control](https://github.com/gethugothemes/bookworm/wiki/author)**
 
 ---
 
 ## Release Changelog
 
-Release ChangeLog has info about stuff added: **[Releases](https://github.com/gethugothemes/bookworm/releases)**
+Release ChangeLog has info about stuff added: **[Releases](https://github.com/gethugothemes/bookworm/wiki/releases)**
 
 ---
 
