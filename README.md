@@ -31,25 +31,25 @@ ExampleSite can be found here: [exampleSite](https://github.com/gethugothemes/bo
 
 ---
 
-## Installation
+## Installation 📥
 
 Read Wiki For More Details => **[Bookworm - Installation](https://github.com/gethugothemes/bookworm/wiki/installation)**
 
 ---
 
-## Configuration
+## Configuration ⚙
 
 Read Wiki For More Details => **[Bookworm - Configuration](https://github.com/gethugothemes/bookworm/wiki/configuration)**
 
 ---
 
-## Maintain Pages
+## Maintain Pages 📜
 
 Maintain(Add, Create or Remove) Pages: **[Maintain Pages](https://github.com/gethugothemes/bookworm/wiki/Maintain-Pages)**
 
 <!-- ---
 
-## Release Changelog
+## Release Changelog 📝
 
 Release ChangeLog has info about stuff added: **[Releases](https://github.com/gethugothemes/bookworm/releases)** -->
 
