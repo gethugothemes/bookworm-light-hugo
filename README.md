@@ -68,7 +68,7 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ge
 
 ---
 
-## [LightHouse Report (100% ?)](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F)
+<!-- ## [LightHouse Report (100% ?)](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F) -->
 
 ---
 
