@@ -45,7 +45,7 @@ Read Wiki For More Details => **[Bookworm - Configuration](https://github.com/ge
 
 ## Maintain Pages
 
-Release ChangeLog has info about stuff added: **[Maintain Pages](https://github.com/gethugothemes/bookworm/pages)**
+Release ChangeLog has info about stuff added: **[Maintain Pages](https://github.com/gethugothemes/bookworm/wiki/Maintain-Pages)**
 
 <!-- ---
 
