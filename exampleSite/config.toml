@@ -95,7 +95,6 @@ enable = false
 instagram_user = "bookworm"
 access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
 
-
 # Subscription
 [params.subscription]
 enable = true
@@ -190,19 +189,19 @@ weight = 4
 url = "terms-conditions/"
 name = "Terms & Conditions"
 
-# Header Social Icons
+# Social Icons
 [[params.social]]
 url = "https://www.facebook.com/"
-icon = "lab la-facebook-f"
+icon = "lab la-facebook-f" # https://icons8.com/line-awesome
 
 [[params.social]]
 url = "https://www.twitter.com/"
-icon = "lab la-twitter"
+icon = "lab la-twitter" # https://icons8.com/line-awesome
 
 [[params.social]]
 url = "https://www.instagram.com/"
-icon = "lab la-instagram"
+icon = "lab la-instagram" # https://icons8.com/line-awesome
 
 [[params.social]]
 url = "https://www.linkedin.com/"
-icon = "lab la-linkedin-in"
+icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
