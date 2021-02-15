@@ -44,8 +44,6 @@ link = "plugins/search/fuse.min.js"
 link = "plugins/search/mark.js"
 [[params.plugins.js]]
 link = "plugins/search/search.js"
-[[params.plugins.js]]
-link = "plugins/turbolinks/turbolinks.js"
 
 # site variables
 [params.variables]
