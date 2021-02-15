@@ -87,9 +87,9 @@ favicon = "images/favicon.png"
 description = "This is meta description"
 author = "Themefisher"
 # contact info
-address = "9567 Turner Trace Apt. BC C3G8A4"
-mobile = "+211234565523"
-email = "info@email.com"
+# address = "9567 Turner Trace Apt. BC C3G8A4"
+# mobile = "+211234565523"
+# email = "info@email.com"
 # contact form action
 contact_form_action = "#" # contact form works with https://formspree.io
 # search
