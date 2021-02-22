@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function () {
+// $(document).on('turbolinks:load', function () {
   'use strict';
 
   // prelaoder
@@ -87,4 +87,4 @@ $(document).on('turbolinks:load', function () {
     $(this).parent().find('.la-minus').removeClass('la-minus').addClass('la-plus');
   });
 
-});
+// });
