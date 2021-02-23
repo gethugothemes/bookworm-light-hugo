@@ -1,0 +1,12 @@
+name = "Bookworm"
+license = "MIT"
+licenselink = "https://github.com/themefisher/bookworm/blob/master/LICENSE"
+description = "Bookworm is clean and modern Hugo blog theme focused on high speed and support muliple authors. Bookworm fits perfectly any kind of blog specially personal, photography, travel or biography blogs. Bookworm is fully responsive, Super fast and powered by Bootstrap."
+homepage = "https://gethugothemes.com/products/bigspring/"
+tags = ['blog', 'fast', 'light', 'white', 'modern', 'themefisher', 'hugo-theme', 'hugo-templates', 'bootstrap', 'responsive', 'clean', 'instagram-feed', 'simple', 'creative', 'contact-form', 'custom-themes', 'mobile', 'minimalistic', 'pages', 'google analytics', 'customizable', 'flexbox', 'presentation', 'product', 'theme', 'typography', 'multilingual', 'gethugothemes']
+features = ['bootstrap','responsive']
+min_version = "0.80.0"
+
+[author]
+name = "Themefisher"
+homepage = "https://themefisher.com/"
