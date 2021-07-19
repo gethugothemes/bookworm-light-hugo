@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://bookworm-hugo.netlify.app/"
+baseURL = "https://examplesite.org/"
 title = "Bookworm - Personal Blog Template"
 theme = "bookworm"
 # post pagination
@@ -10,8 +10,6 @@ summaryLength = "20"
 googleAnalytics = "" # example : UA-123-45
 # disqus short name
 disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
-# disable language
-disableLanguages = [] # desable language from here
 
 
 ############################# Outputs ##############################
