@@ -11,6 +11,10 @@ googleAnalytics = "" # example : UA-123-45
 # disqus short name
 disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
 
+############################# Modules ##############################
+[module.hugoVersion]
+extended = true
+min = "0.80.0"
 
 ############################# Outputs ##############################
 [outputs]
@@ -20,7 +24,7 @@ home = ["HTML", "RSS", "JSON"]
 unsafe= true
 
 
-######################## Plugins ####################
+############################## Plugins ##############################
 # CSS Plugins
 [[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
