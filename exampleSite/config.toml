@@ -1,7 +1,7 @@
 ######################## default configuration ####################
-baseURL = "https://examplesite.org/"
+baseURL = "https://demo.gethugothemes.com/bookworm-light/"
 title = "Bookworm - Personal Blog Template"
-theme = "bookworm"
+theme = "bookworm-light"
 # post pagination
 paginate = "5"
 # post excerpt
@@ -112,96 +112,101 @@ expire_days = 2
 
 ############################# Main Menu ########################
 [[menu.main]]
-weight = 1
-url = "/"
 name = "Home"
+url = "/"
+weight = 1
   
 [[menu.main]]
-weight = 3
-url = "about"
 name = "About"
+url = "about/"
+weight = 3
   
 [[menu.main]]
-weight = 4
-url = "contact"
 name = "Contact"
+url = "contact/"
+weight = 4
+  
+[[menu.main]]
+name = "Buy Premium"
+url = "https://gethugothemes.com/products/bookworm/"
+weight = 5
 
 [[menu.main]]
-weight = 5
+weight = 6
 url = "#"
 name = "Pages"
 hasChildren = true
 
   [[menu.main]]
   parent = "Pages"
-  weight = 1
-  url = "author/"
   name = "Author"
+  url = "author/"
+  weight = 1
   
   [[menu.main]]
   parent = "Pages"
-  weight = 2
-  url = "tags/"
   name = "Tags"
+  url = "tags/"
+  weight = 2
   
   [[menu.main]]
   parent = "Pages"
-  weight = 3
-  url = "categories/"
   name = "Category"
+  url = "categories/"
+  weight = 3
   
   [[menu.main]]
   parent = "Pages"
+  name = "Elements"
   weight = 4
   url = "elements/"
-  name = "Elements"
   
   [[menu.main]]
   parent = "Pages"
-  weight = 5
-  url = "privacy/"
   name = "Privacy"
+  url = "privacy/"
+  weight = 5
   
   [[menu.main]]
   parent = "Pages"
-  weight = 6
-  url = "terms-conditions/"
   name = "Terms & Conditions"
+  url = "terms-conditions/"
+  weight = 6
 
 ############################# Footer Menu ########################
 [[menu.footer]]
-weight = 1
-url = "about/"
 name = "About"
+url = "about/"
+weight = 1
 
 [[menu.footer]]
-weight = 2
-url = "author/"
 name = "Authors"
+url = "author/"
+weight = 2
 
 [[menu.footer]]
-weight = 3
-url = "privacy/"
 name = "Privacy"
+url = "privacy/"
+weight = 3
 
 [[menu.footer]]
-weight = 4
-url = "terms-conditions/"
 name = "Terms & Conditions"
+url = "terms-conditions/"
+weight = 4
 
 # Social Icons
 [[params.social]]
-url = "https://www.facebook.com/"
 icon = "lab la-facebook-f" # https://icons8.com/line-awesome
+url = "https://www.facebook.com/"
 
 [[params.social]]
-url = "https://www.twitter.com/"
 icon = "lab la-twitter" # https://icons8.com/line-awesome
+url = "https://www.twitter.com/"
 
 [[params.social]]
-url = "https://www.instagram.com/"
 icon = "lab la-instagram" # https://icons8.com/line-awesome
+url = "https://www.instagram.com/"
 
 [[params.social]]
-url = "https://www.linkedin.com/"
 icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
+url = "https://www.linkedin.com/"
