@@ -1,63 +1,141 @@
-# Bookworm Light | [Demo](https://demo.gethugothemes.com/bookworm-light/)
 
-Bookworm is a clean, modern Hugo blog theme focused on high speed and supports multiple authors. Bookworm fits perfectly any kind of blog, personal, photography, travel, or biography blog. Bookworm is fully responsive, Superfast, and powered by Bootstrap.
 
-The [demo site](https://demo.gethugothemes.com/bookworm-light/) here. Make sure you visit to get an awesome hands-on experience.
 
-ExampleSite can be found here: [exampleSite](https://github.com/gethugothemes/bookworm/tree/master/exampleSite). The demo builts with exampleSite as a source.
 
----
 
-## Features 🔥🔥
+<h1 align=center>Bookworm Light | <a target="_blank" href="https://demo.gethugothemes.com/bookworm-light/" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fbookworm-light%2F">Page Speed (72%)</a></h1>
 
--   Minimal and Modern Design.
--   Search toggle on the menu (with enable/disable option).
--   Search posts with Fuse.js
--   Active Menu Indicator.
--   Multiple Author support.
--   Author profile (with individual author posts)
--   Breadcrumb navigation.
--   Cover image for each post (with Responsive image support).
--   Custom pagination.
--   Recent posts suggestions on a single post.
--   Social-Media share buttons on a single post.
--   Taxonomies
--   Instagram feed (with enable/disable option)
--   Mailchimp Email subscription (with enable/disable option)
--   Contact form support with [Formspree](https://formspree.io)
--   SEO Friendly.
--   No webpack, nodejs, and other dependencies are required to edit the theme.
-**
+<p align=center>
+  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.80.0" alt="Contributors">
+    <img src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.80.0&color=f00&logo=hugo" />
+  </a>
+
+  <a href="https://github.com/gethugothemes/bookworm-light/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/gethugothemes/bookworm-light" alt="license"></a>
+
+  <img src="https://img.shields.io/github/languages/code-size/gethugothemes/bookworm-light" alt="code size">
+
+  <a href="https://github.com/gethugothemes/bookworm-light/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/gethugothemes/bookworm-light" alt="contributors"></a>
+
+  <a href="https://twitter.com/intent/follow?screen_name=gethugothemes">
+    <img src="https://img.shields.io/twitter/follow/gethugothemes?style=social&logo=twitter"
+      alt="follow on Twitter"></a>
+</p>
 
 ---
 
-## Installation 📥
+<p align="center">
 
-Read Wiki For More Details => **[Bookworm - Installation](https://github.com/gethugothemes/bookworm/wiki/installation)**
+![bookworm](images/tn.png)
+</p>
 
----
 
-## Configuration ⚙
-
-Read Wiki For More Details => **[Bookworm - Configuration](https://github.com/gethugothemes/bookworm/wiki/configuration)**
 
 ---
+## Features
+| [Bookworm Light](https://github.com/gethugothemes/bookworm-light)                        | [Bookworm Premium](https://gethugothemes.com/products/bookworm/)                              |
+| :-------------                                                                           |:-------------                            | 
+| Google analytics support                                                                 | Google analytics support                |
+| CSS and JS bundle with hugo pipe                                                         | CSS and JS bundle with hugo pipe         |
+| Netlify settings predefine                                                               | Netlify settings predefine               |
+| Contact form Support                                                                     | Contact form Support              |
+| Search by fuse.js and mark.js                                                            | Search by fuse.js and mark.js                     |
+| GDPR consent enable                                                                      | GDPR consent enable                        |
+| Color and fonts variable in config file                                                  | Color and fonts variable in config file                      |
+| Mailchimp integrate                                                                      | Mailchimp integrate     |          
+| Instagram feed available                                                                 | Instagram feed available                     |
+| Google page speed optimized ( 72% )                                                      | Google page speed optimized ( 56% )                    |
+| Open graph meta tag                                                                      | Open graph meta tag                     |
+| Twitter card meta tag                                                                    | Twitter card meta tag                    |
+| Home Page, About page Contact Page and more Pages available                              | Premium page list ([List Layout Homepage](https://demo.gethugothemes.com/bookworm/homepage/list/), [Grid Layout Homepage](https://demo.gethugothemes.com/bookworm/homepage/grid/), [Tag Single](https://demo.gethugothemes.com/bookworm/tags/photography/), [Category Signle Page](https://demo.gethugothemes.com/bookworm/categories/lifestyle/) )              |
+|                                                                                          | Multiple language support (Fr, En)                     |
+|                                                                                          | Menu alignment customized (left, right, or center )                              |
+|                                                                                          | Multiple post layout ( grid or list)              |
+|                                                                                          | Sidebar option (left, right or false)     |
+|                                                                                          | Main taxonomy change option (tag or category)                |
+|       
 
-## Maintain Pages 📜
 
-Maintain(Add, Create or Remove) Pages: **[Maintain Pages](https://github.com/gethugothemes/bookworm/wiki/Maintain-Pages)**
 
-<!-- ---
+## Local development
 
-## Release Changelog 📝
+```bash
+# clone the repository
+git clone git@github.com:gethugothemes/bookworm-light.git
 
-Release ChangeLog has info about stuff added: **[Releases](https://github.com/gethugothemes/bookworm/releases)** -->
+# cd in the project directory
+$ cd bookworm-light/exampleSite/
 
----
+# Start local dev server
+$ hugo server --themesDir ../..
+```
+Or Check out [Full Documentation](https://docs.gethugothemes.com/bookworm/?ref=github).
 
-## Special Thanks 🌟
+## Content Management System
 
--   [**Fuse.js**](https://github.com/krisk/fuse)
--   [**Line Awesome Icon**](https://icons8.com/line-awesome)
--   [**Instafeed JS**](https://instafeedjs.com/#/)
--   **All Contributors and Supporters**
+[![import to
+Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=gethugothemes/bookworm-light&engine=hugo&version=0.87.0)
+
+This project has been pre-configured to work with [Forestry](https://forestry.io) a git-based CMS, [import your
+repository in Forestry](https://app.forestry.io/quick-start?repo=gethugothemes/bookworm-light&engine=hugo&version=0.87.0) and
+you will be able to edit and preview your site ✨.
+
+Any changes you make in Forestry will be committed back to the repo and deployed if you use [Netlify](#netlify).
+## Deployment and hosting
+
+[![Deploy to
+Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gethugothemes/bookworm-light)
+
+Follow the steps.
+
+## Prefer a video? (Hugo + Netlify + Forestry)
+Build your website with **Bookworm Light** theme by following these easy steps (No Coding Required!)
+[Video Tutorial](https://youtu.be/ResipmZmpDU).
+
+<!-- reporting issue -->
+## Reporting Issues
+We use GitHub Issues as the official bug tracker for the bookworm Template. Please Search [existing
+issues](https://github.com/gethugothemes/bookworm-light/issues). Someone may have already reported the same problem.
+If your problem or idea has not been addressed yet, feel free to [open a new
+issue](https://github.com/gethugothemes/bookworm-light/issues).
+
+
+
+<!-- ## Bookworm Light Powered Websites
+
+
+View all the websites powered by Bookworm Light [here](https://github.com/gethugothemes/bookworm-light/wiki/All-bookworm-light-theme-Powered-Websites). Want to submit your own website powered by Bookworm Light? You can submit it [here](https://github.com/gethugothemes/bookworm-light/discussions/5). -->
+
+<!-- licence -->
+## License
+Copyright &copy; Designed by [Themefisher](https://themefisher.com) & Developed by
+[Gethugothemes](https://gethugothemes.com)
+
+**Code License:** Released under the [MIT](https://github.com/gethugothemes/bookworm-light/blob/master/LICENSE) license.
+
+**Image license:** The images are only for demonstration purposes. They have their licenses. We don't have permission to
+share those images.
+
+<!-- resources -->
+## Special Thanks
+- [Bootstrap](https://getbootstrap.com)
+- [Jquery](https://jquery.com)
+- [FuseJs](https://fusejs.io)
+- [MarkJs](https://markjs.io/)
+- [Line awesome](https://icons8.com/line-awesome)
+- [Instafeed](https://instafeedjs.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [All Contributors](https://github.com/gethugothemes/bookworm-light/graphs/contributors)
+
+
+## Hire Us
+We are available for **Hiring** for your next HUGO project. Please, check our
+[services](https://gethugothemes.com/services/?ref=github)
+
+<!-- premium themes -->
+## Premium Themes By Us
+| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.webp)](https://gethugothemes.com/bundle) | [![gosaas](https://demo.gethugothemes.com/thumbnails/gosaas.webp)](https://gethugothemes.com/products/gosaas/) | [![gojournal](https://demo.gethugothemes.com/thumbnails/gojournal.webp)](https://gethugothemes.com/products/gojournal/) |
+|:---:|:---:|:---:|
+| **Premium Theme Bundle (40+)** | **Gosaas** | **Gojournal** |
+
