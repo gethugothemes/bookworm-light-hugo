@@ -54,7 +54,7 @@
 |                                                                                          | Multiple post layout ( grid or list)              |
 |                                                                                          | Sidebar option (left, right or false)     |
 |                                                                                          | Main taxonomy change option (tag or category)                |
-|       
+   
 
 
 
