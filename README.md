@@ -45,7 +45,7 @@
 | Color and fonts variable in config file                                                  | Color and fonts variable in config file                      |
 | Mailchimp integrate                                                                      | Mailchimp integrate     |          
 | Instagram feed available                                                                 | Instagram feed available                     |
-| Google page speed optimized ( 72% )                                                      | Google page speed optimized ( 56% )                    |
+| Google page speed optimized ( 72% )                                                      | Google page speed optimized ( 80% )                    |
 | Open graph meta tag                                                                      | Open graph meta tag                     |
 | Twitter card meta tag                                                                    | Twitter card meta tag                    |
 | Home Page, About page Contact Page and more Pages available                              | Premium page list ([List Layout Homepage](https://demo.gethugothemes.com/bookworm/homepage/list/), [Grid Layout Homepage](https://demo.gethugothemes.com/bookworm/homepage/grid/), [Tag Single](https://demo.gethugothemes.com/bookworm/tags/photography/), [Category Signle Page](https://demo.gethugothemes.com/bookworm/categories/lifestyle/) )              |
