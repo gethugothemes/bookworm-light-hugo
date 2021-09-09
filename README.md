@@ -53,7 +53,6 @@ Multiple language support (Fr, En)                       | ✖️    |   ✔️ 
 Menu alignment customized (left, right, or center )      | ✖️    |   ✔️    |
 Multiple post layout ( grid or list)                     | ✖️    |   ✔️    |
 Sidebar option (left, right or false)                    | ✖️    |   ✔️    |
-Main taxonomy change option (tag or category)            | ✖️    |   ✔️    |
 4+ Premium Pages    | ✖️     | ✔️ |
 Get It Now          | [![download-light](https://user-images.githubusercontent.com/88376439/132500272-dbe39bc0-bb69-4292-b72c-27599bf1bac5.png)](https://github.com/gethugothemes/bookworm-light/archive/refs/heads/master.zip)         | [![download](https://user-images.githubusercontent.com/88376439/132500074-35ed470a-481c-49cb-ba05-ea0523da63e2.png)](https://gethugothemes.com/products/bookworm/?ref=github)
 
