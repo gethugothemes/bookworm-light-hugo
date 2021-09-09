@@ -33,29 +33,29 @@
 
 
 ---
-## Features
-| [Bookworm Light](https://github.com/gethugothemes/bookworm-light)                        | [Bookworm Premium](https://gethugothemes.com/products/bookworm/)                              |
-| :-------------                                                                           |:-------------                            | 
-| Google analytics support                                                                 | Google analytics support                |
-| CSS and JS bundle with hugo pipe                                                         | CSS and JS bundle with hugo pipe         |
-| Netlify settings predefine                                                               | Netlify settings predefine               |
-| Contact form Support                                                                     | Contact form Support              |
-| Search by fuse.js and mark.js                                                            | Search by fuse.js and mark.js                     |
-| GDPR consent enable                                                                      | GDPR consent enable                        |
-| Color and fonts variable in config file                                                  | Color and fonts variable in config file                      |
-| Mailchimp integrate                                                                      | Mailchimp integrate     |          
-| Instagram feed available                                                                 | Instagram feed available                     |
-| Google page speed optimized ( 72% )                                                      | Google page speed optimized ( 56% )                    |
-| Open graph meta tag                                                                      | Open graph meta tag                     |
-| Twitter card meta tag                                                                    | Twitter card meta tag                    |
-| Home Page, About page Contact Page and more Pages available                              | Premium page list ([List Layout Homepage](https://demo.gethugothemes.com/bookworm/homepage/list/), [Grid Layout Homepage](https://demo.gethugothemes.com/bookworm/homepage/grid/), [Tag Single](https://demo.gethugothemes.com/bookworm/tags/photography/), [Category Signle Page](https://demo.gethugothemes.com/bookworm/categories/lifestyle/) )              |
-|                                                                                          | Multiple language support (Fr, En)                     |
-|                                                                                          | Menu alignment customized (left, right, or center )                              |
-|                                                                                          | Multiple post layout ( grid or list)              |
-|                                                                                          | Sidebar option (left, right or false)     |
-|                                                                                          | Main taxonomy change option (tag or category)                |
-|       
+## Discover Free & Premium Features
 
+Featurees | [Bookworm Light](https://github.com/gethugothemes/bookworm-light)  | [Bookworm Premium](https://gethugothemes.com/products/bookworm/?ref=github) | 
+:------------ |    :----:    |     :----:    | 
+Google analytics support                   | ✔️ | ✔️                |
+CSS and Js bundle with hugo pipe           | ✔️ | ✔️                |
+Netlify settings predefine                 | ✔️ | ✔️                |
+Contact form Support                       | ✔️ | ✔️                |
+Search by fuse.js and mark.js              | ✔️ | ✔️                |
+GDPR consent enable                        | ✔️ | ✔️                |
+Color and fonts variable in config file    | ✔️ | ✔️                |
+Mailchimp integrate                        | ✔️ | ✔️                |
+Instagram feed available                   | ✔️ | ✔️                |
+Google page speed optimized                | ✔️ | ✔️                |
+Open graph meta tag                        | ✔️ | ✔️                |
+Twitter card meta tag                      | ✔️ | ✔️                |
+Multiple language support (Fr, En)                       | ✖️    |   ✔️    |
+Menu alignment customized (left, right, or center )      | ✖️    |   ✔️    |
+Multiple post layout ( grid or list)                     | ✖️    |   ✔️    |
+Sidebar option (left, right or false)                    | ✖️    |   ✔️    |
+Main taxonomy change option (tag or category)            | ✖️    |   ✔️    |
+4+ Premium Pages    | ✖️     | ✔️ |
+Get It Now          | [![download-light](https://user-images.githubusercontent.com/88376439/132500272-dbe39bc0-bb69-4292-b72c-27599bf1bac5.png)](https://github.com/gethugothemes/bookworm-light/archive/refs/heads/master.zip)         | [![download](https://user-images.githubusercontent.com/88376439/132500074-35ed470a-481c-49cb-ba05-ea0523da63e2.png)](https://gethugothemes.com/products/bookworm/?ref=github)
 
 
 ## Local development
