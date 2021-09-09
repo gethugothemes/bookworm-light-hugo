@@ -37,23 +37,24 @@
 
 Featurees | [Bookworm Light](https://github.com/gethugothemes/bookworm-light)  | [Bookworm Premium](https://gethugothemes.com/products/bookworm/?ref=github) | 
 :------------ |    :----:    |     :----:    | 
-Google analytics support                   | ✔️ | ✔️                |
-CSS and Js bundle with hugo pipe           | ✔️ | ✔️                |
-Netlify settings predefine                 | ✔️ | ✔️                |
-Contact form Support                       | ✔️ | ✔️                |
-Search by fuse.js and mark.js              | ✔️ | ✔️                |
-GDPR consent enable                        | ✔️ | ✔️                |
-Color and fonts variable in config file    | ✔️ | ✔️                |
-Mailchimp integrate                        | ✔️ | ✔️                |
-Instagram feed available                   | ✔️ | ✔️                |
-Google page speed optimized                | ✔️ | ✔️                |
-Open graph meta tag                        | ✔️ | ✔️                |
-Twitter card meta tag                      | ✔️ | ✔️                |
-Multiple language support (Fr, En)                       | ✖️    |   ✔️    |
-Menu alignment customized (left, right, or center )      | ✖️    |   ✔️    |
-Multiple post layout ( grid or list)                     | ✖️    |   ✔️    |
-Sidebar option (left, right or false)                    | ✖️    |   ✔️    |
-4+ Premium Pages    | ✖️     | ✔️ |
+Google analytics support                   | :white_check_mark: | :white_check_mark:                |
+CSS and Js bundle with hugo pipe           | :white_check_mark: | :white_check_mark:                |
+Netlify settings predefine                 | :white_check_mark: | :white_check_mark:                |
+Contact form Support (formspree)           | :white_check_mark: | :white_check_mark:                |
+Search by fuse.js and mark.js              | :white_check_mark: | :white_check_mark:                |
+GDPR consent enable                        | :white_check_mark: | :white_check_mark:                |
+Color and fonts variable in config file    | :white_check_mark: | :white_check_mark:                |
+Mailchimp integrate                        | :white_check_mark: | :white_check_mark:                |
+Instagram feed available                   | :white_check_mark: | :white_check_mark:                |
+Google page speed optimized                | :white_check_mark: | :white_check_mark:                |
+Open graph meta tag                        | :white_check_mark: | :white_check_mark:                |
+Twitter card meta tag                      | :white_check_mark: | :white_check_mark:                |
+Multiple language support (Fr, En)                       | :heavy_multiplication_x:    | :white_check_mark:    |
+Menu alignment customized (left, right, or center )      | :heavy_multiplication_x:    | :white_check_mark:    |
+Multiple post layout ( grid or list)                     | :heavy_multiplication_x:    | :white_check_mark:    |
+Sidebar option (left, right or false)                    | :heavy_multiplication_x:    | :white_check_mark:    |
+4+ Premium Pages                                         | :heavy_multiplication_x:    | :white_check_mark: |
+Priority Support                                         | :heavy_multiplication_x:    | :white_check_mark: |
 Get It Now          | [![download-light](https://user-images.githubusercontent.com/88376439/132500272-dbe39bc0-bb69-4292-b72c-27599bf1bac5.png)](https://github.com/gethugothemes/bookworm-light/archive/refs/heads/master.zip)         | [![download](https://user-images.githubusercontent.com/88376439/132500074-35ed470a-481c-49cb-ba05-ea0523da63e2.png)](https://gethugothemes.com/products/bookworm/?ref=github)
 
 
