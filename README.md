@@ -27,7 +27,7 @@
 
 <p align="center">
 
-![bookworm](images/tn.png)
+<img src="https://demo.gethugothemes.com/thumbnails/bookworm-light.webp" alt="screenshot" width="100%">
 </p>
 
 
