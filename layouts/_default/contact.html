@@ -4,25 +4,25 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-8">
-        <form action="{{site.Params.contact_form_action}}" method="POST">
+        <form action="{{site.Params.contact_form_action}}" method="post">
           <div class="mb-4">
-            <label for="name" class="form-label">Your Name</label>
-            <input type="text" name="name" class="form-control rounded" id="name" placeholder="Alex Smith" required>
+            <label for="name" class="form-label">{{ i18n "name" }}</label>
+            <input type="text" class="form-control" id="name" name="name" required>
           </div>
           <div class="mb-4">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" name="email" class="form-control rounded" id="email" placeholder="hello@bookworm.com" required>
+            <label for="email" class="form-label">{{ i18n "email" }}</label>
+            <input type="email" class="form-control" id="email" name="email" required>
           </div>
           <div class="mb-4">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" name="subject" class="form-control rounded" id="subject" placeholder="Reasons for Contact" required>
+            <label for="subject" class="form-label">{{ i18n "subject" }}</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
           </div>
           <div class="mb-4">
-            <label for="message" class="form-label">Your Message Here</label>
-            <textarea class="form-control rounded" name="message" id="message" rows="4" placeholder="Your Message" required></textarea>
+            <label for="message" class="form-label">{{ i18n "message"}}</label>
+            <textarea class="form-control" id="message" rows="4" name="message" required></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary rounded" aria-label="Send Message">Send Message</button>
+          <button type="submit" class="btn btn-primary" aria-label="Send Message">{{ i18n "send_message"}}</button>
         </form>
       </div>
     </div>
