@@ -3,7 +3,7 @@
 
 
 
-<h1 align=center>Bookworm Light | <a target="_blank" href="https://demo.gethugothemes.com/bookworm-light/" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fbookworm-light%2F">Page Speed (72%)</a></h1>
+<h1 align=center>Bookworm Light | <a target="_blank" href="https://demo.gethugothemes.com/bookworm-light/" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fbookworm-light%2F">Page Speed (79%)</a></h1>
 
 <p align=center>
   <a href="https://github.com/gohugoio/hugo/releases/tag/v0.80.0" alt="Contributors">
