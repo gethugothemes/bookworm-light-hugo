@@ -191,7 +191,7 @@ Markdown | Less | Pretty
 
 ##### Image
 
-![image](../../images/post/01.jpg)
+{{< image src="images/post/01.jpg" caption="This is Image Caption" alt="alter-text" command="fill" option="q95" class="img-fluid" title="image title" >}}
 
 <hr>
 

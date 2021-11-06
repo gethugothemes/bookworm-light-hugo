@@ -10,4 +10,4 @@
 {{ end }}
 {{ $styles := $styles | append (resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify) }}
 {{ $styles := $styles | resources.Concat "/css/vendor.css" | minify | fingerprint "sha512" }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+<style type="text/css">{{$styles.Content | safeCSS}}</style>

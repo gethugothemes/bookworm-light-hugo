@@ -1,0 +1,61 @@
+{{ $imagePath:= .Src }}
+{{ $class:= .Class }}
+{{ $size:= .Size }}
+{{ $alt:= .Alt }}
+{{ $height:= index (split $size `x`) 1 }}
+{{ $width:= index (split $size `x`) 0 }}
+
+<!-- image static/CDN -->
+{{ if or (hasPrefix $imagePath "http") (fileExists (add `static/` (string $imagePath))) }}
+<img loading="lazy" decoding="async" src="{{ $imagePath | absURL }}" alt="{{.Alt}}" class="{{with $class}}{{.}}{{else}}img-fluid{{end}}" height="{{$height}}" width="{{$width}}">
+{{ else }}
+<!-- /image cdn -->
+
+<!-- check file existance -->
+{{ if fileExists (add `assets/` (string $imagePath)) }}
+{{ $image:= resources.Get $imagePath }}
+
+<!-- image extension -->
+{{ $imageExt := path.Ext $image }}
+
+<!-- image height, width (if not svg) -->
+{{ if eq $imageExt `.svg` }}
+{{ .Scratch.Set "image-height" "" }}
+{{ .Scratch.Set "image-width" "" }}
+{{ else }}
+{{ .Scratch.Set "image-height" $image.Height }}
+{{ .Scratch.Set "image-width" $image.Width }}
+{{ end }}
+{{ $imageHeight:= .Scratch.Get "image-height" }}
+{{ $imageWidth:= .Scratch.Get "image-width" }}
+
+<!-- gif/svg image -->
+{{ if or (eq $imageExt `.gif`) (eq $imageExt `.svg`) }}
+<img src="{{$image.RelPermalink}}" loading="lazy" decoding="async" alt="{{.Alt}}" class="{{with $class}}{{.}}{{else}}img-fluid{{end}}" width="{{$width}}" height="{{$height}}">
+{{ else }}
+
+<!-- single image -->
+{{ if $size }}
+{{ $imageFallback:= $image.Resize $size }}
+{{ $imageWebp:= $image.Resize (add (string $size) " webp") }}
+<img loading="lazy" decoding="async" src="{{$imageWebp.RelPermalink}}" alt="{{.Alt}}" class="{{with $class}}{{.}}{{else}}img-fluid{{end}}" width="{{$width}}" height="{{$height}}" onerror="this.onerror='null';this.src='{{$imageFallback.RelPermalink}}'">
+{{ else }}
+
+<!-- image processing for multiple device -->
+{{ $imageFallback:= $image.Resize "1110x" }}
+{{ $imageXL:= $image.Resize "1110x webp" }}
+{{ $imageLG:= $image.Resize "700x webp" }}
+{{ $imageMD:= $image.Resize "600x webp" }}
+{{ $imageSM:= $image.Resize "545x webp" }}
+<picture>
+  <source srcset="{{ $imageSM.RelPermalink }}" media="(max-width: 575px)">
+  <source srcset="{{ $imageMD.RelPermalink }}" media="(max-width: 767px)">
+  <source srcset="{{ $imageLG.RelPermalink }}" media="(max-width: 991px)">
+  <source srcset="{{ $imageXL.RelPermalink }}">
+  <img loading="lazy" decoding="async" class="{{with $class}}{{.}}{{else}}img-fluid{{end}}" src="{{$imageFallback.RelPermalink}}" alt="{{.Alt}}" width="{{$image.Width}}" height="{{$image.Height}}">
+</picture>
+{{ end }} <!-- end image processing -->
+{{ end }} <!-- end single image -->
+{{ end }} <!-- end check file existance -->
+
+{{ end }}

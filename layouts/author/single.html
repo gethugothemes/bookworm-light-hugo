@@ -5,7 +5,7 @@
     <div class="row justify-content-center text-center">
       <div class="col-12 mb-4">
         {{if .Params.image}}
-        <img loading="lazy" class="img-fluid rounded mb-5" src="{{.Params.image | absURL}}" alt="{{.Title}}">
+        {{ partial "image.html" (dict "Src" .Params.image "Size" "150x150" "Class" "img-fluid rounded mb-5" "Alt" .Title) }}
         {{else}}
         <img loading="lazy" class="img-fluid rounded mb-5" src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=150&pg&d=identicon">
         {{end}}

@@ -14,7 +14,11 @@ disqusShortname = "themefisher-template" # get your shortname form here : https:
 ############################# Modules ##############################
 [module.hugoVersion]
 extended = true
-min = "0.80.0"
+min = "0.87.0"
+
+############################# Image Processing ##############################
+[imaging]
+quality = "95"
 
 ############################# Outputs ##############################
 [outputs]

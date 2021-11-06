@@ -10,7 +10,7 @@
 {{ end }}
 {{ $scripts := $scripts | append (resources.Get "js/script.js" | minify) }}
 {{ $scripts := $scripts | resources.Concat "/js/vendor.js" | minify | fingerprint "sha512" }}
-<script data-turbolinks-suppress-warning src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}"></script>
+<script crossorigin="anonymous" defer="defer" integrity="{{ $scripts.Data.Integrity }}" type="application/javascript">{{$scripts.Content | safeJS}}</script>
 
 <!-- cookie -->
 {{ if site.Params.cookies.enable }}

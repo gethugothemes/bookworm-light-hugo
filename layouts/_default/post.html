@@ -1,7 +1,7 @@
 <article class="card post-card">
   {{if .Params.image}}
   <a href="{{.Permalink}}">
-    <img loading="lazy" class="w-100 rounded" src="{{ .Params.image | absURL}}" alt="{{.Title}}">
+    {{ partial "image.html" (dict "Src" .Params.image "Class" "w-100 h-auto rounded" "Alt" .Title) }}
   </a>
   {{end}}
   <div class="card-body">
@@ -10,7 +10,7 @@
         {{ with site.GetPage (.Params.Author | urlize | lower) }}
         <a href="{{.Permalink}}" class="card-meta-author">
           {{if .Params.image}}
-          <img loading="lazy" src="{{.Params.image | absURL}}" alt="{{.Title}}">
+          {{ partial "image.html" (dict "Src" .Params.image "Size" "26x26" "Class" "w-auto" "Alt" .Title) }}
           {{else}}
           <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=150&pg&d=identicon">
           {{end}}

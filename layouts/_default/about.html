@@ -6,7 +6,7 @@
 
       {{ with .Params.image }}
       <div class="col-lg-10 mb-5">
-        <img loading="lazy" class="img-fluid rounded" src="{{. | relURL}}" alt="">
+        {{ partial "image.html" (dict "Src" . "Class" "img-fluid rounded" "Alt" "about image") }}
       </div>
       {{ end }}
 

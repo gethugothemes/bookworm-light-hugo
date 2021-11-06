@@ -7,7 +7,7 @@
       <div class="col-lg-4 col-sm-6 mb-4">
         {{ if .Params.image }}
         <a class="d-inline-block" href="{{.Permalink}}">
-          <img loading="lazy" class="img-fluid rounded" src="{{.Params.image | absURL}}" alt="{{.Title}}">
+          {{ partial "image.html" (dict "Src" .Params.image "Size" "150x150" "Class" "img-fluid rounded" "Alt" .Title) }}
           <h4 class="font-weight-700 text-dark mt-4 mb-3">{{.Title}}</h4>
         </a>
         {{ else }}
