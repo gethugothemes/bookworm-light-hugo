@@ -1,0 +1,16 @@
+---
+label: New Page
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: description
+  label: description
+- type: text
+  name: layout
+  label: layout
