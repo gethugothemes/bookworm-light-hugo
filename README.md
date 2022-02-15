@@ -138,7 +138,7 @@ If you need to customize the theme or complete website development from scratch,
 
 <!-- premium themes -->
 ## Premium Themes By Us
-| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.webp)](https://gethugothemes.com/bundle) | [![Logbook](https://demo.gethugothemes.com/thumbnails/logbook.webp)](https://gethugothemes.com/products/logbook/) | [![Parsa](https://demo.gethugothemes.com/thumbnails/parsa.webp)](https://gethugothemes.com/products/parsa/) |
+| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.webp)](https://gethugothemes.com/bundle/?utm_source=bookworm_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Logbook](https://demo.gethugothemes.com/thumbnails/logbook.webp)](https://gethugothemes.com/products/logbook/) | [![Parsa](https://demo.gethugothemes.com/thumbnails/parsa.webp)](https://gethugothemes.com/products/parsa/) |
 |:---:|:---:|:---:|
-| **Premium Theme Bundle (40+)** | **Logbook** | **Parsa** |
+| **Get 50+ Premium Hugo Themes Bundle** | **Logbook** | **Parsa** |
 
