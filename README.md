@@ -62,7 +62,7 @@ Get It Now          | [![download-light](https://demo.gethugothemes.com/icons/do
 
 ```bash
 # clone the repository
-git clone git@github.com:gethugothemes/bookworm-light.git
+git clone git@github.com/gethugothemes/bookworm-light.git
 
 # cd in the project directory
 $ cd bookworm-light/exampleSite/
