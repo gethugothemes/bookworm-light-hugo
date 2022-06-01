@@ -22,8 +22,7 @@
 ---
 
 <p align="center">
-
-<img src="https://demo.gethugothemes.com/thumbnails/bookworm-light.webp" alt="screenshot" width="100%">
+<img src="https://demo.gethugothemes.com/thumbnails/bookworm-light.png" alt="screenshot" width="100%">
 </p>
 
 ---
