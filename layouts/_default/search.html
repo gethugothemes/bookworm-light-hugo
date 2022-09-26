@@ -8,8 +8,8 @@
           <h1 class="h3">Search results for
             <span class="mark">
               <script>
-                var keyword = (window.location.search).substr(3);
-                var result = keyword.replace("+", " ");
+                var keyword = decodeURIComponent((window.location.search).substr(3));
+                var result = keyword.replace(/\+/g, " ");
                 document.write(result);
               </script>
             </span>
