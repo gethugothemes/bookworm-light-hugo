@@ -6,6 +6,7 @@
   {{end}}
   <div class="card-body">
     <ul class="card-meta list-inline mb-2">
+      {{ if .Params.Author }}
       <li class="list-inline-item mb-2">
         {{ with site.GetPage (.Params.Author | urlize | lower) }}
         <a href="{{.Permalink}}" class="card-meta-author">
@@ -18,6 +19,7 @@
         </a>
         {{ end }}
       </li>
+      {{ end }}
       <li class="list-inline-item mb-2">
         <span>{{.PublishDate.Format "02 Jan, 2006"}}</span>
       </li>
