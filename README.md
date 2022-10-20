@@ -1,5 +1,8 @@
 
-<h1 align=center>Bookworm Light | <a target="_blank" href="https://demo.gethugothemes.com/bookworm-light/" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fbookworm-light%2F">Page Speed (79%)</a></h1>
+<h1 align=center>Bookworm Light</h1> 
+<p align=center>This modern Hugo blog theme is perfect for creating any kind of blog website, including food, recipes, beauty, lifestyle, photography, travel, health, fitness, and more. </p>
+<h2 align="center"><a target="_blank" href="https://demo.gethugothemes.com/bookworm-light/" rel="nofollow">Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fbookworm-light%2Fsite%2F&form_factor=desktop">Page Speed (96%)</a></h2>
+
 
 <p align=center>
   <a href="https://github.com/gohugoio/hugo/releases/tag/v0.80.0" alt="Contributors">
@@ -97,9 +100,20 @@ issues](https://github.com/gethugothemes/bookworm-light/issues). Someone may hav
 If your problem or idea has not been addressed yet, feel free to [open a new
 issue](https://github.com/gethugothemes/bookworm-light/issues).
 
-<!-- ## Bookworm Light Powered Websites
+## Bookworm Light Powered Websites
 
-View all the websites powered by Bookworm Light [here](https://github.com/gethugothemes/bookworm-light/wiki/All-bookworm-light-theme-Powered-Websites). Want to submit your own website powered by Bookworm Light? You can submit it [here](https://github.com/gethugothemes/bookworm-light/discussions/5). -->
+- https://bluzky.github.io/
+- https://rewallet.de/en/blog/
+- https://dragonpwn.github.io/
+- https://xstitchleena.com/
+- https://www.greenhouseghost.com/
+- https://ayats.org/
+- https://alyve.be/
+- https://fabiolopes.page/
+- https://hummus-eater.net/
+- https://setagaya-phil.net/
+
+View all the websites powered by Bookworm Light [here](https://gethugothemes.com/showcase). Want to submit your own website powered by Bookworm Light? You can submit it [here](https://gethugothemes.com/showcase).
 
 <!-- licence -->
 ## License
@@ -135,6 +149,6 @@ If you need to customize the theme or complete website development from scratch,
 <!-- premium themes -->
 ## Premium Themes By Us
 
-| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png)](https://gethugothemes.com/bundle/?utm_source=bookworm_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Logbook](https://demo.gethugothemes.com/thumbnails/logbook.png)](https://gethugothemes.com/products/logbook/) | [![Parsa](https://demo.gethugothemes.com/thumbnails/parsa.png)](https://gethugothemes.com/products/parsa/) |
+| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png?)](https://gethugothemes.com/bundle/?utm_source=bookworm_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Logbook](https://demo.gethugothemes.com/thumbnails/logbook.png)](https://gethugothemes.com/products/logbook/) | [![Parsa](https://demo.gethugothemes.com/thumbnails/parsa.png)](https://gethugothemes.com/products/parsa/) |
 |:---:|:---:|:---:|
-| **Get 50+ Premium Hugo Themes Bundle** | **Logbook** | **Parsa** |
+| **Get 55+ Premium Hugo Themes Bundle** | **Logbook** | **Parsa** |
