@@ -100,20 +100,15 @@ issues](https://github.com/gethugothemes/bookworm-light/issues). Someone may hav
 If your problem or idea has not been addressed yet, feel free to [open a new
 issue](https://github.com/gethugothemes/bookworm-light/issues).
 
-## Bookworm Light Powered Websites
+## Submit Your Website To Our Showcase
 
-- https://bluzky.github.io/
-- https://rewallet.de/en/blog/
-- https://dragonpwn.github.io/
-- https://xstitchleena.com/
-- https://www.greenhouseghost.com/
-- https://ayats.org/
-- https://alyve.be/
-- https://fabiolopes.page/
-- https://hummus-eater.net/
-- https://setagaya-phil.net/
+Are you using Bookworm Hugo theme? Submit it to our [showcase](https://gethugothemes.com/showcase). 
 
-View all the websites powered by Bookworm Light [here](https://gethugothemes.com/showcase). Want to submit your own website powered by Bookworm Light? You can submit it [here](https://gethugothemes.com/showcase).
+Our showcase aims to demonstrate to the world what amazing websites people like you have created utilizing our Hugo themes and to show that Hugo has tremendous capabilities as a Static Site Generator. 
+
+View all the websites powered by Bookworm Hugo from [here](https://gethugothemes.com/showcase?theme=bookworm). 
+
+[Submit](https://gethugothemes.com/showcase?submit=show) your Bookworm Hugo powered website.
 
 <!-- licence -->
 ## License
