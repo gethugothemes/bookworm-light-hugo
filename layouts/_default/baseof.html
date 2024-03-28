@@ -2,13 +2,15 @@
 <html lang="{{ site.LanguageCode | default `en-US` }}">
 {{ partial "head.html" . }}
 
-<body>
+<body class="d-flex flex-column min-vh-100">
   {{ partialCached "preloader.html" . }}
   {{ partial "header.html" . }}
+  <main class="flex-fill">
   {{if and (not .IsHome) (ne .Section "blog") (ne .Permalink (`about/` | absURL)) (ne .Permalink (`search/` | absURL)) }}
   {{ partial "page-header.html" . }}
   {{end}}
   {{ block "main" . }}{{ end }}
+  </main>
   {{ partialCached "footer.html" . }}
   {{ partialCached "script.html" . }}
 </body>
