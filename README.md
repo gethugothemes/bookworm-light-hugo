@@ -1,3 +1,21 @@
+## Installation Instructions
+
+```bash
+# Create new hugo site called Newsite (example name)
+hugo new site NewSite
+cd NewSite/themes
+
+# Download the repo as a submodule 
+git init
+git submodule add https://gitlab.com/writeonlyhugo/up-business-theme.git
+
+# Remove the default hugo.toml file
+cd ../Newsite
+rm hugo.toml
+
+# Copy everything from themes/bookworm-light-hugo over to the Newsite folder
+```
+
 
 <h1 align=center>Bookworm Light</h1> 
 <p align=center>This modern Hugo blog theme is perfect for creating any kind of blog website, including food, recipes, beauty, lifestyle, photography, travel, health, fitness, and more. </p>
