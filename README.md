@@ -7,7 +7,7 @@ cd NewSite/themes
 
 # Download the repo as a submodule 
 git init
-git submodule add https://gitlab.com/writeonlyhugo/up-business-theme.git
+git submodule add https://github.com/TheHelpfulOtter/bookworm-light-hugo.git
 
 # Remove the default hugo.toml file
 cd ../Newsite
