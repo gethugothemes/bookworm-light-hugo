@@ -13,7 +13,7 @@ git submodule add https://github.com/TheHelpfulOtter/bookworm-light-hugo.git
 
 # Copy example files over to Newsite
 cd ..
-cp -r themes/bookworm-light-hugo/exampleSite .
+cp -r themes/bookworm-light-hugo/exampleSite/. .
 ```
 
 <h1 align=center>Bookworm Light</h1> 
