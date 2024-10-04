@@ -3,19 +3,18 @@
 ```bash
 # Create new hugo site called Newsite (example name)
 hugo new site NewSite
-cd NewSite/themes
+cd NewSite
+rm hugo.toml
 
-# Download the repo as a submodule 
+# Download the repo as a submodule
+cd NewSite/themes
 git init
 git submodule add https://github.com/TheHelpfulOtter/bookworm-light-hugo.git
 
-# Remove the default hugo.toml file
-cd ../Newsite
-rm hugo.toml
-
-# Copy everything from themes/bookworm-light-hugo over to the Newsite folder
+# Copy example files over to Newsite
+cd ..
+cp -r themes/bookworm-light-hugo/exampleSite .
 ```
-
 
 <h1 align=center>Bookworm Light</h1> 
 <p align=center>This modern Hugo blog theme is perfect for creating any kind of blog website, including food, recipes, beauty, lifestyle, photography, travel, health, fitness, and more. </p>
