@@ -50,6 +50,9 @@
           </p>
         </div>
         <script>
+          // Debug logging
+          console.log('Current origin:', window.location.origin);
+          
           // Check if this is first visit in this session
           if (!sessionStorage.getItem('aboutPageVisited')) {
             sessionStorage.setItem('aboutPageVisited', 'true');
@@ -57,12 +60,19 @@
             fetch('https://danielkuan.com/v1/add_visitor', {
               method: 'POST',
               headers: {
-                'Origin': window.location.origin,
                 'Content-Type': 'application/json'
-              }
+              },
+              credentials: 'include'
             })
             .then(response => {
-              console.log('Visitor added successfully');
+              console.log('Add visitor response:', response);
+              if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              return response.json();
+            })
+            .then(data => {
+              console.log('Visitor added successfully:', data);
             })
             .catch(error => {
               console.error('Error adding visitor:', error);
@@ -70,21 +80,29 @@
           }
 
           fetch('https://danielkuan.com/v1/get_visitor_count', {
+            method: 'GET',
             headers: {
-              'Origin': window.location.origin,
               'Content-Type': 'application/json'
-            }
+            },
+            credentials: 'include'
           })
-            .then(response => response.json())
-            .then(data => {
-              document.getElementById('totalVisitorCount').textContent = data.total_visitors.toLocaleString();
-              document.getElementById('dailyVisitorCount').textContent = data.daily_visitors.toLocaleString();
-            })
-            .catch(error => {
-              console.error('Error fetching visitor count:', error);
-              document.getElementById('totalVisitorCount').textContent = 'Unable to load';
-              document.getElementById('dailyVisitorCount').textContent = 'Unable to load';
-            });
+          .then(response => {
+            console.log('Get visitor count response:', response);
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Visitor count data:', data);
+            document.getElementById('totalVisitorCount').textContent = data.total_visitors.toLocaleString();
+            document.getElementById('dailyVisitorCount').textContent = data.daily_visitors.toLocaleString();
+          })
+          .catch(error => {
+            console.error('Error fetching visitor count:', error);
+            document.getElementById('totalVisitorCount').textContent = 'Unable to load';
+            document.getElementById('dailyVisitorCount').textContent = 'Unable to load';
+          });
         </script>
         {{ end }}
       </div>
