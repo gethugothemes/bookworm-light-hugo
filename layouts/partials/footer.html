@@ -37,6 +37,56 @@
         {{ with site.Params.copyright }}
         <p class="mb-0 font-weight-500 copyright-text content">{{.| markdownify}}</p>
         {{ end }}
+        
+        <div style="color: red;">
+          DEBUG: Current RelPermalink is: {{ .RelPermalink }}
+        </div>
+        
+        {{ if or (eq .RelPermalink "/bookworm-light/categories/") (eq .RelPermalink "/categories/") }}
+        <div>
+          <p class="mt-2 font-weight-500">
+            Daily Visitors: <span id="dailyVisitorCount">Loading...</span>
+            Total Visitors: <span id="totalVisitorCount">Loading...</span>
+          </p>
+        </div>
+        <script>
+          // Check if this is first visit in this session
+          if (!sessionStorage.getItem('aboutPageVisited')) {
+            sessionStorage.setItem('aboutPageVisited', 'true');
+            
+            fetch('https://danielkuan.com/v1/add_visitor', {
+              method: 'POST',
+              headers: {
+                'Origin': window.location.origin,
+                'Content-Type': 'application/json'
+              }
+            })
+            .then(response => {
+              console.log('Visitor added successfully');
+            })
+            .catch(error => {
+              console.error('Error adding visitor:', error);
+            });
+          }
+
+          fetch('https://danielkuan.com/v1/get_visitor_count', {
+            headers: {
+              'Origin': window.location.origin,
+              'Content-Type': 'application/json'
+            }
+          })
+            .then(response => response.json())
+            .then(data => {
+              document.getElementById('totalVisitorCount').textContent = data.total_visitors.toLocaleString();
+              document.getElementById('dailyVisitorCount').textContent = data.daily_visitors.toLocaleString();
+            })
+            .catch(error => {
+              console.error('Error fetching visitor count:', error);
+              document.getElementById('totalVisitorCount').textContent = 'Unable to load';
+              document.getElementById('dailyVisitorCount').textContent = 'Unable to load';
+            });
+        </script>
+        {{ end }}
       </div>
     </div>
   </div>
