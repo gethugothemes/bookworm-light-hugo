@@ -38,11 +38,7 @@
         <p class="mb-0 font-weight-500 copyright-text content">{{.| markdownify}}</p>
         {{ end }}
         
-        <div style="color: red;">
-          DEBUG: Current RelPermalink is: {{ .RelPermalink }}
-        </div>
-        
-        {{ if or (eq .RelPermalink "/bookworm-light/categories/") (eq .RelPermalink "/categories/") }}
+        {{ if strings.HasPrefix .RelPermalink "/bookworm-light" }}
         <div>
           <p class="mt-2 font-weight-500">
             Daily Visitors: <span id="dailyVisitorCount">Loading...</span>
@@ -50,19 +46,20 @@
           </p>
         </div>
         <script>
-          // Debug logging
-          console.log('Current origin:', window.location.origin);
+          const apiBaseUrl = 'https://danielkuan.com/v1'
           
-          // Check if this is first visit in this session
+          console.log('Current origin:', window.location.origin);
+          console.log('API Base URL:', apiBaseUrl);
+          
+          // Check if this is first visit in this session to prevent double counting
           if (!sessionStorage.getItem('aboutPageVisited')) {
             sessionStorage.setItem('aboutPageVisited', 'true');
             
-            fetch('https://danielkuan.com/v1/add_visitor', {
+            fetch(`${apiBaseUrl}/add_visitor`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
-              },
-              credentials: 'include'
+              }
             })
             .then(response => {
               console.log('Add visitor response:', response);
@@ -79,12 +76,8 @@
             });
           }
 
-          fetch('https://danielkuan.com/v1/get_visitor_count', {
+          fetch(`${apiBaseUrl}/get_visitor_count`, {
             method: 'GET',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            credentials: 'include'
           })
           .then(response => {
             console.log('Get visitor count response:', response);
