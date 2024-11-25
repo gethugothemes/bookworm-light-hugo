@@ -1,0 +1,84 @@
+
+############################# Main Menu ########################
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "About"
+url = "about/"
+weight = 3
+
+[[main]]
+name = "Contact"
+url = "contact/"
+weight = 4
+
+[[main]]
+name = "Buy Premium"
+url = "https://gethugothemes.com/products/bookworm/"
+weight = 5
+
+[[main]]
+weight = 6
+url = "#"
+name = "Pages"
+hasChildren = true
+
+[[main]]
+parent = "Pages"
+name = "Author"
+url = "author/"
+weight = 1
+
+[[main]]
+parent = "Pages"
+name = "Tags"
+url = "tags/"
+weight = 2
+
+[[main]]
+parent = "Pages"
+name = "Category"
+url = "categories/"
+weight = 3
+
+[[main]]
+parent = "Pages"
+name = "Elements"
+weight = 4
+url = "elements/"
+
+[[main]]
+parent = "Pages"
+name = "Privacy"
+url = "privacy/"
+weight = 5
+
+[[main]]
+parent = "Pages"
+name = "Terms & Conditions"
+url = "terms-conditions/"
+weight = 6
+
+############################# Footer Menu ########################
+[[footer]]
+name = "About"
+url = "about/"
+weight = 1
+
+[[footer]]
+name = "Authors"
+url = "author/"
+weight = 2
+
+[[footer]]
+name = "Privacy"
+url = "privacy/"
+weight = 3
+
+[[footer]]
+name = "Terms & Conditions"
+url = "terms-conditions/"
+weight = 4

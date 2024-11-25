@@ -1,0 +1,35 @@
+<section class="section-sm pb-2 page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 mx-auto text-center">
+
+        {{ if or (eq .Section "tags") (eq .Section "categories") }}
+        {{ if or (eq .Permalink (`tags/` | absLangURL)) (eq .Permalink (`categories/` | absLangURL)) }}
+        <h3 class="mb-3 text-dark fw-800">{{.Title | markdownify}}</h3>
+        {{else}}
+        <h4 class="mb-3 text-dark fw-800">{{ i18n "showing_posts_from" }} <mark>{{.Title | markdownify}}</mark></h4>
+        {{ end }}
+        {{ else }}
+        <h3 class="mb-3 text-dark fw-800">{{.Title | markdownify}}</h3>
+        {{ end }}
+
+
+        <ul class="list-inline breadcrumb-menu">
+        {{ $url := replace .Permalink ( printf "%s" site.BaseURL) "" }}
+        {{ $.Scratch.Add "path" site.BaseURL }}
+        <li class="list-inline-item"><a href="{{ site.BaseURL | relLangURL }}">Home</a></li>
+        {{ range $index, $element := split $url "/" }}
+        {{ $.Scratch.Add "path" $element}}
+        {{ if ne $element "" }}
+        {{ if ne $element "fr" }}
+        <li class="list-inline-item">/ &nbsp; <a href="{{ $.Scratch.Get `path` }}">{{ . | humanize }}</a></li>
+        {{ end }}
+        {{ $.Scratch.Add "path" "/"}}
+        {{ end }}
+        {{ end }}
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>

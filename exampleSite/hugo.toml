@@ -1,0 +1,62 @@
+# This file is for render site varibles and plugins
+# don't remove this file.
+# The presence of this file is for compatibility with Blogdown and Forestry.
+#
+# The actual configuration files are stored in the `config/_default/` folder.
+
+
+######################### site variables ##############################
+# customize your color and font from here.
+[params.variables]
+white = "#ffffff"
+black = "#000000"
+dark = "#152035"
+gray = "#747577"
+light = "#FAFAFA"
+color_primary = "#01AD9F"
+
+# font variables
+# base font size for full website, 
+font_size = "16px" # default is 16px
+
+# Font Scale Sizes
+# "minorSecond": 1.067,
+# "majorSecond": 1.125,
+# "minorThird": 1.2,
+# "majorThird": 1.25,
+# "perfectFourth": 1.333,
+# "augmentedFourth": 1.414,
+# "perfectFifth": 1.5,
+# "goldenRatio": 1.618
+font_scale = "1.25" # default is "majorThird": 1.25
+
+# go to https://fonts.google.com/ to find the font you want to use. select your font and copy only the bold part from the URL. and paste it here.
+# example: "Work+Sans:wght@400;500;600"
+font_primary = "Mulish:wght@500;600;700;800;900"
+font_primary_type = "sans-serif" # [serif/sans-serif]
+font_secondary = ""
+font_secondary_type = "" # [serif/sans-serif]
+font_icon = "Font Awesome 6 Free" # https://fontawesome.com/v6.0/icons/
+
+
+############################# Plugins ##############################
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/glightbox/glightbox.css"
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/line-awesome/css/line-awesome.min.css"
+
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/cookie.js"
+[[params.plugins.js]]
+link = "plugins/glightbox/glightbox.js"
+[[params.plugins.js]]
+link = "js/gallery-slider.js"
+[[params.plugins.js]]
+link = "plugins/instagram-feed/instagram-feed.js"
+[[params.plugins.js]]
+link = "js/search.js"

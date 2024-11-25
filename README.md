@@ -111,8 +111,6 @@ share those images.
 
 - [Bootstrap](https://getbootstrap.com)
 - [Jquery](https://jquery.com)
-- [FuseJs](https://fusejs.io)
-- [MarkJs](https://markjs.io/)
 - [Line awesome](https://icons8.com/line-awesome)
 - [Instafeed](https://instafeedjs.com/)
 - [Google Fonts](https://fonts.google.com/)

@@ -1,50 +1,71 @@
-h1, .h1 {
-   font-size: $h1;
-   @include desktop-xl {
-      font-size: $h1-lg;
-   }
-   @include desktop {
-      font-size: $h1-md;
-   }
+/*  typography */
+
+html {
+  font-size: $font-size;
 }
-h2, .h2 {
-   font-size: $h2;
-   @include desktop {
-      font-size: $h2-md;
-   }
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.75;
+  color: $text-color;
 }
-h3, .h3 {
-   font-size: $h3;
-   @include desktop {
-      font-size: $h3-md;
-   }
+
+p {
+  margin-bottom: 1rem;
 }
-h4, .h4 {
-   font-size: $h4;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: 100;
+  color: $text-dark;
 }
-h5, .h5 {
-   font-size: $h5;
+
+small,
+.small {
+  font-size: 0.8rem;
 }
-h6, .h6 {
-   font-size: $h6;
-}
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-   line-height: 1.3;
-}
-a:focus,
-button:focus {
-	outline: 0;
-}
-a {
-   color: $gray;
-   transition: all .3s;
-   &:hover {
-      text-decoration: none;
-      color: $color-primary;
-   }
-}
-ul, li {
-	padding: 0;
-   margin: 0;
-   list-style-position: inside;
+
+// List in descending order to prevent extra sort function
+$type-levels: 6,5,4,3,2,1;
+
+@each $level in $type-levels {
+  $font-size: $font-size * $font-scale;
+
+  // Output heading styles
+  h#{$level},
+  .h#{$level} {
+    font-size: $font-size;
+    line-height: calc(10px + 2ex + 2px);
+    margin-bottom: 0.65em;
+
+    // responsive for h1, h2, h3, h4
+    &:not(h5, .h5, h6, .h6) {
+
+      @include desktop {
+        font-size: calc(#{$font-size} * .90);
+        margin-bottom: 0.55em;
+      }
+
+      @include tablet {
+        font-size: calc(#{$font-size} * .80);
+      }
+    }
+
+
+    // responsive for h5, h6
+    @include desktop {
+      font-size: calc(#{$font-size} * .95);
+      margin-bottom: 0.55em;
+    }
+
+    @include tablet {
+      font-size: calc(#{$font-size} * .90);
+    }
+  }
 }

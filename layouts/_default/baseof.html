@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html lang="{{ site.LanguageCode | default `en-US` }}">
-{{ partial "head.html" . }}
+<html lang="{{ site.LanguageCode | default `en-US` }}" itemscope itemtype="http://schema.org/WebPage">
 
-<body class="d-flex flex-column min-vh-100">
-  {{ partialCached "preloader.html" . }}
-  {{ partial "header.html" . }}
-  <main class="flex-fill">
-  {{if and (not .IsHome) (ne .Section "blog") (ne .Permalink (`about/` | absURL)) (ne .Permalink (`search/` | absURL)) }}
-  {{ partial "page-header.html" . }}
-  {{end}}
-  {{ block "main" . }}{{ end }}
-  </main>
-  {{ partialCached "footer.html" . }}
-  {{ partialCached "script.html" . }}
+<head>
+	{{ partial "essentials/head.html" . }}
+
+	<!-- cache partial only in production -->
+	{{ if hugo.IsProduction }}
+	{{ partialCached "essentials/style.html" . }}
+	{{ else }}
+	{{ partial "essentials/style.html" . }}
+	{{ end }}
+</head>
+
+<body>
+	<!-- cache partial only in production -->
+	{{ if hugo.IsProduction }}
+	{{ partial "essentials/header.html" . }}
+	{{ partialCached "gtm-noscript.html" . }}
+	{{ partialCached "preloader.html" . }}
+	{{ else }}
+	{{ partial "essentials/header.html" . }}
+	{{ partial "preloader.html" . }}
+	{{ end }}
+
+	{{ if and 
+		(not .IsHome) 
+		(ne .Section "blog") 
+		(ne .Section "homepage") 
+		(ne .Permalink ("/about/" | absLangURL)) 
+		(ne .Permalink ("/search/" | absLangURL)) 
+		(ne .Kind "404") 
+	}}
+		{{ partial "components/page-header.html" . }}
+	{{ end }}
+	
+
+
+	<main>
+		{{ block "main" . }}{{ end }}
+	</main>
+
+	<!-- cache partial only in production -->
+	{{ if hugo.IsProduction }}
+	{{ partialCached "essentials/footer.html" . }}
+	{{ partialCached "essentials/script.html" . }}
+	{{ else }}
+	{{ partial "essentials/footer.html" . }}
+	{{ partial "essentials/script.html" . }}
+	{{ end }}
 </body>
 
 </html>

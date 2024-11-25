@@ -1,0 +1,132 @@
+#################### default parameters ################################
+# favicon
+favicon = "images/favicon.png"
+# logo
+logo = "images/logo.png"
+# use `px` or `x` with logo_width, example: "100px".
+# Note: logo_width is not work with .svg file
+logo_width = "208px"
+# if logo_webp set false, will not generate WEBP version of logo | default is true
+logo_webp = true
+# logo text will only show when logo is missing.
+logo_text = "Bookworm"
+# purgeCSS
+purge_css = true
+
+# Menu align
+menu_align = "center" # Menu-align value "left", "right" or "center" (if Search is disable/false Menu will align in Right)
+# Main section
+mainSections = ["blog"]
+# Post layout
+post_layout = "list" # Post-Layout value ("grid" or "list")
+# Blog-details page sidebar
+sidebar = "false" # Sidebar value ("left", "right" or false)
+
+# image gallery shortcode
+image_gallery = true
+
+# copyright
+theme_copyright = true
+copyright = "Copyright by your company"
+
+# google tag manager, see https://developers.google.com/tag-manager/
+google_tag_manager = "" # example: G-XXXXXXXXXX
+# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
+custom_script= ""
+
+# contact form action
+contact_form_action = "#" # contact form works with https://formspree.io
+
+# Preloader
+[preloader]
+enable = false
+preloader = "images/favicon.png" # use jpg, png, svg or gif format.
+
+[search]
+enable = true # (if Search is false Menu will align in Right)
+primary_color = "#01AD9F"
+include_sections = [] # if `include_sections` is empty then section are come from `mainSections`
+show_image = true
+show_description = true
+show_tags = true
+show_categories = true
+
+######################## sidebar widgets #########################
+[widgets]
+sidebar = ["search", "categories", "tags", "social"]
+
+# Instagram feed
+[params.instafeed]
+enable = false
+instagram_user = "bookworm"
+access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
+
+# Subscription
+[subscription]
+enable = true
+# mailchimp subsciption
+mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
+mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
+title = "Subscribe for our monthly newsletter."
+input_placeholder = "Enter your email"
+
+# Crisp Chat
+[crisp_chat]
+enable = false
+crisp_website_id = "75ea92c2-a135-4f5c-8b44-54f9ddc30745" # replace this code with yours
+# Check this video tutorial to get your crisp website ID - https://www.youtube.com/watch?v=nW5UX6iVdFc
+
+# seo meta data for OpenGraph / Twitter Card
+[metadata]
+keywords = ["Boilerplate", "Hugo", "Themefisher", "GetHugoThemes"]
+description = "This is meta description"
+author = "Themefisher"
+image = "images/favicon.png" # this image will be used as fallback if a page has no image of its own
+
+
+# baidu analytics: see https://tongji.baidu.com/
+[baidu]
+enable = false
+analytics_id = "" # Your ID
+
+# plausible analytics: see https://plausible.io/
+[plausible]
+enable = false
+domain = "" # yourdomain.com
+
+# counter analytics: see https://counter.dev/setup.html
+[counter]
+enable = false
+username = "" # your username
+
+# site verifications
+[site_verification]
+google = "" # Your verification code
+bing = "" # Your verification code
+baidu = "" # Your verification code
+facebook = "" # Your verification code
+
+# cookies
+[cookies]
+enable = true
+expire_days = 2
+content = "This site uses cookies. By continuing to use this website, you agree to their use."
+button = "I Accept"
+
+
+# Social Icons
+[[social]]
+icon = "lab la-facebook-f"        # https://icons8.com/line-awesome
+url = "https://www.facebook.com/"
+
+[[social]]
+icon = "lab la-twitter"          # https://icons8.com/line-awesome
+url = "https://www.twitter.com/"
+
+[[social]]
+icon = "lab la-instagram"          # https://icons8.com/line-awesome
+url = "https://www.instagram.com/"
+
+[[social]]
+icon = "lab la-linkedin-in"       # https://icons8.com/line-awesome
+url = "https://www.linkedin.com/"

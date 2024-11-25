@@ -2,12 +2,12 @@
 
 <section class="section-sm">
   <div class="container">
-    <div class="row no-gutters justify-content-center">
+    <div class="row lg:no-gutters justify-content-center">
       <div class="col-lg-10">
         <div class="row">
           {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
           {{range $index, $items := $paginator.Pages}}
-          <div class="{{ if (eq $index 0) }}col-lg-12{{ else }}col-lg-6{{ end }}">
+          <div class="px-3 {{ if (eq $index 0) }}col-lg-12{{ else }}col-lg-6{{ end }}">
             {{.Render "post"}}
           </div>
           {{end}}
@@ -86,7 +86,6 @@
             </nav>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -105,7 +104,7 @@
       </div>
       {{ with .access_token }}
       <div class="mt-5">
-        <div id="instafeed" class="instagram_feed rounded row no-gutters justify-content-center" data-accessToken="{{.}}"></div>
+        <div id="instafeed" class="instagram_feed rounded row lg:no-gutters justify-content-center" data-accessToken="{{.}}"></div>
       </div>
       {{ end }}
     </div>

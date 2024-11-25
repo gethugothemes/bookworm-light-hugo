@@ -19,13 +19,41 @@ body {
 
 .mark,
 mark {
-  padding: 0 5px 4px;
-  background-color: rgba($color-primary, .1);
+  border-bottom: 1px dashed rgba($color-primary, 0.4);
+  background: transparent;
+  padding: 0;
+  color: $color-primary;
 }
 
-/*------------------------------------------------------------------
- # preloader
--------------------------------------------------------------------*/
+a:focus,
+button:focus {
+  outline: 0;
+}
+
+a {
+  color: $gray;
+  transition: all .3s;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-primary;
+  }
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+}
+
+p {
+  color: $gray;
+}
+
+// preloader
+// ====================================
 .preloader {
   position: fixed;
   top: 0;
@@ -36,9 +64,8 @@ mark {
   width: 100%;
 }
 
-/*------------------------------------------------------------------
- # default styles
--------------------------------------------------------------------*/
+// default styles
+// ====================================
 .section {
   padding: 120px 0;
 
@@ -47,26 +74,9 @@ mark {
   }
 }
 
-.section-title {
-  h1 {
-    font-size: $h1-lg;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-    position: relative;
-    padding-top: 25px;
-
-    @include desktop-xl {
-      font-size: 42px;
-    }
-
-    @include tablet {
-      font-size: 34px;
-    }
-  }
-}
-
 
 // social-links
+// ====================================
 .social-links {
   a {
     font-size: 18px;
@@ -78,6 +88,7 @@ mark {
       color: $color-primary;
     }
   }
+
   &.icon-box li a {
     height: 45px;
     width: 45px;
@@ -90,15 +101,15 @@ mark {
 
 
 // card style
+// ====================================
 .card.post-card {
   border-radius: 0px;
   border: 0;
-  // height: 100%;
-
+  margin-bottom: 70px;
+  
   .card-body {
+    margin-top: 30px;
     padding: 0;
-    padding-top: 30px;
-    margin-bottom: 70px;
   }
 }
 
@@ -119,6 +130,9 @@ a.post-title:hover,
   > li {
     line-height: 1;
     vertical-align: middle;
+    span {
+      color: $gray;
+    }
   }
 
   .list-inline-item:not(:last-child) {
@@ -128,14 +142,16 @@ a.post-title:hover,
   .card-meta-author {
     display: inline-block;
 
-    &:hover {
+    &:hover span {
       color: $color-primary;
     }
 
     img {
       border-radius: 50%;
+      width: 26px;
       height: 26px;
       margin-right: 6px;
+      object-fit: cover;
     }
 
     span {
@@ -163,6 +179,7 @@ a.post-title:hover,
 }
 
 // taxonomies-list
+// ====================================
 .taxonomies-list {
   li a:hover {
     background-color: $color-primary !important;
@@ -170,63 +187,47 @@ a.post-title:hover,
   }
 }
 
+// widget
+// ====================================
+.widget {
+  margin-bottom: 35px;
 
-// content
-.content {
-  font-size: 17px;
-
-  p {
-    margin-bottom: 16px;
+  &-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    text-decoration-color: #999;
   }
 
-  img {
-    margin-bottom: 30px;
-    @extend .rounded;
+  .widget-list li a {
+    padding: 10px 15px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
   }
 
-  h2,
-  h3,
-  h4 {
-    color: $dark;
-    margin-bottom: 20px;
-    font-weight: 700;
-  }
+  .widget-list-inline li {
+    margin-right: 3px;
 
-  h3 {
-    margin-top: 40px;
-  }
-
-  ol,
-  ul {
-    margin-bottom: 25px;
-    padding-left: 0;
-
-    li {
-      margin-bottom: 10px;
-    }
-  }
-
-  img {
-    margin-top: 10px;
-    margin-bottom: 35px;
-  }
-
-  blockquote {
-    padding: 20px 30px;
-    border-left: 6px solid $color-primary;
-    color: $dark;
-    font-weight: 700;
-    font-size: 22px;
-    margin: 30px 0;
-    border-radius: 5px;
-
-    p {
-      margin-bottom: 0;
+    a {
+      display: inline-block;
+      padding: 5px 15px !important;
+      margin-bottom: 5px !important;
     }
   }
 }
 
 // content style
+// ====================================
+.cookie-box {
+  border-radius: 10px !important;
+  .btn {
+    border-radius: 8px;
+    padding: 8px 20px;
+  }
+}
+
 .content {
 
   * {
@@ -234,8 +235,28 @@ a.post-title:hover,
     overflow-wrap: break-word;
   }
 
+  details.table-of-content {
+    padding: 12px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 7px;
+
+    ul {
+      margin-top: 10px;
+    }
+  }
+
+  .accordion {
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-color: $border-color;
+    &-collapse {
+      border-top-color: $border-color;
+    }
+  }
+
   img {
-    max-width: 100%;
+    border-radius: 8px;
   }
 
   h1,
@@ -244,60 +265,68 @@ a.post-title:hover,
   h4,
   h5,
   h6 {
-    font-weight: 700;
-    color: $dark;
+    font-weight: 600;
   }
 
   strong {
-    font-weight: 800;
+    font-weight: 600;
   }
 
   a {
-    color: $gray;
-    border-bottom: 1px dotted $color-primary;
+    color: $text-color;
+    border-bottom: 1px dotted $border-color;
 
     &:hover {
       color: $color-primary;
     }
   }
-  a.collapse-head {
-    border-bottom: 1px solid #dee2e6;
-  }
 
   ol,
   ul {
+    padding-left: 1.25rem;
+
     li {
-      margin-bottom: 10px;
+      margin-bottom: 0.62rem;
     }
   }
 
   ul {
-    margin-bottom: 20px;
+    padding-left: 0;
+    margin-bottom: 1.25rem;
     list-style-type: none;
 
     li {
-      padding-left: 20px;
+      padding-left: 1.25rem;
       position: relative;
 
       &::before {
         position: absolute;
         content: '';
-        height: 8px;
-        width: 8px;
+        height: 0.5rem;
+        width: 0.5rem;
         border-radius: 50%;
         background: $color-primary;
         left: 3px;
-        top: 8px;
+        top: 0.5rem;
       }
     }
 
+  }
+
+  .quote i {
+    font-size: 30px;
+    margin-right: 20px;
   }
 
   table {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
-    border: 1px solid #e0e0e0;
+    border: 1px solid $border-color;
+    border-collapse: initial;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   table td,
@@ -305,50 +334,53 @@ a.post-title:hover,
     padding: .75rem;
     vertical-align: top;
     margin-bottom: 0;
-    border: 1px solid #e0e0e0;
-  }
-
-  tr:not(:last-child) {
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  th {
-    font-weight: 500;
-  }
-
-  thead {
-    background: #efefef;
-    margin-bottom: 0;
-
-    tr {
-      border-bottom: 1px solid #e0e0e0;
+    &:not(:last-child) {
+      border-right: 1px solid $border-color !important;
     }
   }
 
-  tbody {
-    background: lighten($color: #efefef, $amount: 5);
+  th {
+    color: $black;
+  }
+
+  thead {
+    background: $light;
     margin-bottom: 0;
+  }
+
+  tbody {
+    background: lighten($color: $light, $amount: 5);
+    margin-bottom: 0;
+    td {
+      border-top: 1px solid $border-color !important;
+    }
   }
 
   .notices {
     margin: 2rem 0;
     position: relative;
     overflow: hidden;
+    border-radius: 8px;
   }
 
   .notices p {
-    padding: 10px;
+    padding: 0.62rem;
     margin-bottom: 0;
   }
 
   .notices p::before {
-    position: absolute;
-    top: 2px;
-    color: $white;
-    font-family: 'Line Awesome Free';
-    font-weight: 900;
     content: "\f05a";
-    left: 10px;
+    top: 2px;
+    left: 0.62rem;
+    color: $white;
+    font-weight: 900;
+    position: absolute;
+    font-family: $font-icon;
+    border: none;
+  }
+
+  .notices p::after {
+    left: 2.2rem !important;
   }
 
   .notices.note p {
@@ -363,7 +395,6 @@ a.post-title:hover,
     color: $white;
     left: 2rem;
   }
-
 
   .notices.tip p {
     border-top: 30px solid #78C578;
@@ -380,7 +411,7 @@ a.post-title:hover,
 
   .notices.info p {
     border-top: 30px solid #F0B37E;
-    background: #f7f7f7;
+    background: $light;
   }
 
   .notices.info p::after {
@@ -405,11 +436,26 @@ a.post-title:hover,
     left: 2rem;
   }
 
+  blockquote {
+    color: $text-color;
+    padding: 1.25rem 2.5rem;
+    border-left: 2px solid $color-primary;
+    margin: 2.5rem 0;
+    font-weight: bold;
+    background: $light;
+
+    p {
+      font-size: 1.25rem !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
   pre {
     display: block;
-    padding: 9.5px;
-    margin: 10px 0px 10px;
+    padding: 10px 16px;
+    margin: 10px 0px 0.62rem;
     white-space: pre-wrap;
+    border-radius: 8px;
   }
 
   code {
@@ -418,45 +464,32 @@ a.post-title:hover,
   }
 }
 
-// code-tab
-.code-tabs {
-  border: 1px solid #ddd;
+.tab-panel {
+  border: 1px solid $border-color;
+  border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 20px;
 
-  .nav-tabs {
-    margin-bottom: 0;
-
-    .nav-item {
-      padding-left: 0;
-      border-right: 1px solid #ddd;
-
-      .nav-link {
-        text-decoration: none;
-        font-weight: 500;
-        border: 0;
-      }
-
-      &::before {
-        display: none;
-      }
-
-      &.active {
-        background: $color-primary;
-
-        .nav-link {
-          color: $white;
-        }
-      }
+  .tab-nav {
+    button {
+      border: none;
     }
   }
-
   .tab-content {
-    padding: 20px 15px;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+    padding: 10px 15px;
   }
 }
 
+.glightbox img,
+video,
+iframe,
+.embed-responsive {
+  border-radius: 8px;
+}
+
 // pagination
+// ====================================
 .pagination {
   .page-link {
     padding: 0;
@@ -499,14 +532,15 @@ a.post-title:hover,
 }
 
 // breadcrumb
+// ====================================
 .breadcrumb-menu {
   display: inline-block;
   padding-top: 18px;
   border-top: 1px solid $color-primary;
 }
 
-
 // form-control
+// ====================================
 .form-control {
   padding: 0;
   border: 0;
@@ -533,6 +567,7 @@ a.post-title:hover,
 
 textarea {
   resize: none;
+  min-height: 150px !important;
 }
 
 .input-group-text {
@@ -544,6 +579,10 @@ textarea {
   .icon {
     font-size: 22px;
   }
+}
+
+button {
+  line-height: 1.75;
 }
 
 button.input-group-text {
@@ -599,20 +638,16 @@ button.input-group-text {
   overflow: hidden;
 }
 
-.font-weight-500 {
+.fw-500 {
   font-weight: 500
 }
 
-.font-weight-700 {
+.fw-700 {
   font-weight: 700
 }
 
-.font-weight-800 {
+.fw-800 {
   font-weight: 800
-}
-
-.font-weight-900 {
-  font-weight: 900
 }
 
 .text-primary {
@@ -648,10 +683,13 @@ a.text-dark:hover {
 }
 
 // footer
+// ====================================
 footer {
   background-color: $dark;
+
   .icon-box a {
     color: rgba($white, .7);
+
     &:hover {
       color: $white;
       background-color: $color-primary;
@@ -659,18 +697,85 @@ footer {
     }
   }
 }
+
 .footer-menu {
   li a {
     color: rgba($white, .7);
+
     &:hover {
       color: $color-primary;
       text-decoration: underline;
     }
   }
 }
+
 .copyright-text {
   color: rgba($white, .7);
+
   a {
     color: rgba($white, .7);
   }
+}
+
+// Accordions
+// ====================================
+.accordion {
+  --bs-accordion-active-color: $text-dark;
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-active-color: $text-dark;
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var%28--bs-body-color%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+  border-radius: 0px;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: -1px;
+  border: 1px solid rgba($text-dark, 0.5);
+
+  &-button {
+    box-shadow: none !important;
+    padding: 10px 14px !important;
+  }
+
+  &-button::after {
+    transform: scale(0.8);
+  }
+
+  &-button:not(.collapsed)::after {
+    transform: scale(0.8) rotate(180deg);
+  }
+
+  &-item {
+    border: none;
+  }
+
+  &-collapse {
+    border-top: 1px solid $border-color;
+  }
+}
+
+// Tab
+.tab-nav .tab-nav-button {
+  background-color: $light;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  border-bottom: 0px;
+}
+
+.tab-content {
+  border: 1px solid $border-color;
+  padding: 20px;
+}
+
+// Gallery
+// ====================================
+.gallery a {
+  border: 0px;
+}
+
+// Remove Cross Icon form input type search
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }

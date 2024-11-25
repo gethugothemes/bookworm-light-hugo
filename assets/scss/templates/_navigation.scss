@@ -1,33 +1,47 @@
-// start header style
-.header-height-fix {
-  height: 109px;
-  @include tablet {
-    height: 60px;
-  }
-}
+// header style
+// ====================================
 header {
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
   background-color: $white;
-  padding: 50px 0 20px;
-  transition: .25s ease;
+  padding: 30px 0;
+  transition: 0.25s ease;
+
+  .navbar-toggler {
+    .close {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      .close {
+        display: block;
+      }
+
+      .open {
+        display: none;
+      }
+    }
+  }
 
   @include tablet {
     padding: 40px 0;
   }
 
   &.header-sticky-top {
-    box-shadow: 0 0 50px -30px rgba($color-primary, .5);
-    padding: 20px 0;
+    box-shadow: 0 0 50px -30px rgba($color-primary, 0.5);
   }
 
   .navbar-brand {
+    img {
+      height: auto !important;
+    }
     @include tablet {
       img {
-        height: 30px;
+        width: auto !important;
+        height: 30px !important;
       }
     }
   }
@@ -39,6 +53,11 @@ header {
 
     &.dropdown .nav-link {
       position: relative;
+      padding-right: 30px !important;
+
+      @include desktop {
+        padding-right: 20px !important;
+      }
     }
 
     &.dropdown .nav-link::after {
@@ -47,10 +66,15 @@ header {
 
     &.dropdown .nav-link::before {
       position: absolute;
-      right: 0;
+      right: 14px;
+
+      @include desktop {
+        right: 0;
+      }
+
       top: calc(50% - 7px);
       display: inline-block;
-      vertical-align: .255em;
+      vertical-align: 0.255em;
       content: "";
       height: 9px;
       width: 9px;
@@ -65,17 +89,16 @@ header {
 
     .nav-link {
       font-size: 18px;
-      font-weight: 700;
       color: $dark !important;
       padding: 15px !important;
-
+      font-weight: 500;
       &:hover {
         color: $color-primary !important;
       }
     }
   }
 
-  @media (min-width:991px) {
+  @media (min-width: 991px) {
     .dropdown-menu {
       display: block;
       opacity: 0;
@@ -90,8 +113,15 @@ header {
     .dropdown:hover .dropdown-menu {
       opacity: 1;
       visibility: visible;
-      box-shadow: 0 10px 30px rgba(22, 28, 45, .10);
+      box-shadow: 0 10px 30px rgba(22, 28, 45, 0.1);
       transform: translate(-50%, -6px);
+    }
+
+    .dropdown-menu[data-bs-popper] {
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 0;
     }
   }
 
@@ -102,8 +132,7 @@ header {
 
   .dropdown-item {
     font-size: 16px;
-    padding: 8px 0;
-    font-weight: 700;
+    padding: 6px 0;
   }
 
   .dropdown-item.active,
@@ -123,7 +152,11 @@ header {
     padding: 0;
     font-size: 38px;
     color: $dark;
-    transition: .3s ease;
+    transition: 0.3s ease;
+
+    &:focus {
+      box-shadow: none;
+    }
 
     @include tablet {
       font-size: 32px;
@@ -154,7 +187,7 @@ header {
     .dropdown-menu {
       padding: 5px;
       text-align: center;
-      background: rgba($color-primary, .05);
+      background: rgba($color-primary, 0.05);
     }
 
     .nav-item .nav-link {
@@ -163,12 +196,35 @@ header {
   }
 }
 
+// search block style
+// ====================================
+// .search-toggle {
+//   background-color: transparent;
+//   border: 0;
+//   transition: .3s ease;
+//   padding: 5px;
+
+//   &:hover {
+//     color: $color-primary;
+//   }
+// }
+
+// .search-modal-content {
+//   width: 650px;
+//   .search-input-body label {
+//     line-height: 1.4;
+//   }
+// }
+
+// .search-title {
+//   transition: 0s;
+// }
 
 // search block style
 .search-toggle {
   background-color: transparent;
   border: 0;
-  transition: .3s ease;
+  transition: 0.3s ease;
   padding: 10px;
   font-size: 22px;
 
@@ -205,7 +261,7 @@ header {
     padding: 15px 0;
     margin: auto;
     letter-spacing: -1px;
-    transition: .3s ease;
+    transition: 0.3s ease;
   }
 
   &.is-visible {
@@ -222,5 +278,3 @@ header {
     right: 40px;
   }
 }
-
-// end header style

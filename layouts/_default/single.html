@@ -62,7 +62,7 @@
       <div class="single-post-author">
         <div class="row justify-content-center">
           <div class="col-lg-10">
-            <div class="media d-block d-sm-flex text-center text-sm-left">
+            <div class="media d-block d-sm-flex text-sm-left">
               {{ with .Site.GetPage (.Params.Author | urlize | lower) }}
               <a href="{{.Permalink}}">
                 {{ partial "image.html" (dict "Src" .Params.image "Size" "150x150" "Class" "img-fluid rounded-circle mr-0 mr-sm-4 mb-4" "Alt" .Title) }}

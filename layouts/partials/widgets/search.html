@@ -1,0 +1,10 @@
+{{ "<!-- Search -->" | safeHTML }}
+{{ if site.Params.search }}
+<div class="widget">
+  <h5 class="widget-title"><span>{{ i18n "search" }}</span></h5>
+  <form action="{{ `search`| relLangURL }}" class="widget-search position-relative" data-target="search-modal">
+    <input class="mb-1 form-control rounded" id="search-query" name="s" type="search" placeholder="{{ i18n `search_placeholder`}}">
+    <i class="fas fa-search" style="position:absolute;top:18px;right:17px;"></i>
+  </form>
+</div>
+{{ end }}

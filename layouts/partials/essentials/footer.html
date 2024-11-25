@@ -1,0 +1,43 @@
+<footer class="section-sm">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5">
+        {{ with site.Params.subscription }}
+        {{ if .enable }}
+        <div class="newsletter-block font-primary">
+          <h3 class="h5 mb-4 font-weight-700 text-white text-center">{{ .title | markdownify }}</h3>
+          <form class="px-0 px-sm-3 px-md-5" action="{{ .mailchimp_form_action }}" method="post" name="mailchimp_form_name" target="_blank">
+            <div class="input-group">
+              <input form="subscription" type="text" class="form-control" placeholder="{{ .input_placeholder }}" aria-label="Subscription" required autocomplete="new-email">
+              <div class="input-group-append">
+                <button type="submit" name="subscription" class="input-group-text" aria-label="Subscription Button"><i class="icon las la-paper-plane"></i></button>
+              </div>
+            </div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="{{ .mailchimp_form_name }}" tabindex="-1">
+            </div>
+          </form>
+        </div>
+        {{ end }}
+        {{ end }}
+      </div>
+      <div class="col-lg-12 text-center mt-5">
+        <ul class="list-inline footer-menu mb-4">
+          {{ range site.Menus.footer }}
+          <li class="list-inline-item mx-3"><a href="{{.URL | absURL}}">{{.Name}}</a></li>
+          {{ end }}
+        </ul>
+        <ul class="social-links icon-box list-unstyled list-inline font-weight-500 mb-3">
+          {{range site.Params.social}}
+          <li class="list-inline-item text-center"><a href="{{.url}}" aria-label="social-icon">
+            <i class="lab {{.icon}}"></i>
+          </a></li>
+          {{end}}
+        </ul>
+        {{ with site.Params.copyright }}
+        <p class="mb-0 font-weight-500 copyright-text content">{{.| markdownify}}</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</footer>

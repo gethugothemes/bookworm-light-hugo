@@ -1,17 +1,18 @@
-// button style
+/* Button style */
+// ====================================
 .btn {
-	font-size: 16px;
-	padding: 12px 28px;
-	color: $white;
-	border: 0;
-	border-radius: 50px;
-	transition: .2s ease-out;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-   @include desktop-lg {
-      font-size: 15px;
-	}
+  font-size: 1rem;
+  font-family: $font-primary;
+  text-transform: capitalize;
+  padding: .75em 1.75em;
+  border-radius: 8px;
+  border: 1px solid;
+  position: relative;
+  z-index: 1;
+  transition: .2s ease;
+  @include desktop-lg {
+    font-size: 0.9rem;
+  }
 	
 	&:active,
 	&:focus {
@@ -21,16 +22,17 @@
 
 	&:hover {
 		box-shadow: 0px 10px 25px rgba($black, 0.1);
+		border-color: inherit !important;
 	}
 
 	&.btn-sm {
-		padding: 10px 18px;
+		padding: 0.625em 1.125;
 	}
 
 	&.btn-lg {
-		padding: 14px 34px;
+    padding: 1em 2em;
 		@include desktop-lg {
-			padding: 12px 28px;
+      padding: .75em 1.75em;
 		}
 	}
 
