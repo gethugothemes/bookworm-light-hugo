@@ -58,13 +58,13 @@ Get It Now          | [![download-light](https://demo.gethugothemes.com/icons/do
 
 ```bash
 # clone the repository
-git clone git@github.com:gethugothemes/bookworm-light.git
+git clone git@github.com:gethugothemes/bookworm-light-hugo.git
 
-# cd in the project directory
-$ cd bookworm-light/exampleSite/
+#Install all the necessary dependencies using the following command:
+npm install
 
 # Start local dev server
-$ hugo server --themesDir ../..
+$ npm run dev:example
 ```
 
 Or Check out [Full Documentation](https://docs.gethugothemes.com/bookworm/?ref=github).

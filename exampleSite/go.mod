@@ -11,11 +11,8 @@ require (
 	github.com/gethugothemes/hugo-modules/images v0.0.0-20241123034247-ea3817d07c63 // indirect
 	github.com/gethugothemes/hugo-modules/pwa v0.0.0-20241123034247-ea3817d07c63 // indirect
 	github.com/gethugothemes/hugo-modules/search v0.0.0-20241123034247-ea3817d07c63 // indirect
-	github.com/gethugothemes/hugo-modules/shortcodes/buttons v0.0.0-20241123034247-ea3817d07c63 // indirect
-	github.com/gethugothemes/hugo-modules/shortcodes/codepen v0.0.0-20241123034247-ea3817d07c63 // indirect
 	github.com/gethugothemes/hugo-modules/shortcodes/collapse v0.0.0-20241123034247-ea3817d07c63 // indirect
 	github.com/gethugothemes/hugo-modules/shortcodes/notice v0.0.0-20241123034247-ea3817d07c63 // indirect
-	github.com/gethugothemes/hugo-modules/shortcodes/table-of-contents v0.0.0-20241123034247-ea3817d07c63 // indirect
 	github.com/gethugothemes/hugo-modules/shortcodes/tabs v0.0.0-20241123034247-ea3817d07c63 // indirect
 	github.com/gethugothemes/hugo-modules/videos v0.0.0-20241123034247-ea3817d07c63 // indirect
 	github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200 // indirect

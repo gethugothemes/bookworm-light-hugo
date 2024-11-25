@@ -16,7 +16,6 @@
 	<!-- cache partial only in production -->
 	{{ if hugo.IsProduction }}
 	{{ partial "essentials/header.html" . }}
-	{{ partialCached "gtm-noscript.html" . }}
 	{{ partialCached "preloader.html" . }}
 	{{ else }}
 	{{ partial "essentials/header.html" . }}
