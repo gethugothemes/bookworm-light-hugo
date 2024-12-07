@@ -12,17 +12,19 @@
         </a>
         {{ else }}
         <a class="d-inline-block" href="{{.Permalink}}">
-          <img loading="lazy" class="img-fluid rounded" src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=150&pg&d=identicon">
+          {{ partial "image.html" (dict "Src" "images/author/unkown.png" "Size" "150x150" "Class" "img-fluid rounded" "Alt" .Title) }}
           <h4 class="font-weight-700 text-dark mt-4 mb-3">{{.Title}}</h4>
         </a>
         {{ end }}
+        {{ if .Params.social.enable }}
         <ul class="social-links list-unstyled list-inline ml-0 ml-sm-n2 mb-2">
-          {{ range .Params.social }}
+          {{ range .Params.social.social_links }}
           <li class="list-inline-item"><a href="{{.link | safeURL}}">
               <i class="lab {{.icon}}"></i>
             </a></li>
           {{end}}
         </ul>
+        {{end}}
         <p>{{- .Summary | truncate 100 -}} &nbsp; <a class="text-dark" href="{{.Permalink}}">Read More</a></p>
       </div>
       {{end}}

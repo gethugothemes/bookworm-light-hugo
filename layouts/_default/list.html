@@ -2,14 +2,23 @@
 
 <!-- checking blog -->
 {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
-
+{{ $category_name := .Title }}
+{{ with site.Params.lightning_pills }} 
+{{ if and (.enable) (eq $category_name .name) }}
+<div class="container row justify-content-center mx-auto content">
+  <blockquote>
+    <p>{{ .text }}</p>
+  </blockquote>
+</div>
+{{end}}
+{{end}}
 <section class="section-sm">
   <div class="container">
-    <div class="row lg:no-gutters justify-content-center">
+    <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="row">
           {{range .Data.Pages}}
-          <div class="col-lg-6">
+          <div class="col-lg-10 mx-auto">
             {{.Render "post"}}
           </div>
           {{end}}

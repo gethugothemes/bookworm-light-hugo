@@ -5,22 +5,22 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <form action="{{.}}">
+        <form method="POST" action="{{.}}">
           <div class="mb-4">
-            <label for="name" class="form-label">{{ i18n "name" }}</label>
-            <input type="text" class="form-control rounded" id="name" placeholder="Alex Smith" required>
+            <label for="name" class="form-label" >{{ i18n "name" }}</label>
+            <input type="text" name="name" class="form-control rounded" id="name" placeholder="" required>
           </div>
           <div class="mb-4">
             <label for="email" class="form-label">{{ i18n "email" }}</label>
-            <input type="email" class="form-control rounded" id="email" placeholder="hello@bookworm.com" required>
+            <input type="email" name="email" class="form-control rounded" id="email" placeholder="" required>
           </div>
           <div class="mb-4">
             <label for="subject" class="form-label">{{ i18n "subject" }}</label>
-            <input type="text" class="form-control rounded" id="subject" placeholder="Reasons for Contact" required>
+            <input type="text" name="text" class="form-control rounded" id="subject" placeholder="" required>
           </div>
           <div class="mb-4">
             <label for="message" class="form-label">{{ i18n "message"}}</label>
-            <textarea class="form-control rounded" id="message" rows="4" placeholder="Your Message" required></textarea>
+            <textarea name="message" class="form-control rounded" id="message" rows="4" placeholder="" required></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary rounded" aria-label="Send Message">{{ i18n "send_message"}}</button>

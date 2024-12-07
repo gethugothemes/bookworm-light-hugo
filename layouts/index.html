@@ -1,13 +1,18 @@
 {{define "main"}}
+<div class="container row justify-content-center mx-auto content">
+  <blockquote>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!</p>
+  </blockquote>
+</div>
 
 <section class="section-sm">
   <div class="container">
-    <div class="row lg:no-gutters justify-content-center">
+    <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="row">
           {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
           {{range $index, $items := $paginator.Pages}}
-          <div class="px-3 {{ if (eq $index 0) }}col-lg-12{{ else }}col-lg-6{{ end }}">
+          <div class="col-lg-10 mx-auto">
             {{.Render "post"}}
           </div>
           {{end}}

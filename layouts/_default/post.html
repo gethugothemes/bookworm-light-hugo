@@ -5,6 +5,9 @@
   </a>
   {{end}}
   <div class="card-body">
+    <h3 class="mb-3">
+      <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
+    </h3>
     <ul class="card-meta list-inline mb-2">
       {{ if .Params.Author }}
       <li class="list-inline-item mb-2">
@@ -13,6 +16,7 @@
           {{if .Params.image}}
           {{ partial "image.html" (dict "Src" .Params.image "Size" "26x26" "Class" "w-auto" "Alt" .Title) }}
           {{else}}
+          <!-- FIXME: Change that one to unknown -->
           <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=150&pg&d=identicon">
           {{end}}
           <span>{{ .Title }}</span>
@@ -31,11 +35,8 @@
         </ul>
       </li>
     </ul>
-    <h3 class="mb-3">
-      <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
-    </h3>
     <p>{{ .Summary }}</p>
 
-    <!-- <a href="{{.Permalink}}" aria-label="More on {{.Title}}">Read More <i class="las la-angle-right"></i></a> -->
+    <a href="{{.Permalink}}" aria-label="More on {{.Title}}">Read More <i class="las la-angle-right"></i></a>
   </div>
 </article>

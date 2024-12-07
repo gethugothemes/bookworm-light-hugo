@@ -37,3 +37,8 @@
 
 <!-- cookie consent -->
 {{ partialCached "cookie-consent.html" . }}
+
+{{ if .Params.cloudflare_analytics.enable }}
+<!-- TODO: Make it configurable Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "719df5375d68451f87ac7a5904790470"}'></script><!-- End Cloudflare Web Analytics -->
+{{end}}
