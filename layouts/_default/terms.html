@@ -22,6 +22,16 @@
         </ul>
       </div>
     </div>
+    <!-- TODO: Check if there is a pagination limit -->
+    <div class="col-lg-12">
+      <h4 class="mb-4">Latest Articles</h4>
+      {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+      {{range $index, $items := $paginator.Pages}}
+      <div class="col-lg-12 mx-auto">
+        {{.Render "post"}}
+      </div>
+      {{end}}
+    </div>
   </div>
 </section>
 

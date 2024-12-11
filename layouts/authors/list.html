@@ -3,30 +3,8 @@
 <section class="section-sm">
   <div class="container">
     <div class="row justify-content-center text-center">
-      {{range .RegularPages }}
-      <div class="col-lg-4 col-sm-6 mb-4">
-        {{ if .Params.image }}
-        <a class="d-inline-block" href="{{.Permalink}}">
-          {{ partial "image.html" (dict "Src" .Params.image "Size" "150x150" "Class" "img-fluid rounded" "Alt" .Title) }}
-          <h4 class="font-weight-700 text-dark mt-4 mb-3">{{.Title}}</h4>
-        </a>
-        {{ else }}
-        <a class="d-inline-block" href="{{.Permalink}}">
-          {{ partial "image.html" (dict "Src" "images/author/unkown.png" "Size" "150x150" "Class" "img-fluid rounded" "Alt" .Title) }}
-          <h4 class="font-weight-700 text-dark mt-4 mb-3">{{.Title}}</h4>
-        </a>
-        {{ end }}
-        {{ if .Params.social.enable }}
-        <ul class="social-links list-unstyled list-inline ml-0 ml-sm-n2 mb-2">
-          {{ range .Params.social.social_links }}
-          <li class="list-inline-item"><a href="{{.link | safeURL}}">
-              <i class="lab {{.icon}}"></i>
-            </a></li>
-          {{end}}
-        </ul>
-        {{end}}
-        <p>{{- .Summary | truncate 100 -}} &nbsp; <a class="text-dark" href="{{.Permalink}}">Read More</a></p>
-      </div>
+      {{ range .RegularPages }}
+        {{ partial "list-author.html" (dict "authorPath" .RelPermalink "showAuthorName" true) }}
       {{end}}
     </div>
   </div>

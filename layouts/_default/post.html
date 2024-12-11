@@ -1,42 +1,49 @@
 <article class="card post-card">
-  {{if .Params.image}}
-  <a href="{{.Permalink}}">
-    {{ partial "image.html" (dict "Src" .Params.image "Class" "w-100 h-auto rounded" "Alt" .Title) }}
-  </a>
-  {{end}}
-  <div class="card-body">
-    <h3 class="mb-3">
-      <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
-    </h3>
-    <ul class="card-meta list-inline mb-2">
-      {{ if .Params.Author }}
-      <li class="list-inline-item mb-2">
-        {{ with site.GetPage (.Params.Author | urlize | lower) }}
-        <a href="{{.Permalink}}" class="card-meta-author">
-          {{if .Params.image}}
-          {{ partial "image.html" (dict "Src" .Params.image "Size" "26x26" "Class" "w-auto" "Alt" .Title) }}
-          {{else}}
-          <!-- FIXME: Change that one to unknown -->
-          <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=150&pg&d=identicon">
-          {{end}}
-          <span>{{ .Title }}</span>
+  <div class="row no-gutters align-items-top">
+    <div class="col-lg-5">
+      <div class="pr-0 pr-lg-5">
+        {{if .Params.image}}
+        <a href="{{.Permalink}}">
+          {{ partial "image.html" (dict "Src" .Params.image "Class" "w-100 h-auto rounded" "Alt" .Title) }}
         </a>
-        {{ end }}
-      </li>
-      {{ end }}
-      <li class="list-inline-item mb-2">
-        <span>{{.PublishDate.Format "02 Jan, 2006"}}</span>
-      </li>
-      <li class="list-inline-item mb-2">
-        <ul class="card-meta-tag list-inline">
-          {{range .Params.tags}}
-          <li class="list-inline-item"><a href="{{site.BaseURL}}tags/{{.| urlize}}">{{.}}</a></li>
-          {{end}}
+        {{end}}
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="card-body">
+        <h5 class="text-dark mb-0">
+          <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
+        </h5>
+        <ul class="card-meta list-inline mb-2">
+          {{ if .Params.Author }}
+          <li class="list-inline-item mb-2">
+            {{ with site.GetPage (.Params.Author | urlize | lower) }}
+            <a href="{{.Permalink}}" class="card-meta-author">
+              {{if .Params.image}}
+                {{ partial "image.html" (dict "Src" .Params.image "Size" "26x26" "Class" "w-auto" "Alt" .Title) }}
+              {{else}}
+                {{ partial "image.html" (dict "Src" "images/authors/unknown.png" "Size" "26x26" "Class" "w-auto" "Alt" .Title) }}
+              {{end}}
+              <span>{{ .Title }}</span>
+            </a>
+            {{ end }}
+          </li>
+          {{ end }}
+          <li class="list-inline-item mb-2">
+            <span>{{.PublishDate.Format "02 Jan, 2006"}}</span>
+          </li>
+          <li class="list-inline-item mb-2">
+            <ul class="card-meta-tag list-inline">
+              {{range .Params.tags}}
+              <li class="list-inline-item"><a href="{{site.BaseURL}}tags/{{.| urlize}}">{{.}}</a></li>
+              {{end}}
+            </ul>
+          </li>
         </ul>
-      </li>
-    </ul>
-    <p>{{ .Summary }}</p>
-
-    <a href="{{.Permalink}}" aria-label="More on {{.Title}}">Read More <i class="las la-angle-right"></i></a>
+        <p>{{ .Summary }}</p>
+    
+        <a href="{{.Permalink}}" aria-label="More on {{.Title}}">Read More <i class="las la-angle-right"></i></a>
+      </div>
+    </div>
   </div>
 </article>

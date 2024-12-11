@@ -8,34 +8,37 @@
     <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="text-center mb-5">
-          <h3 class="h2 mb-4 post-title">{{.Title}}</h3>
-          <ul class="card-meta list-inline">
-            <li class="list-inline-item">
-              {{ if .Params.author }}
-              <a href="#!" class="card-meta-author">
-                {{ with .Site.GetPage (.Params.author | urlize | lower) }}
-                <a href="{{.Permalink}}" class="card-meta-author">
-                  {{ partial "image.html" (dict "Src" .Params.image "Size" "26x26" "Class" "w-auto" "Alt" .Title) }}
-                  <span>{{.Title}}</span>
+          {{ with .Params.image }}
+          <div class="mb-3 text-center">
+            {{ partial "image.html" (dict "Src" . "Class" "img-fluid rounded" "Alt" "Post image") }}
+          </div>
+          {{ end }}
+        </div>
+            <h1 class="h4 mb-2 post-title">{{.Title}}</h1>
+            <ul class="card-meta list-inline mb-3">
+              <li class="list-inline-item">
+                {{ if .Params.author }}
+                <a href="#!" class="card-meta-author">
+                  {{ with .Site.GetPage (.Params.author | urlize | lower) }}
+                  <a href="{{.Permalink}}" class="card-meta-author">
+                    {{if .Params.image}}
+                      {{ partial "image.html" (dict "Src" .Params.image "Size" "26x26" "Class" "w-auto" "Alt" .Title) }}
+                    {{else}}
+                    {{ partial "image.html" (dict "Src" "images/authors/unknown.png" "Size" "26x26" "Class" "w-auto" "Alt" .Title) }}
+                    {{end}}
+                    <span>{{.Title}}</span>
+                  </a>
+                  {{ end }}
                 </a>
+                {{ else }}
+                  <span>{{.Site.Params.Author}}</span>
                 {{ end }}
-              </a>
-              {{ else }}
-                <span>{{.Site.Params.Author}}</span>
-              {{ end }}
-            </li>
-            <li class="list-inline-item">|</li>
-            <li class="list-inline-item">
-              <span>{{.PublishDate.Format "02 January 2006"}}</span>
-            </li>
-          </ul>
-        </div>
-
-        {{ with .Params.image }}
-        <div class="mb-5 text-center">
-          {{ partial "image.html" (dict "Src" . "Class" "img-fluid rounded" "Alt" "Post image") }}
-        </div>
-        {{ end }}
+              </li>
+              <li class="list-inline-item">|</li>
+              <li class="list-inline-item">
+                <span>{{.PublishDate.Format "02 January 2006"}}</span>
+              </li>
+            </ul>
 
         <div class="content">
           {{.Content}}
@@ -65,12 +68,16 @@
             <div class="media d-block d-sm-flex text-sm-left">
               {{ with .Site.GetPage (.Params.Author | urlize | lower) }}
               <a href="{{.Permalink}}">
-                {{ partial "image.html" (dict "Src" .Params.image "Size" "150x150" "Class" "img-fluid rounded-circle mr-0 mr-sm-4 mb-4" "Alt" .Title) }}
+                {{if .Params.image}}
+                  {{ partial "image.html" (dict "Src" .Params.image "Size" "150x150" "Class" "img-fluid rounded-circle mr-0 mr-sm-4 mb-4" "Alt" .Title) }}
+                {{else}}
+                  {{ partial "image.html" (dict "Src" "images/authors/unknown.png" "Size" "150x150" "Class" "img-fluid rounded-circle mr-0 mr-sm-4 mb-4" "Alt" .Title) }}
+                {{end}}
               </a>
               <div class="media-body">
                 <p class="font-primary mb-1">Written By</p>
-                <h4><a href="{{.Permalink}}" class="text-dark font-weight-700">{{.Title}}</a></h4>
-                <p class="font-primary">{{ .Summary | truncate 250 }}</p>
+                <h5 class="text-dark mb-0"><a href="{{.Permalink}}" class="text-dark font-weight-700">{{.Title}}</a></h5>
+                <p class="font-primary">{{ .Params.caption.title | markdownify }}</p>
                 {{ if .Params.social.enable }}
                 {{ with .Params.social }}
                 <ul class="social-links list-unstyled list-inline ml-0 ml-sm-n2">
@@ -90,17 +97,36 @@
       </div>
     {{ end }}
 
+    {{ if site.Params.giscuss.enable }}
+      <script src="https://giscus.app/client.js"
+        data-repo="adriantunez/adriantunez.cloud"
+        data-repo-id="R_kgDONQbdQw"
+        data-category="General"
+        data-category-id="DIC_kwDONQbdQ84CkfQz"
+        data-mapping="url"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="noborder_light"
+        data-lang="es"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+      </script>
+    {{end}}
+
     {{ $related := (where site.RegularPages "Section" "blog") | intersect (where site.Pages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
     {{ if $related }}
       <div class="single-post-similer">
         <div class="row justify-content-center">
           <div class="col-lg-10">
             <div class="row mt-3">
-              <div class="col-12">
-                <h3 class="text-dark font-weight-800 mb-4 pb-2">You May Also Like</h3>
+              <div class="col-10">
+                <h4 class="mb-4 pb-2">You May Also Like</h4>
               </div>            
                 {{ range first 2 $related }}
-              <div class="col-md-6">
+              <div class="col-md-10">
                 {{ .Render "post" }}
               </div>
               {{ end }}

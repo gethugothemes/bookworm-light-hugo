@@ -5,20 +5,29 @@
 {{ $category_name := .Title }}
 {{ with site.Params.lightning_pills }} 
 {{ if and (.enable) (eq $category_name .name) }}
-<div class="container row justify-content-center mx-auto content">
-  <blockquote>
-    <p>{{ .text }}</p>
-  </blockquote>
-</div>
-{{end}}
-{{end}}
 <section class="section-sm">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="row">
+            <div class="notice tip mt-4">
+              <i class="notice-head lab la-cloudversify" style="font-size: 32px;"><p>&nbsp;{{ .name }}</p></i>
+              <div class="notice-body"><p>{{ .text | markdownify }}</p></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}
+{{end}}
+<!-- TODO: Paginate it -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="row">
           {{range .Data.Pages}}
-          <div class="col-lg-10 mx-auto">
+          <div class="col-lg-12 mx-auto">
             {{.Render "post"}}
           </div>
           {{end}}
@@ -34,7 +43,7 @@
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 mx-auto">
+      <div class="col-lg-12 mx-auto">
         <div class="content">
           {{.Content}}
         </div>

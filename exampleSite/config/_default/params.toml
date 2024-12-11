@@ -27,7 +27,7 @@ image_gallery = true
 
 # copyright
 theme_copyright = true
-copyright = "Copyright by your company"
+copyright = "Copyright by Adriantunez.cloud"
 
 # google tag manager, see https://developers.google.com/tag-manager/
 google_tag_manager = "" # example: G-XXXXXXXXXX

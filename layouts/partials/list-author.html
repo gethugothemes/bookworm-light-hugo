@@ -1,0 +1,32 @@
+{{ $params := . }}
+{{ with site.GetPage $params.authorPath }}
+  <div class="col-lg-4 mb-1 text-center">
+    <div class="mb-2">
+    {{if .Params.image}}
+      {{ partial "image.html" (dict "Src" .Params.image "Class" "img-fluid rounded-circle" "Alt" "about image") }}
+    {{else}}
+      {{ partial "image.html" (dict "Src" "images/authors/unknown.png" "Class" "img-fluid rounded-circle" "Alt" "about image") }}
+    {{end}}
+    </div>
+
+    {{ if $params.showAuthorName }}
+      <a class="h4 post-title mb-0" href="{{.Permalink}}">{{ .Params.title }}</a>
+    {{end}}
+    
+    {{ if .Params.caption.enable }}
+      <div>
+        <strong>{{ .Params.caption.title | markdownify }}</strong>
+      </div>
+    {{end}}
+    
+    {{ if .Params.social.enable }}
+    <ul class="social-links list-unstyled list-inline ml-0 ml-sm-n2 mb-2">
+      {{ range .Params.social.social_links }}
+      <li class="list-inline-item"><a href="{{.link | safeURL}}" target="_blank">
+          <i class="lab {{.icon}}"></i>
+        </a></li> 
+      {{end}}
+    </ul>
+    {{end}}
+  </div>
+{{end}}

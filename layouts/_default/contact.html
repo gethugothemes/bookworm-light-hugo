@@ -4,26 +4,28 @@
 <section class="section-sm">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-10">
         <form method="POST" action="{{.}}">
           <div class="mb-4">
             <label for="name" class="form-label" >{{ i18n "name" }}</label>
-            <input type="text" name="name" class="form-control rounded" id="name" placeholder="" required>
+            <input type="text" name="name" class="form-control rounded" id="name" placeholder="Your name" required>
           </div>
           <div class="mb-4">
             <label for="email" class="form-label">{{ i18n "email" }}</label>
-            <input type="email" name="email" class="form-control rounded" id="email" placeholder="" required>
+            <input type="email" name="email" class="form-control rounded" id="email" placeholder="your@email.com" required>
           </div>
           <div class="mb-4">
             <label for="subject" class="form-label">{{ i18n "subject" }}</label>
-            <input type="text" name="text" class="form-control rounded" id="subject" placeholder="" required>
+            <input type="text" name="text" class="form-control rounded" id="subject" placeholder="Subject text" required>
           </div>
           <div class="mb-4">
             <label for="message" class="form-label">{{ i18n "message"}}</label>
-            <textarea name="message" class="form-control rounded" id="message" rows="4" placeholder="" required></textarea>
+            <textarea name="message" class="form-control rounded" id="message" rows="4" placeholder="Your message" required></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary rounded" aria-label="Send Message">{{ i18n "send_message"}}</button>
+          <div class="mb-4 text-right" >
+            <button type="submit" class="btn btn-success rounded" aria-label="Send Message">{{ i18n "send_message"}}</button>
+          </div>
         </form>
       </div>
     </div>

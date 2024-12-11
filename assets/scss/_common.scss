@@ -1,10 +1,21 @@
-body {
+html, body {
   color: $gray;
   background-color: $white;
   font-family: $font-primary;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 ::selection {
@@ -70,7 +81,11 @@ p {
   padding: 120px 0;
 
   &-sm {
-    padding: 90px 0;
+    padding: 5px 0;
+  }
+
+  &-sm-footer {
+    padding: 50px 0;
   }
 }
 
@@ -108,13 +123,13 @@ p {
   margin-bottom: 70px;
   
   .card-body {
-    margin-top: 30px;
+    margin-top: 0px;
     padding: 0;
   }
 }
 
 .post-title {
-  font-weight: 800;
+  font-weight: 200;
   color: $dark;
   display: inline-block;
 }
@@ -686,6 +701,7 @@ a.text-dark:hover {
 // ====================================
 footer {
   background-color: $dark;
+  padding: 1rem 0;
 
   .icon-box a {
     color: rgba($white, .7);
