@@ -1,7 +1,7 @@
 {
   "name": "bookworm-light",
   "version": "3.4.2",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "gethugothemes",
   "scripts": {
     "dev": "hugo server",
