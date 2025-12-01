@@ -1,7 +1,7 @@
 
 <h1 align=center>Bookworm Light</h1> 
 <p align=center>This modern Hugo blog theme is perfect for creating any kind of blog website, including food, recipes, beauty, lifestyle, photography, travel, health, fitness, and more. </p>
-<h2 align="center"><a target="_blank" href="https://demo.gethugothemes.com/bookworm-light/" rel="nofollow">👀Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fbookworm-light%2Fsite%2F&form_factor=desktop">Page Speed (96%)🚀</a></h2>
+<h2 align="center"><a target="_blank" href="https://bookworm-light-hugo.vercel.app/" rel="nofollow">👀Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fbookworm-light%2Fsite%2F&form_factor=desktop">Page Speed (96%)🚀</a></h2>
 
 
 <p align=center>
