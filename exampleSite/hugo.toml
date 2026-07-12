@@ -60,3 +60,7 @@ link = "js/gallery-slider.js"
 link = "plugins/instagram-feed/instagram-feed.js"
 [[params.plugins.js]]
 link = "js/search.js"
+[[params.plugins.js]]
+link = "js/accordion.js"
+[[params.plugins.js]]
+link = "js/tab.js"

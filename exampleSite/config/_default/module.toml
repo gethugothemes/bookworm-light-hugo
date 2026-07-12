@@ -1,6 +1,6 @@
 [hugoVersion]
 extended = true
-min = "0.115.1"
+min = "0.163.3"
 
 [[imports]]
 path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
@@ -33,11 +33,14 @@ path = "github.com/gethugothemes/hugo-modules/components/render-link"
 path = "github.com/gethugothemes/hugo-modules/pwa"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/collapse"
+path = "github.com/gethugothemes/hugo-modules/accordion"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/shortcodes/notice"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/tabs"
+path = "github.com/gethugothemes/hugo-modules/tab"
+
+[[imports]]
+path = "github.com/gethugothemes/hugo-modules/components/open-remark"
 

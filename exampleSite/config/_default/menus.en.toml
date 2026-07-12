@@ -24,7 +24,6 @@ weight = 5
 weight = 6
 url = "#"
 name = "Pages"
-hasChildren = true
 
 [[main]]
 parent = "Pages"

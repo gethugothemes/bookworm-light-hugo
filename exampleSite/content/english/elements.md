@@ -115,19 +115,19 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime 
 
 <hr>
 
-### Collapse
+### Accordion
 
-{{< collapse "collapse 1" >}}
-  This is a simple collapse
-{{< /collapse >}}
+{{< accordion "accordion 1" >}}
+  This is a simple accordion
+{{< /accordion >}}
 
-{{< collapse "collapse 2" >}}
-  This is a simple collapse
-{{< /collapse >}}
+{{< accordion "accordion 2" >}}
+  This is a simple accordion
+{{< /accordion >}}
 
-{{< collapse "collapse 3" >}}
-  This is a simple collapse
-{{< /collapse >}}
+{{< accordion "accordion 3" >}}
+  This is a simple accordion
+{{< /accordion >}}
 
 <hr>
 

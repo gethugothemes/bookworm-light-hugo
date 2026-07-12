@@ -86,6 +86,16 @@
       </div>
     {{ end }}
 
+    {{ if site.Params.open_remark.enable }}
+      <div class="single-post-comment">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            {{ partial "open-remark.html" . }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
+
     {{ $related := (where site.RegularPages "Section" "blog") | intersect (where site.Pages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
     {{ if $related }}
       <div class="single-post-similer">

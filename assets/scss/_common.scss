@@ -250,7 +250,7 @@ a.post-title:hover,
     margin-bottom: 10px;
     border-radius: 6px;
     border-color: $border-color;
-    &-collapse {
+    &-content {
       border-top-color: $border-color;
     }
   }
@@ -720,50 +720,45 @@ footer {
 // Accordions
 // ====================================
 .accordion {
-  --bs-accordion-active-color: $text-dark;
-  --bs-accordion-active-bg: transparent;
-  --bs-accordion-active-color: $text-dark;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var%28--bs-body-color%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-
   border-radius: 0px;
   background-color: transparent;
   box-shadow: none;
   margin-bottom: -1px;
   border: 1px solid rgba($text-dark, 0.5);
+}
 
-  &-button {
-    box-shadow: none !important;
-    padding: 10px 14px !important;
-  }
+.accordion-header {
+  color: $text-dark;
+}
 
-  &-button::after {
-    transform: scale(0.8);
-  }
+.accordion-content {
+  border-top: 1px solid $border-color;
+}
 
-  &-button:not(.collapsed)::after {
-    transform: scale(0.8) rotate(180deg);
-  }
-
-  &-item {
-    border: none;
-  }
-
-  &-collapse {
-    border-top: 1px solid $border-color;
-  }
+.accordion.active .accordion-icon {
+  color: $color-primary;
 }
 
 // Tab
-.tab-nav .tab-nav-button {
+.tab-nav-item {
   background-color: $light;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  border-bottom: 0px;
+  color: $text-dark;
+  border: 0;
+}
+
+.tab-nav-item.active {
+  background-color: $color-primary;
+  color: $white;
+  border-bottom: 1px solid $color-primary;
 }
 
 .tab-content {
   border: 1px solid $border-color;
   padding: 20px;
+}
+
+.tab-content-panel.active {
+  padding: 0;
 }
 
 // Gallery
